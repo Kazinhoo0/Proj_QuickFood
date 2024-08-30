@@ -1,0 +1,178 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container_fluid-home {
+  border: 1px solid red;
+  width: 100%;
+
+}
+
+.container_son {
+  height: 720px;
+}
+
+.style_navbar {
+  border: 1px solid purple;
+  height: 70px;
+  display: flex;
+}
+
+.img_logo {
+  width: 100px;
+  height: 150px;
+
+}
+
+.container_logo {
+  width: 190px;
+  height: 30px;
+  margin: 20px;
+}
+
+.imglogo_width {
+  width: 190px;
+  height: 23px;
+  border-style: none;
+  cursor: pointer;
+}
+
+.imglogo_position {
+  margin-top: 10px;
+}
+
+.container_navbar_buttons {
+  border: 1px solid red;
+  width: 86%;
+  height: 50px;
+  margin: 10px;
+}
+
+
+.navbar_style {
+  text-align: end;
+}
+
+
+.navbar_itens_style {
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar_itens_style_orange {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid orange;
+  background-color: orange;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.topimg_home-style {
+  width: 100%;
+  z-index: 1;
+}
+
+/* container.home_text */
+
+.container.home_text {
+  border: 1px solid yellow;
+  width: 500px;
+  height: 500px;
+  margin-top: 500px;
+}
+
+.container_h1tittle {
+  width: 70%;
+  height: 180px;
+  margin-left: 280px;
+  margin-top: 180px;
+  border: 1px solid rgb(255, 255, 255);
+
+
+}
+
+h1 {
+  font-size: 40px;
+}
+
+strong {
+  margin: 180px;
+  margin-top: 50px;
+  color: white;
+}
+
+.strongclass_txt {
+  margin: 218px;
+  margin-top: 20px;
+}
+
+.container_searchbar {
+  border: 1px solid red;
+  width: 75%;
+  height: 60px;
+  margin-left: 230px;
+  display: flex;
+}
+
+.inputtext_style {
+  width: 30%;
+  height: 32px;
+  margin: 12px;
+  margin-left: 390px;
+  border: none;
+  padding-left: 10px ;
+}
+
+.buttonsearch_text {
+  border: none;
+  margin: 12px;
+  width: 10%;
+  height: 33px;
+  background-color: orange;
+  color: white;
+  Font-weight: bold
+}
+
+
+
+
+/*  */
