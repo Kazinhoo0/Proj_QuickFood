@@ -1,9 +1,10 @@
-import logo from './/logo_quickfood.png'
+import logo from '../assets_imgs/logo_quickfood.png'
 import topimg_home from '../assets_imgs/home-top-1.jpg'
 import optionsimg from '../assets_imgs/options-img.png'
 import caminhaoimg from '../assets_imgs/how-to-work1.png'
 import lojaimg from '../assets_imgs/how-to-work2.png'
 import sinoimg from '../assets_imgs/how-to-work3.png'
+import imgpicanha_tophowitworks from '../assets_imgs/call-to-action-paralax.jpg'
 
 export default function Home() {
 
@@ -95,10 +96,29 @@ export default function Home() {
                         <div style={{width: '250px'}}>
                             <p>Purus enim. Cras massa massa, maximus sit amet finibus quis, pharetra eu erat.</p>
                         </div>
-                       
-                    
+        
                     </div>
                 </ul>
+                <div className= 'container_imgpicanha' style={{backgroundImage: `url(${imgpicanha_tophowitworks})` }}>
+                    <div className='container_gridpicanha'>
+                        <h2 style={{color: 'white', fontSize:'40px'}}>BASTA ENCOMENDAR E NÓS ENTREGAREMOS</h2>
+                            <p  className='teste2223' style={{color: 'white'}}>Pellentesque eget justo eget nibh luctus semper at ut tellus.</p>
+                        <div className='teste2223'>
+                            <button className='style_button-ordenaragora'>ORDENAR AGORA</button>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div className='container_destaques'>
+                    <div className='container_tittle-restaurantesemdestaque'>
+                        <h2 style={{fontSize: '30px'}}>RESTAURANTES EM DESTAQUE</h2>
+                        <p className='style-paragrafo-destaque'>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+
+                    <div className='container_restaurants-destaques'>
+                        <div className='minicontainers-destaques' ></div>
+                    </div>
+                </div>
 
             </div>
 
