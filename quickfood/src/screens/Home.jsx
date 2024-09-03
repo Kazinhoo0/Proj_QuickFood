@@ -59,24 +59,44 @@ export default function Home() {
             </div>
             <div className='container_fotherhowitworks'>
                 <div className='container_howitworks'>
-
                     <h2 className='teste' style={{ color: 'black', border: '5px solid white' }}>COMO TRABALHAMOS</h2>
-
-                    <h4 className='teste2'>Como funciona o processo até a sua casa.</h4>
+                    <p className='teste2'>Como funciona o processo até a sua casa.</p>
                 </div>
                 <ul className='container_blockhowitworks'>
-                    <div className='tst'>
-                        <span className='span_circlue'><img src={caminhaoimg} alt="" /></span>
 
+                    <div className='tst'>
+
+                        <div className='span_circlue'><img className='style_imgs-howworks' src={caminhaoimg} alt="" /></div>
+                        <div className='container_tittleimgs'>
+                            <h3>Escolha um prato saboroso</h3>
+                        </div>
+                        <div style={{width: '250px'}}>
+                            <p>Purus enim. Cras massa massa, maximus sit amet finibus quis, pharetra eu erat.</p>
+                        </div>
+                        
                     </div>
                     <div className='tst'>
-                        <span><img src={sinoimg} alt="" /></span>
-                        
 
+                        <div className='span_circlue'><img src={lojaimg} alt="" /></div>
+                        <div className='container_tittleimgs'>
+                            <h3>Escolha um restaurante</h3>
+                        </div>
+                        <div style={{width: '250px'}}>
+                            <p>Purus enim. Cras massa massa, maximus sit amet finibus quis, pharetra eu erat.</p>
+                        </div>
+                       
                     </div>
                     <div className='tst'>
-                        <span><img src={sinoimg} alt="" /></span>
-                        
+
+                        <div className='span_circlue'><img src={sinoimg} alt="" /></div>
+                        <div className='container_tittleimgs'>
+                            <h3 className= 'style_writehowdo'>Entrega ou Delivery</h3>
+                        </div>
+                        <div style={{width: '250px'}}>
+                            <p>Purus enim. Cras massa massa, maximus sit amet finibus quis, pharetra eu erat.</p>
+                        </div>
+                       
+                    
                     </div>
                 </ul>
 
