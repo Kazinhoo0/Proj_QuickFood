@@ -323,13 +323,13 @@ strong {
 /* Container destaques  */
 
 .container_destaques {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 100%;
-  height: 700px;
+  height: 810px;
 }
 
 .container_tittle-restaurantesemdestaque {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 100%;
   height: 200px;
   margin: 6px;
@@ -337,17 +337,157 @@ strong {
   align-content: center;
   justify-content: center;
 }
+
+
+.container_pai_restaurantedestaques {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 .container_restaurants-destaques {
-  border: 1px solid red;
-  width: 80%;
-  height: 480px;
-  margin-left: 480px;
+  /* border: 1px solid red; */
+  width: 450px;
+  height: 550px;
+  margin-right: 50px;
+}
+
+.container_restaurants-destaques2 {
+  /* border: 1px solid red; */
+  width: 450px;
+  height: 550px;
+
+}
+
+.container-son-destaque {
+  /* border: 1px solid red; */
+  margin: 2px;
+  margin-top: 15px;
+  height: 161px;
+
+}
+
+.container-in-destaque {
+  margin: 5px;
+  margin-top: 15px;
+  width: 101%;
+  padding: 15px;
+  height: 150px;
+  display: flex;
+  background-color: rgb(252, 250, 250);
 }
 
 .minicontainers-destaques {
-  width: 5;
+  margin: 9px;
+  /* border: 1px solid red; */
+  width: 185px;
 }
+
+.container-circle-destaqimg {
+  border: 1px solid rgb(204, 201, 201);
+
+}
+
+.container-text-about-restaurantdestaque {
+  /* border: 1px solid rgb(15, 245, 53); */
+  width: 60%;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+
+}
+
+.container_estrelas-for-restaurants {
+  display: flex;
+  /* border: 1px solid red; */
+
+}
+
+.style-estrelaimg {
+  width: 20px;
+  height: 20px;
+
+}
+
+
+.style-heartfavorit {
+  margin-left: 15px;
+}
+
+.style_smalltext {
+  /* border: 1px solid red; */
+  width: 250px;
+  margin-bottom: 45px;
+  margin-left: 10px;
+}
+
+.style-h4-destaq {
+  margin-left: 10px;
+}
+
 
 .style-paragrafo-destaque {
   margin-left: 16px;
 }
+
+.container-favoritar-destaque {
+  /* border: 1px solid pink; */
+  width: 35px;
+}
+
+
+/* cabecalho de informações */
+
+
+.container_cabecalho-informacoes {
+  width: 100%;
+  height: 380px;
+  background-color: rgb(37, 37, 49);
+  padding-bottom: 50px;
+  border: 1px solid red;
+  justify-content: center;
+  align-content: center;
+}
+
+.container_infor-text {
+  border: 1px solid pink;
+  width: 80%;
+  height: 300px;
+  margin-left: 160px;
+  display: flex;
+  padding: 15px;
+
+}
+
+.container-menus-tela {
+  border: 1px solid red;
+  width: 25%;
+
+}
+
+.tittle-menus {
+  border: 1px solid red;
+  margin: 4px;
+  height: 50px;
+  justify-content: center;
+  align-content: center;
+  text-align: start;
+  color: white;
+}
+
+.style-barra {
+  border: 1px solid grey;
+
+}
+
+.container_icons {
+  border: 1px solid green;
+  display: flex;
+  margin: 5px;
+  margin-top: 25px;
+  height: 50px;
+}
+
