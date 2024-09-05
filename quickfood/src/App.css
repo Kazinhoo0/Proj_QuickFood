@@ -484,10 +484,57 @@ strong {
 }
 
 .container_icons {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   display: flex;
   margin: 5px;
   margin-top: 25px;
   height: 50px;
 }
 
+.style-img-redesociais {
+  width: 40px;
+  height: 40px;
+  padding-left: 15px;
+}
+
+.container-telefone {
+  /* border: 1px solid pink; */
+  height: 50px;
+  margin: 5px;
+  margin-top: 10px;
+  display: flex;
+  justify-content:flex-start;
+  color: white;
+  
+}
+
+.style-imgtelefone {
+  /* border: 1px solid red; */
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+}
+
+.style-telefoneeemail {
+   margin-left: 10px; 
+   margin-top: 5px;
+}
+
+
+.container-categoriasmenu-popular-cities {
+  /* border: 1px solid red; */
+  margin: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  padding-top: 5px ;
+  height: 230px;
+  display: grid;
+  
+  
+}
+
+.style-linksstyle {
+  text-decoration: none;
+  color: white;
+  
+}

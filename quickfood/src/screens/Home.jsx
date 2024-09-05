@@ -6,7 +6,6 @@ import lojaimg from '../assets_imgs/how-to-work2.png'
 import sinoimg from '../assets_imgs/how-to-work3.png'
 import imgpicanha_tophowitworks from '../assets_imgs/call-to-action-paralax.jpg'
 import imgdestaqnatural from '../assets_imgs/listing-logo03.png'
-import { CiStar } from "react-icons/ci";
 import iconestrela from '../assets_imgs/star.png'
 import imgdestaqmenu from '../assets_imgs/listing-logo09.png'
 import imgdestaqchefs from '../assets_imgs/listing-logo12.png'
@@ -16,6 +15,9 @@ import imgdestaqifood from '../assets_imgs/listing-logo04.png'
 import imgfavorithearth from '../assets_imgs/hearth.png'
 import imgmenuinstagram from '../assets_imgs/instagram.png'
 import imgmenufacebook from '../assets_imgs/facebook.png'
+import imgmenutwitter from '../assets_imgs/twitter.png'
+import imgtelefone from '../assets_imgs/phone.png'
+import imgemail from '../assets_imgs/mail.png'
 
 
 
@@ -287,7 +289,18 @@ export default function Home() {
                                 <h3>Popular Cities</h3>
                                 {/* <p className='style-barra'></p> */}
                             </div>
-                            <div></div>
+
+                            <div className='container-categoriasmenu-popular-cities' >
+                                <ul className='style-linksstyle '>
+                                    <li>Karachi</li>
+                                    <li>Lahore</li>
+                                    <li>Islamabad</li>
+                                    <li>Rawalpindi</li>
+                                    <li>Multan</li>
+                                </ul>
+                                
+                            </div>
+
                         </div>
 
                         <div className='container-menus-tela'>
@@ -295,12 +308,35 @@ export default function Home() {
                                 <h3>Popular Cuisnies</h3>
                                 {/* <p className='style-barra'></p> */}
                             </div>
+
+                            <div className='container-categoriasmenu-popular-cities' >
+                                   
+                                <ul className='style-linksstyle '>
+                                    <li>Apple Juice</li>
+                                    <li>BB.Q</li>
+                                    <li>Chicken Roast</li>
+                                    <li>Prawns</li>
+                                    <li>Steam Roast</li>
+                                </ul>
+                                
+                            </div>
+
                         </div>
 
                         <div className='container-menus-tela'>
                             <div className='tittle-menus'>
-                                <h3>Menus</h3>
+                                <h3>Menu</h3>
                                 {/* <p className='style-barra'></p> */}
+                            </div>
+
+                            <div className='container-categoriasmenu-popular-cities' >
+                                <ul className='style-linksstyle '>
+                                    <li>Home</li>
+                                    <li>Contact</li>
+                                    <li>FAQ's</li>
+                                    <li>How it works</li>
+                                </ul>
+                                
                             </div>
                         </div>
 
@@ -310,8 +346,19 @@ export default function Home() {
                                 {/* <p className='style-barra'></p> */}
                             </div>
                             <div className='container_icons'>
-                                <img src={imgmenufacebook} alt="" />
+                                <img className='style-img-redesociais' src={imgmenufacebook} alt="" />
+                                <img className='style-img-redesociais' src={imgmenuinstagram} alt="" />
+                                <img className='style-img-redesociais' src={imgmenutwitter} alt="" />
                                 
+                            </div>
+                            <div className='container-telefone'>
+                                <img className='style-imgtelefone' src={imgtelefone} alt="" />
+                                <small className='style-telefoneeemail' >+55 21999999999</small>
+                            </div>
+
+                            <div className='container-telefone'>
+                                <img className='style-imgtelefone' src={imgemail} alt="" />
+                                <small className='style-telefoneeemail' >quickfood@gmail.com</small>
                             </div>
                         </div>
                     </div>
