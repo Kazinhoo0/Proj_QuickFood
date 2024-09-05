@@ -287,7 +287,7 @@ export default function Home() {
                         <div className='container-menus-tela'>
                             <div className='tittle-menus'>
                                 <h3>Popular Cities</h3>
-                                {/* <p className='style-barra'></p> */}
+                                <p className='style-barra'></p>
                             </div>
 
                             <div className='container-categoriasmenu-popular-cities' >
@@ -298,7 +298,7 @@ export default function Home() {
                                     <li>Rawalpindi</li>
                                     <li>Multan</li>
                                 </ul>
-                                
+
                             </div>
 
                         </div>
@@ -306,11 +306,11 @@ export default function Home() {
                         <div className='container-menus-tela'>
                             <div className='tittle-menus'>
                                 <h3>Popular Cuisnies</h3>
-                                {/* <p className='style-barra'></p> */}
+                                <p className='style-barra'></p>
                             </div>
 
                             <div className='container-categoriasmenu-popular-cities' >
-                                   
+
                                 <ul className='style-linksstyle '>
                                     <li>Apple Juice</li>
                                     <li>BB.Q</li>
@@ -318,7 +318,7 @@ export default function Home() {
                                     <li>Prawns</li>
                                     <li>Steam Roast</li>
                                 </ul>
-                                
+
                             </div>
 
                         </div>
@@ -326,7 +326,7 @@ export default function Home() {
                         <div className='container-menus-tela'>
                             <div className='tittle-menus'>
                                 <h3>Menu</h3>
-                                {/* <p className='style-barra'></p> */}
+                                <p className='style-barra'></p>
                             </div>
 
                             <div className='container-categoriasmenu-popular-cities' >
@@ -336,20 +336,20 @@ export default function Home() {
                                     <li>FAQ's</li>
                                     <li>How it works</li>
                                 </ul>
-                                
+
                             </div>
                         </div>
 
                         <div className='container-menus-tela'>
                             <div className='tittle-menus'>
                                 <h3>Contact</h3>
-                                {/* <p className='style-barra'></p> */}
+                                <p className='style-barra'></p>
                             </div>
                             <div className='container_icons'>
                                 <img className='style-img-redesociais' src={imgmenufacebook} alt="" />
                                 <img className='style-img-redesociais' src={imgmenuinstagram} alt="" />
                                 <img className='style-img-redesociais' src={imgmenutwitter} alt="" />
-                                
+
                             </div>
                             <div className='container-telefone'>
                                 <img className='style-imgtelefone' src={imgtelefone} alt="" />
@@ -361,6 +361,9 @@ export default function Home() {
                                 <small className='style-telefoneeemail' >quickfood@gmail.com</small>
                             </div>
                         </div>
+                    </div>
+                    <div className='container-copyright'>
+                        <p style={{color:'white'}}>© 2024 Quick Food.Developed by Kauã Lopes</p>
                     </div>
                 </div>
             </div>

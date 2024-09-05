@@ -447,13 +447,13 @@ strong {
   height: 380px;
   background-color: rgb(37, 37, 49);
   padding-bottom: 50px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   justify-content: center;
   align-content: center;
 }
 
 .container_infor-text {
-  border: 1px solid pink;
+  /* border: 1px solid pink; */
   width: 80%;
   height: 300px;
   margin-left: 160px;
@@ -463,13 +463,13 @@ strong {
 }
 
 .container-menus-tela {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 25%;
 
 }
 
 .tittle-menus {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: 4px;
   height: 50px;
   justify-content: center;
@@ -480,6 +480,8 @@ strong {
 
 .style-barra {
   border: 1px solid grey;
+  margin-bottom: 5px;
+  width: 85%;
 
 }
 
@@ -503,9 +505,9 @@ strong {
   margin: 5px;
   margin-top: 10px;
   display: flex;
-  justify-content:flex-start;
+  justify-content: flex-start;
   color: white;
-  
+
 }
 
 .style-imgtelefone {
@@ -516,8 +518,8 @@ strong {
 }
 
 .style-telefoneeemail {
-   margin-left: 10px; 
-   margin-top: 5px;
+  margin-left: 10px;
+  margin-top: 5px;
 }
 
 
@@ -526,15 +528,187 @@ strong {
   margin: 5px;
   margin-bottom: 5px;
   padding: 5px;
-  padding-top: 5px ;
+  padding-top: 5px;
   height: 230px;
   display: grid;
-  
-  
+
+
 }
 
 .style-linksstyle {
+  /* border: 1px solid red; */
   text-decoration: none;
   color: white;
-  
+  list-style: none;
+  align-content: start;
+  padding-left: 0px;
+
 }
+
+.container-copyright {
+
+  width: 80%;
+  height: 90px;
+  display: flex;
+  margin-left: 160px;
+}
+
+
+
+
+
+
+
+
+
+
+/*                                  login page                          */
+
+
+/* header */
+
+
+
+.container-login_text {
+  /* border: 1px solid white; */
+  width: 80%;
+  height: 40%;
+  margin-left: 180px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+}
+
+
+.container_h1headerloginpage {
+  /* border: 1px solid red; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 100px;
+
+}
+
+
+.container_son-login {
+  height: 400px;
+}
+
+
+.container-principal-login-register {
+  /* border: 1px solid red; */
+  height: 470px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: rgba(236, 235, 235, 0.74);
+
+}
+
+
+.container-second-login-register {
+  /* border: 1px solid black; */
+  width: 50%;
+  height: 370px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+}
+
+.container_input-login-register {
+  border: 1px solid rgb(255, 255, 255);
+  width: 60%;
+  background-color: white;
+}
+
+.style-h2-loginpage {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+
+}
+
+
+.container-formulario-login {
+  /* border: 1px solid red; */
+  height: 190px;
+  display: grid;
+  padding: 15px;
+}
+
+.style-inputs-loginpage {
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  height: 35px;
+}
+
+.style-button-loginpage {
+  width: 25%;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(255, 123, 0);
+  font-size: 18px;
+  color: white;
+  height: 35px;
+}
+
+.container-nothaveaccount {
+  margin-left: 15px;
+  /* border: 1px solid red; */
+  height: 35px;
+  display: flex;
+  justify-content:start;
+}
+
+.style-link-a {
+ color: rgb(255, 123, 0);
+ padding: 5px;
+}
+
+
+
+/* Pagina registrar usuario e empresas */
+
+
+.container_input-restaurants-register {
+  border: 1px solid rgb(228, 11, 11);
+  width: 95%;
+  height: 500px;
+  background-color: white;
+}
+
+.container-principal-restaurants-register {
+  border: 1px solid red;
+  height: 570px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: rgba(236, 235, 235, 0.74);
+}
+
+
+.container-formulario-restaurants {
+  width: 50%;
+  border: 1px solid rgb(0, 0, 0);
+  height:300px;
+  display: grid;
+  padding: 15px;
+} 
+
+.container-input-registerrestaurants {
+  border: 1px solid rgb(0, 255, 0);
+  display: flex;
+  height: 400px;
+}
+
+.style-container-termosecondicoes {
+  display: flex;
+  padding-bottom: 10px;
+ 
+}
+

@@ -1,11 +1,11 @@
 import './App.css';
-import Home from './screens/Home';
+import Rotas from '../src/rotes/routes'
 
 
 function App() {
   return (
-    <div >
-      <Home/>  
+    <div>
+       <Rotas/>
     </div>
   );
 }
