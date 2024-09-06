@@ -28,7 +28,7 @@ const Rotas = () => {
                 <Route Component={MyFoods} path="/MinhasComidas" ></Route>
                 <Route Component={MyOrders} path="/MinhasOrdens"></Route>
                 <Route Component={AddMenuitens} path="/Adicionaritensmenu" > </Route>
-                <Route Component={Restaurants} path='/Restaurantes'> </Route>
+                <Route Component={Restaurants} path='/Pesquisarrestaurants'> </Route>
                 <Route Component={RestaurantsDetails} path='Detalhesrestaurantes' ></Route>
             </Routes>
         </BrowserRouter>

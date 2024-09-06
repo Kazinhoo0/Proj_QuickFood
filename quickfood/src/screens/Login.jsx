@@ -6,10 +6,37 @@ import imgmenuinstagram from '../assets_imgs/instagram.png'
 import imgmenufacebook from '../assets_imgs/facebook.png'
 import imgmenutwitter from '../assets_imgs/twitter.png'
 import imgtelefone from '../assets_imgs/phone.png'
+import { useNavigate } from 'react-router-dom'
 
 
 
 export default function Login() {
+
+
+
+    const navigate = useNavigate('')
+
+
+    const handlenavigatehome = () => {
+        navigate('/')
+        console.log('Executado com sucesso')
+    }
+
+    const handlenavigateregister = () => {
+        navigate('/Registrarrestaurantes')
+        console.log('Executado com sucesso')
+    }
+
+    const handlenavigateLogin = () => {
+        navigate('/Login')
+        console.log('Executado com sucesso')
+    }
+
+    const handlenavigaterestaurant = () => {
+        navigate('/Pesquisarrestaurants')
+        console.log("executado com sucesso")
+    }
+
 
     return (
         <div className="home-container">
@@ -17,15 +44,15 @@ export default function Login() {
                 <div className="container_son-login">
                     <nav className="style_navbar">
                         <div className='container_logo'>
-                            <a className='imglogo_position'>
+                            <a onClick={handlenavigatehome} className='imglogo_position'>
                                 <img className='imglogo_width' src={logo} alt="" />
                             </a>
                         </div>
                         <div className='container_navbar_buttons'>
                             <ul className='navbar_style'>
-                                <lo className='navbar_itens_style'>RESTAURANTS</lo>
-                                <lo className='navbar_itens_style'>LOGIN /  REGISTER</lo>
-                                <lo className='navbar_itens_style_orange'>REGISTRAR RESTAURANT</lo>
+                                <lo className='navbar_itens_style'> <a onClick={handlenavigaterestaurant}>RESTAURANTS</a></lo>
+                                <lo className='navbar_itens_style'><a onClick={handlenavigateLogin}>LOGIN /  REGISTER</a></lo>
+                                <lo className='navbar_itens_style_orange'><a onClick={handlenavigateregister}>REGISTRAR RESTAURANT</a></lo>
 
                             </ul>
                         </div>

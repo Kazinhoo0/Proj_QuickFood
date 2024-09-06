@@ -542,6 +542,7 @@ strong {
   list-style: none;
   align-content: start;
   padding-left: 0px;
+  cursor: pointer;
 
 }
 
@@ -662,12 +663,12 @@ strong {
   /* border: 1px solid red; */
   height: 35px;
   display: flex;
-  justify-content:start;
+  justify-content: start;
 }
 
 .style-link-a {
- color: rgb(255, 123, 0);
- padding: 5px;
+  color: rgb(255, 123, 0);
+  padding: 5px;
 }
 
 
@@ -676,14 +677,14 @@ strong {
 
 
 .container_input-restaurants-register {
-  border: 1px solid rgb(228, 11, 11);
+  /* border: 1px solid rgb(228, 11, 11); */
   width: 95%;
   height: 500px;
   background-color: white;
 }
 
 .container-principal-restaurants-register {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 570px;
   display: flex;
   align-content: center;
@@ -694,14 +695,14 @@ strong {
 
 .container-formulario-restaurants {
   width: 50%;
-  border: 1px solid rgb(0, 0, 0);
-  height:300px;
+  /* border: 1px solid rgb(0, 0, 0); */
+  height: 300px;
   display: grid;
   padding: 15px;
-} 
+}
 
 .container-input-registerrestaurants {
-  border: 1px solid rgb(0, 255, 0);
+  /* border: 1px solid rgb(0, 255, 0); */
   display: flex;
   height: 400px;
 }
@@ -709,6 +710,128 @@ strong {
 .style-container-termosecondicoes {
   display: flex;
   padding-bottom: 10px;
- 
+
 }
 
+
+
+
+
+
+/* Pagina de pesquisar restaurants */
+
+
+.style_input-pesquisarrestaurants {
+  width: 500px;
+  height: 35px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: none;
+  padding-left: 10px;
+
+}
+
+.style-img-pesquisarrestaurants {
+  width: 20px;
+  height: 20px;
+  margin-top: 7px;
+
+
+}
+
+.container-imglupasearch {
+  border: 1px solid red;
+  width: 35px;
+  height: 37px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: white;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: none;
+}
+
+.container_h1headerpesquisar-restaurants-page {
+  /* border: 1px solid red; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 100px;
+}
+
+
+
+.container-principal-restaurants-search {
+  /* border: 1px solid red; */
+  height: 400px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: #d3d1d1bd;
+}
+
+.container-categorias-searchrestaurants {
+  /* border: 1px solid rgb(0, 255, 34); */
+  width: 30%;
+  padding-left: 10px;
+}
+
+.container-restaurants-searchrestaurants {
+  /* border: 1px solid rgb(0, 255, 34); */
+  width: 20%;
+}
+
+.container-sortby-searchrestaurants {
+  /* border: 1px solid rgb(0, 255, 34); */
+  width: 20%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.style-containercategorias {
+  /* border: 1px solid red; */
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.style-lista-restaurants {
+  list-style: none;
+  padding-left: 2px;
+  padding-bottom: 5px;
+}
+
+.style-elements-input-restaurants {
+  padding-bottom: 20px;
+}
+
+.container-sortby {
+  /* border: 1px solid pink; */
+  width: 250px;
+  height: 150px;
+  display: grid;
+  margin-top: 100px;
+  background-color: white;
+  padding-left: 10px;
+  padding-bottom: 15px;
+}
+
+.style-links-sortby {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+.style-img-sortby  {
+  width: 15px;
+  height: 15px;
+
+}
+
+a:hover {
+  color: rgb(255, 102, 0);
+}
