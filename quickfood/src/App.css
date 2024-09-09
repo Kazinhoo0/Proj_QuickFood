@@ -648,6 +648,14 @@ strong {
   height: 35px;
 }
 
+.style-input-loginpage-file {
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  height: 35px;
+
+}
+
 .style-button-loginpage {
   width: 25%;
   border-radius: 5px;
@@ -826,7 +834,7 @@ strong {
 
 }
 
-.style-img-sortby  {
+.style-img-sortby {
   width: 15px;
   height: 15px;
 
@@ -835,3 +843,186 @@ strong {
 a:hover {
   color: rgb(255, 102, 0);
 }
+
+
+
+/* Página MyFoods */
+
+
+.container_fluid-pagmyfoods {
+  /* border: 1px solid red; */
+  width: 100%;
+  background-repeat: no-repeat;
+
+}
+
+.container-principal-login-register-myfoods {
+  height: 100px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: rgba(219, 218, 218, 0.664);
+}
+
+.container_cabecalho-informacoes-myfoods {
+  width: 100%;
+  height: 450px;
+  background-color: rgb(37, 37, 49);
+  padding-bottom: 100px;
+  /* border: 1px solid red; */
+  justify-content: center;
+  align-content: center;
+}
+
+
+.container_son-myfoods {
+  height: 350px;
+}
+
+.container_userprofile-myfoods {
+  /* border: 1px solid red; */
+  width: 50%;
+  height: 60%;
+  margin: 20px;
+  display: flex;
+}
+
+.container_picture-father {
+  /* border: 1px solid black; */
+  width: 30%;
+  margin-left: 30px;
+
+}
+
+.container_picture_son {
+  border: 5px solid rgb(255, 255, 255);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-left: 65px;
+  margin-top: 30px;
+
+}
+
+
+.style-img-profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+
+
+.container_username {
+  width: 50%;
+  /* border: 1px solid red; */
+  display: grid;
+  justify-content: start;
+  align-content: center;
+  padding-left: 5px;
+  color: white;
+}
+
+.list-foods {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+  margin: 20px;
+  /* border: 1px solid black; */
+  background-color: white;
+}
+
+.navbar_itens_style_onpages-logon {
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
+  border: 1px solid orange;
+  background-color: orange;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+
+.navbar_itens-style_logon-pages {
+  margin-left: 10px;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.navbar_username-logon {
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
+  color: rgb(255, 196, 0);
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+
+
+
+/* Página Meus pedidos */
+
+
+.container-principal-meuspedidos {
+  height: 300px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: rgba(219, 218, 218, 0.664);
+}
+
+.container_organizarpedidos {
+  display: grid;
+  align-content: center;
+  justify-content: start;
+  width: 50%;
+  height: 85%;
+  margin: 20px;
+}
+
+.container_options-meuspedidos {
+  border: 1px solid red;
+  margin: 40px;
+  width: 99%;
+  height: 50px;
+  display: flex;
+  background-color: none;
+}
+
+.container_result-options {
+  /* border: 1px solid pink; */
+  width: 99%;
+  margin: 40px;
+  width: 99%;
+  height: 150px;
+  display: flex;
+  background-color: white;
+}
+
+.style-options-meuspedidos {
+  padding: 80px;
+  /* border: 1px solid yellow; */
+  cursor: pointer;
+  font-weight: bolder;
+
+}
+
+.style-imgs-meuspedidos {
+  /* border: 1px solid red; */
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+lo:hover {
+  color: rgb(255, 123, 0);
+}
+

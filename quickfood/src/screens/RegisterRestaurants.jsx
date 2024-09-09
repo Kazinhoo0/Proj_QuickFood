@@ -79,8 +79,12 @@ export default function RegisterRestaurant() {
                                 <input className='style-inputs-loginpage' placeholder='Sua senha aqui*' type="password" />
                                 <span>Cidade</span>
                                 <input className='style-inputs-loginpage' type="email" />
-                                <span>Email</span>
-                                <input className='style-inputs-loginpage' placeholder='Seu email aqui*' type="email" />
+                                <span>Genero</span>
+                                <select className='style-inputs-loginpage' name="" id="">
+                                    <option value=""></option>
+                                    <option value="feminino">Feminino</option>
+                                    <option value="masculino">Masculino</option>
+                                </select>
                                 <div className='style-container-termosecondicoes'>
                                     <input type="checkbox" />
                                     <small>Concordo com os termos e condições</small>
@@ -102,8 +106,7 @@ export default function RegisterRestaurant() {
                                 <span>Pais</span>
                                 <input className='style-inputs-loginpage' type="email" />
                                 <span>Foto Perfil</span>
-                                <input className='style-inputs-loginpage' placeholder='Escolher Imagem*' type="email" />
-
+                                <input className='style-input-loginpage-file' placeholder='Escolher Imagem*' type="file" />
                             </form>
 
                         </div>
