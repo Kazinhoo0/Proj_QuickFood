@@ -82,19 +82,17 @@ export default function AddMenuItens() {
                                 <span>Preço</span>
                                 <input className='style-inputs-loginpage' type="email" />
                                 <div>
-
                                     <button className='style-button-loginpage'>Entrar</button>
                                 </div>
-
-
-
                             </form>
 
                             <form className='container-formulario-restaurants' action="">
                                 <span>Ingredientes</span>
-                                <input className='style-inputs-loginpage' placeholder='Seu email aqui*' type="email" />
-                                <span>Imagem do item</span>
-                                <input className='style-inputs-loginpage' placeholder='Sua senha aqui*' type="file" />
+                                <input className='style-inputs-additenspag ' placeholder='Seu email aqui*' type="email" />
+                                <span>Foto Menu</span>
+                                <input className='style-inputs-additenspag2 ' placeholder='Sua senha aqui*' type="file" />
+
+                               
                             </form>
 
                         </div>

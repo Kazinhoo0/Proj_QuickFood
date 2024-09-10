@@ -9,6 +9,7 @@ import MyOrders from '../screens/MyOrders'
 import AddMenuitens from '../screens/AddMenuitens'
 import Restaurants from '../screens/Restaurants'
 import RestaurantsDetails from '../screens/RestaurantsDetails'
+import CreateAccount from "../screens/CreateAccount";
 
 
 
@@ -30,6 +31,7 @@ const Rotas = () => {
                 <Route Component={AddMenuitens} path="/Adicionaritensmenu" > </Route>
                 <Route Component={Restaurants} path='/Pesquisarrestaurants'> </Route>
                 <Route Component={RestaurantsDetails} path='Detalhesrestaurantes' ></Route>
+                <Route Component={CreateAccount} path="/Criarconta"> </Route>
             </Routes>
         </BrowserRouter>
 

@@ -54,9 +54,9 @@ export default function MyOrders() {
                         </div>
                         <div className='container_navbar_buttons'>
                             <ul className='navbar_style'>
-                                <lo className='navbar_itens-style_logon-pages'> <a onClick={handlenavigateadditens}>Adicionar itens</a></lo>
+                            <lo className='navbar_itens-style_logon-pages'> <a onClick={handlenavigateadditens}>Adicionar itens</a></lo>
                                 <lo className='navbar_itens-style_logon-pages'> <a onClick={handlenavigatemeuspratos}>Meus pratos</a></lo>
-                                <lo className='navbar_itens-style_logon-pages'><a onClick={handlenavigateordenarrequisições}>Meus Pedidos</a></lo>
+                                <lo className='navbar_itens-style_logon-pages'><a onClick={handlenavigateordenarrequisições}>Ordenar requisições</a></lo>
                                 <lo className='navbar_username-logon'><a> Kauã Lopes</a></lo>
                                 <lo className='navbar_itens_style_onpages-logon'><a onClick={handlenavigatehome}>SAIR</a></lo>
 

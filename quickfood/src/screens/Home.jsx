@@ -73,20 +73,21 @@ export default function Home() {
                             </ul>
                         </div>
                     </nav>
-                    <div className='container.home_text'>
+                    <div className='container_home_text'>
                         <div className='container_h1tittle'>
-                            <h1><strong>FAST FOOD ORGANICO E SAUDÁVEL NA SUA MESA</strong>
-                                <br />
+                            <h1 className='h1titlehome-style'><strong>FAST FOOD ORGANICO E SAUDÁVEL NA SUA MESA </strong>
                                 <strong className='strongclass_txt'> AGORA DE UMA FORMA MAIS FACIL E RÁPIDA</strong>
                             </h1>
                         </div>
-                        <div className='container_searchbar'>
-                            <input placeholder='NOME RESTAURANTE' className='inputtext_style' type="text" />
-                            <button className='buttonsearch_text'>PROCURAR</button>
-                        </div>
-                        <div className='container_options'>
-                            <img src={optionsimg} alt="" />
-                        </div>
+                        <div className='container_pai_search'>
+                            <div className='container_searchbar'>
+                                <input placeholder='NOME RESTAURANTE' className='inputtext_style' type="text" />
+                                <button className='buttonsearch_text'>PROCURAR</button>
+                            </div>
+                            <div className='container_options'>
+                                <img src={optionsimg} alt="" />
+                            </div>
+                        </div> 
                     </div>
 
                 </div>

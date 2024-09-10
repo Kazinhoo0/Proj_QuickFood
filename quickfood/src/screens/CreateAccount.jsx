@@ -7,14 +7,11 @@ import imgmenufacebook from '../assets_imgs/facebook.png'
 import imgmenutwitter from '../assets_imgs/twitter.png'
 import imgtelefone from '../assets_imgs/phone.png'
 import { useNavigate } from 'react-router-dom'
-import { useState } from 'react'
 
 
 
-export default function Login() {
+export default function CreateAccount() {
 
-    const [email, Setemail] = useState('')
-    const [senha, Setsenha] = useState('')
 
     const navigate = useNavigate('')
 
@@ -35,50 +32,9 @@ export default function Login() {
     }
 
     const handlenavigaterestaurant = () => {
-        navigate('/Pesquisarrestaurants')
+        navigate('/Registrarrestaurantes')
         console.log("executado com sucesso")
     }
-
-    const handlenavigatecreateaccount = () => {
-        navigate('/Criarconta')
-    }
-
-
-    const handleloginemuletor = () => {
-        if (email === 'lopeskazin@gmail.com' && senha === '123456') {
-            console.log('Executado com sucesso')
-            navigate('/gerenciarpratos')
-        }
-
-    }
-
-
-    const handleenteraccount = async (event) => {
-        event.preventDefault();
-    
-        const response = await fetch('/Login', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, senha })
-    
-        });
-    
-        const data = await response.json();
-        if (data.success) {
-          localStorage.setItem('token', data.token);
-          localStorage.setItem('email', email)
-          setTimeout(() => {
-            navigate('/gerenciarpratos')
-          }, 2000);
-    
-        } else {
-          alert('Login falhou');
-        }
-    
-    };
-
-
-
 
 
 
@@ -95,8 +51,8 @@ export default function Login() {
                         </div>
                         <div className='container_navbar_buttons'>
                             <ul className='navbar_style'>
-                                <lo className='navbar_itens_style'> <a onClick={handlenavigaterestaurant}>RESTAURANTS</a></lo>
-                                <lo className='navbar_itens_style'><a onClick={handlenavigateLogin}>LOGIN /  REGISTER</a></lo>
+                                <lo className='navbar_itens_style'><a onClick={handlenavigaterestaurant}>RESTAURANTS</a></lo>
+                                <lo className='navbar_itens_style'> <a onClick={handlenavigateLogin}>LOGIN /  REGISTER</a></lo>
                                 <lo className='navbar_itens_style_orange'><a onClick={handlenavigateregister}>REGISTRAR RESTAURANT</a></lo>
 
                             </ul>
@@ -111,30 +67,51 @@ export default function Login() {
 
                 </div>
             </div>
-            <div className='container-principal-login-register'>
+            <div className='container-principal-restaurants-register'>
                 <div className='container-second-login-register'>
-                    <div className='container_input-login-register'>
-                        <h2 className='style-h2-loginpage' >LOGIN SUA CONTA</h2>
-                        <form onSubmit={handleenteraccount} className='container-formulario-login' action="">
-                            <span>Email</span>
-                            <input className='style-inputs-loginpage' placeholder='Seu email aqui*' type="email"
-                                onChange={(e) => Setemail(e.target.value)}
-                                value={email} />
-                            <span>Senha</span>
-                            <input
-                                className='style-inputs-loginpage'
-                                placeholder='Sua senha aqui'
-                                type="password"
-                                onChange={(e) => Setsenha(e.target.value)}
-                                value={senha} />
-                            <button className='style-button-loginpage'>Entrar</button>
+                    <div className='container_input-restaurants-register'>
+                        <h2 className='style-h2-loginpage' >CRIAR NOVA CONTA</h2>
+                        <div className='container-input-registerrestaurants'>
+                            <form className='container-formulario-restaurants' action="">
+                                <span>Nome Completo</span>
+                                <input className='style-inputs-loginpage' placeholder='Nome completo*' type="email" />
+                                <span>Senha</span>
+                                <input className='style-inputs-loginpage' placeholder='Sua senha aqui*' type="password" />
+                                <span>Cidade</span>
+                                <input className='style-inputs-loginpage' type="email" />
+                                <span>Genero</span>
+                                <select className='style-inputs-loginpage' name="" id="">
+                                    <option value=""></option>
+                                    <option value="feminino">Feminino</option>
+                                    <option value="masculino">Masculino</option>
+                                </select>
+                                <div className='style-container-termosecondicoes'>
+                                    <input type="checkbox" />
+                                    <small>Concordo com os termos e condições</small>
+                                </div>
+                                <div className='container_buttoncriarconta'>
+
+                                    <button className='style-button-loginpage'>Criar Conta</button>
+                                    <p className='style-criarconta-a'>Ainda não tem uma conta ?
+                                        <a onClick={handlenavigateLogin} className='style-link-a' > Faça Login</a>
+                                    </p>
+                                </div>
 
 
-                        </form>
-                        <div className='container-nothaveaccount'>
-                            <p className='style-criarconta'>Ainda não tem uma conta ?
-                                <a onClick={handlenavigatecreateaccount} className='style-link-a' >Criar Conta</a>
-                            </p>
+
+                            </form>
+
+                            <form className='container-formulario-restaurants' action="">
+                                <span className='style_spans'>Email</span>
+                                <input className='style-inputs-loginpage' placeholder='Seu email aqui*' type="email" />
+                                <span>Confirmar Senha</span>
+                                <input className='style-inputs-loginpage' placeholder='Sua senha aqui*' type="password" />
+                                <span>Pais</span>
+                                <input className='style-inputs-loginpage' type="email" />
+                                <span>Foto Perfil</span>
+                                <input className='style-input-loginpage-file' placeholder='Escolher Imagem*' type="file" />
+                            </form>
+
                         </div>
                     </div>
                 </div>
@@ -225,5 +202,7 @@ export default function Login() {
                 </div>
             </div>
         </div>
+
+
     )
 }
