@@ -85,17 +85,16 @@ export default function Home() {
                                 <button className='buttonsearch_text'>PROCURAR</button>
                             </div>
                             <div className='container_options'>
-                                <img src={optionsimg} alt="" />
+                                <img className='style_img-inforestaurant' src={optionsimg} alt="" />
                             </div>
-                        </div> 
+                        </div>
                     </div>
 
                 </div>
             </div>
             <div className='container_cadast-restaurants'>
                 <div className='container_cadastro-elements'>
-                    <ul>
-                        <lo></lo>
+                    <ul className='container_infbalanço'>
                         <lo className='cadast_itens_style' >49  Restaurantes</lo>
                         <lo className='cadast_itens_style'>20 Pessoas servidas</lo>
                         <lo className='cadast_itens_style'>100  Usuários registrados</lo>
@@ -115,7 +114,7 @@ export default function Home() {
                         <div className='container_tittleimgs'>
                             <h3>Escolha um prato saboroso</h3>
                         </div>
-                        <div style={{ width: '250px' }}>
+                        <div className='style_text-comotrabalhamos' style={{ width: '250px' }}>
                             <p>Purus enim. Cras massa massa, maximus sit amet finibus quis, pharetra eu erat.</p>
                         </div>
 
@@ -126,7 +125,7 @@ export default function Home() {
                         <div className='container_tittleimgs'>
                             <h3>Escolha um restaurante</h3>
                         </div>
-                        <div style={{ width: '250px' }}>
+                        <div className='style_text-comotrabalhamos' style={{ width: '250px' }}>
                             <p>Purus enim. Cras massa massa, maximus sit amet finibus quis, pharetra eu erat.</p>
                         </div>
 
@@ -137,7 +136,7 @@ export default function Home() {
                         <div className='container_tittleimgs'>
                             <h3 className='style_writehowdo'>Entrega ou Delivery</h3>
                         </div>
-                        <div style={{ width: '250px' }}>
+                        <div className='style_text-comotrabalhamos' style={{ width: '250px' }}>
                             <p>Purus enim. Cras massa massa, maximus sit amet finibus quis, pharetra eu erat.</p>
                         </div>
 
@@ -145,7 +144,7 @@ export default function Home() {
                 </ul>
                 <div className='container_imgpicanha' style={{ backgroundImage: `url(${imgpicanha_tophowitworks})` }}>
                     <div className='container_gridpicanha'>
-                        <h2 style={{ color: 'white', fontSize: '40px' }}>BASTA ENCOMENDAR E NÓS ENTREGAREMOS</h2>
+                        <h2 className='h2-bastaencomendar-enósentregamos' style={{ color: 'white', fontSize: '40px' }}>BASTA ENCOMENDAR E NÓS ENTREGAREMOS</h2>
                         <p className='teste2223' style={{ color: 'white' }}>Pellentesque eget justo eget nibh luctus semper at ut tellus.</p>
                         <div className='teste2223'>
                             <button onClick={handlenavigaterestaurant} className='style_button-ordenaragora'>ORDENAR AGORA</button>
@@ -155,7 +154,7 @@ export default function Home() {
                 </div>
                 <div className='container_destaques'>
                     <div className='container_tittle-restaurantesemdestaque'>
-                        <h2 style={{ fontSize: '30px' }}>RESTAURANTES EM DESTAQUE</h2>
+                        <h2 className='h2-restaurantesemdestaque' style={{ fontSize: '30px' }}>RESTAURANTES EM DESTAQUE</h2>
                         <p className='style-paragrafo-destaque'>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                     <div className='container_pai_restaurantedestaques'>
@@ -389,7 +388,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className='container-copyright'>
-                        <p style={{color:'white'}}>© 2024 Quick Food.Developed by Kauã Lopes</p>
+                        <p style={{ color: 'white' }}>© 2024 Quick Food.Developed by Kauã Lopes</p>
                     </div>
                 </div>
             </div>

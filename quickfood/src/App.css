@@ -45,6 +45,15 @@
 }
 
 
+@media screen and (max-width:1727px) {
+
+
+  .h1titlehome-style {
+    font-size: 30px;
+  }
+
+}
+
 @media screen and (max-width:1726px) {
   .h1titlehome-style {
     font-size: 25px;
@@ -71,73 +80,308 @@
   font-size: 35px;
 }
 
-@media screen and (max-width:1727px) {
+
+@media screen and (max-width:1661px) {
 
 
   .h1titlehome-style {
-    font-size: 30px;
-  }
-
-}
-
-@media screen and (max-width:1570px) {
-
-
-  .h1titlehome-style {
-    font-size: 25px;
-  }
-
-}
-
-
-@media screen and (max-width:1481px) {
-
-
-  .h1titlehome-style {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .container_h1tittle {
     width: 70%;
     height: 180px;
     margin-left: 280px;
-    margin-top: 180px;
+    margin-top: 150px;
     border: 1px solid rgb(255, 255, 255);
-  
-  
+  }
+
+
+  .container_infbalanço {
+    margin-left: 10px;
+    border: 1px solid rgb(255, 255, 255);
+
   }
 
   .cadast_itens_style {
-    margin-left: 120px;
+    margin-right: 70px !important;
+  }
+
+  .container_searchbar {
+    margin-left: 200px !important;
+  }
+
+  .h1titlehome-style {
+    margin-top: 70px !important;
+    margin-left: 30px !important;
+  }
+
+  .container_options {
+    margin-left: 100px !important;
+  }
+
+  .container_blockhowitworks {
+    padding-left: 2% !important;
+  }
+
+
+
+
+}
+
+@media screen and (max-width:1367px) {
+
+
+  .h1titlehome-style {
+    font-size: 20px;
+  }
+
+
+  .container_h1tittle {
+    margin-left: 180px !important;
+  }
+
+  .container_infbalanço {
+    margin-left: 5px !important;
+  }
+
+  .cadast_itens_style {
+    margin: 90px !important;
+  }
+
+  .container_searchbar {
+    margin-left: 90px !important;
+  }
+
+  .container_options {
+    margin-left: 90px !important;
+  }
+
+  .container_blockhowitworks {
+    padding-left: 1% !important;
   }
 
 }
 
-@media screen and (max-width:1411px) and (max-height:1150px) {
+@media screen and (max-width: 1197px) {
+
   .h1titlehome-style {
     font-size: 20px;
 
   }
 
+  .container_home_text {
+    width: 100%;
+  }
+
+
   .container_h1tittle {
-    width: 70%;
-    height: 180px;
-    margin-left: 280px;
-    margin-top: 180px;
-    border: 1px solid rgb(255, 255, 255);
-  
+    margin-left: 150px !important;
+    width: 95% !important;
+  }
+
+  .container_infbalanço {
+    margin-left: 0px !important;
+  }
+
+  .cadast_itens_style {
+    margin: 60px !important;
+  }
+
+  .container_searchbar {
+    margin-left: 50px !important;
+  }
+
+  .container_options {
+    margin-left: 90px !important;
+  }
+
+  .container_blockhowitworks {
+    padding-left: 1% !important;
   }
 }
 
-@media screen and (max-width:1362px) {
+@media screen and (max-width:991px) {
+
+  .h1titlehome-style {
+    font-size: 20px;
+
+  }
+
+  .container_home_text {
+    width: 100%;
+  }
+
+
+  .container_h1tittle {
+    margin-left: 150px !important;
+    width: 95% !important;
+  }
+
+  .container_infbalanço {
+    margin-left: 0px !important;
+  }
+
+  .cadast_itens_style {
+    margin: 60px !important;
+    font-size: small !important;
+  }
+
   .container_searchbar {
-    border: 1px solid red;
-    width: 75%;
-    height: 60px;
-    margin-left: 180px;
-    display: flex;
+    margin-left: 10px !important;
+  }
+
+  .container_options {
+    margin-left: 150px !important;
+
+  }
+
+  .container_blockhowitworks {
+    padding-left: 1% !important;
+
+  }
+
+  .style_img-inforestaurant {
+    width: 50%;
+  }
+
+  .span_circlue {
+    width: 10px !important;
+    height: 10px !important;
+
+  }
+
+  .container_tittleimgs {
+    font-size: small !important;
+  }
+
+  .buttonsearch_text {
+    width: 12% !important;
+  }
+
+  .container_logo {
+    margin-left: 90px !important;
+  }
+
+  .style_text-comotrabalhamos {
+    width: 180px !important;
+    font-size: 15px;
+  }
+
+  .tst {
+    width: 16% !important;
+  }
+
+  .h2-bastaencomendar-enósentregamos {
+    font-size: 25px !important;
+  }
+
+  .h2-restaurantesemdestaque {
+    font-size: 25px !important;
+  }
+
+
+  .style-paragrafo-destaque {
+    margin-left: 2px !important;
+  }
+
+  .container_pai_restaurantedestaques {
+    width: 100% !important;
+  }
+
+  .container_restaurants-destaques {
+    width: 350px !important;
+    height: 350px !important;
+    margin-left: 50px !important;
+  }
+
+  .container_restaurants-destaques2 {
+    width: 350px !important;
+    height: 350px !important;
+    margin-right: 100px !important;
+  }
+
+  .style_imgs-destaques {
+    width: 80px;
+    height: 80px;
+  }
+
+  .style-h4-destaq {
+    margin-left: 20px !important;
+  }
+
+  .style_smalltext {
+    width: 200px !important;
   }
 }
+
+
+/* @media screen and (max-width:1411px) {
+  .h1titlehome-style {
+    font-size: 20px;
+
+  }
+
+  .container_infbalanço {
+    margin-left: 10px;
+    border: 1px solid rgb(255, 255, 255);
+
+  }
+
+  .cadast_itens_style {
+  margin-right: 100px !important;
+  }
+
+  .container_searchbar {
+    margin-left: 130px !important;
+  }
+
+  .h1titlehome-style {
+    margin-top: 70px !important;
+    margin-left: 30px !important;
+  }
+
+  .container_options {
+    margin-left: 150px !important;
+  }
+
+  .container_blockhowitworks {
+    padding-left: 1% !important;
+  }
+
+ 
+} */
+
+
+/* @media screen and (max-width:1361px) {
+  .container_infbalanço {
+    margin-left: 10px;
+    border: 1px solid rgb(255, 255, 255);
+
+  }
+
+  .cadast_itens_style {
+  margin-right: 100px !important;
+  }
+
+  .container_searchbar {
+    margin-left: 130px !important;
+  }
+
+  .h1titlehome-style {
+    margin-top: 70px !important;
+    margin-left: 30px !important;
+  }
+
+  .container_options {
+    margin-left: 150px !important;
+  }
+
+  .container_blockhowitworks {
+    padding-left: 1% !important;
+  }
+} */
+
 
 .container_logo {
   width: 190px;
@@ -204,7 +448,7 @@
   height: 180px;
   margin-left: 280px;
   margin-top: 180px;
-  border: 1px solid rgb(255, 255, 255);
+  /* border: 1px solid rgb(255, 255, 255); */
 
 
 }
@@ -284,7 +528,7 @@ strong {
   color: white;
   font-size: larger;
   Font-weight: bold;
-  margin: 130px;
+  margin: 180px;
 }
 
 .container_howitworks {
@@ -674,6 +918,11 @@ strong {
 
 .container_son-login {
   height: 400px;
+}
+
+.container_home_text {
+  /* border: 1px solid red; */
+  display: grid;
 }
 
 
