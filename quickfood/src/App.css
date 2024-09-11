@@ -71,6 +71,74 @@
   font-size: 35px;
 }
 
+@media screen and (max-width:1727px) {
+
+
+  .h1titlehome-style {
+    font-size: 30px;
+  }
+
+}
+
+@media screen and (max-width:1570px) {
+
+
+  .h1titlehome-style {
+    font-size: 25px;
+  }
+
+}
+
+
+@media screen and (max-width:1481px) {
+
+
+  .h1titlehome-style {
+    font-size: 25px;
+  }
+
+  .container_h1tittle {
+    width: 70%;
+    height: 180px;
+    margin-left: 280px;
+    margin-top: 180px;
+    border: 1px solid rgb(255, 255, 255);
+  
+  
+  }
+
+  .cadast_itens_style {
+    margin-left: 120px;
+  }
+
+}
+
+@media screen and (max-width:1411px) and (max-height:1150px) {
+  .h1titlehome-style {
+    font-size: 20px;
+
+  }
+
+  .container_h1tittle {
+    width: 70%;
+    height: 180px;
+    margin-left: 280px;
+    margin-top: 180px;
+    border: 1px solid rgb(255, 255, 255);
+  
+  }
+}
+
+@media screen and (max-width:1362px) {
+  .container_searchbar {
+    border: 1px solid red;
+    width: 75%;
+    height: 60px;
+    margin-left: 180px;
+    display: flex;
+  }
+}
+
 .container_logo {
   width: 190px;
   height: 30px;
@@ -157,7 +225,7 @@ strong {
 }
 
 .container_searchbar {
-  /* border: 1px solid red; */
+  border: 1px solid red;
   width: 75%;
   height: 60px;
   margin-left: 230px;
@@ -216,7 +284,7 @@ strong {
   color: white;
   font-size: larger;
   Font-weight: bold;
-  margin: 150px;
+  margin: 130px;
 }
 
 .container_howitworks {
@@ -1036,4 +1104,3 @@ a:hover {
 lo:hover {
   color: rgb(255, 123, 0);
 }
-
