@@ -44,6 +44,13 @@
 
 }
 
+
+@media screen and (max-width:1726px) {
+  .h1titlehome-style {
+    font-size: 25px;
+  }
+}
+
 .container_son {
   height: 720px;
 }
@@ -58,6 +65,10 @@
   width: 100px;
   height: 150px;
 
+}
+
+.h1titlehome-style {
+  font-size: 35px;
 }
 
 .container_logo {
