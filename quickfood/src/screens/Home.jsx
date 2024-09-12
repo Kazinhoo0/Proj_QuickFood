@@ -79,7 +79,7 @@ export default function Home() {
                                 <strong className='strongclass_txt'> AGORA DE UMA FORMA MAIS FACIL E RÁPIDA</strong>
                             </h1>
                         </div>
-                        <div className='container_pai_search'>
+                        
                             <div className='container_searchbar'>
                                 <input placeholder='NOME RESTAURANTE' className='inputtext_style' type="text" />
                                 <button className='buttonsearch_text'>PROCURAR</button>
@@ -87,7 +87,7 @@ export default function Home() {
                             <div className='container_options'>
                                 <img className='style_img-inforestaurant' src={optionsimg} alt="" />
                             </div>
-                        </div>
+                        
                     </div>
 
                 </div>
