@@ -112,7 +112,7 @@ export default function Home() {
 
                         <div className='span_circlue'><img className='style_imgs-howworks' src={caminhaoimg} alt="" /></div>
                         <div className='container_tittleimgs'>
-                            <h3>Escolha um prato saboroso</h3>
+                            <h3 className='style_h3-escolhaumsabor' >Escolha um prato saboroso</h3>
                         </div>
                         <div className='style_text-comotrabalhamos' style={{ width: '250px' }}>
                             <p>Purus enim. Cras massa massa, maximus sit amet finibus quis, pharetra eu erat.</p>
@@ -123,10 +123,10 @@ export default function Home() {
 
                         <div className='span_circlue'><img src={lojaimg} alt="" /></div>
                         <div className='container_tittleimgs'>
-                            <h3>Escolha um restaurante</h3>
+                            <h3 className='style_h3-escolhaumsabor' >Escolha um restaurante</h3>
                         </div>
                         <div className='style_text-comotrabalhamos' style={{ width: '250px' }}>
-                            <p>Purus enim. Cras massa massa, maximus sit amet finibus quis, pharetra eu erat.</p>
+                            <p className='style_p-comotrabalhamos'>Purus enim. Cras massa massa, maximus sit amet finibus quis, pharetra eu erat.</p>
                         </div>
 
                     </div>
@@ -134,7 +134,7 @@ export default function Home() {
 
                         <div className='span_circlue'><img src={sinoimg} alt="" /></div>
                         <div className='container_tittleimgs'>
-                            <h3 className='style_writehowdo'>Entrega ou Delivery</h3>
+                            <h3 className='style_h3-escolhaumsabor'>Entrega ou Delivery</h3>
                         </div>
                         <div className='style_text-comotrabalhamos' style={{ width: '250px' }}>
                             <p>Purus enim. Cras massa massa, maximus sit amet finibus quis, pharetra eu erat.</p>

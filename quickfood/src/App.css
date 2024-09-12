@@ -597,6 +597,182 @@
 }
 
 
+/* Móveis pequenos */
+@media (max-width: 320px) {
+  .h1titlehome-style {
+    font-size: 10px;
+    margin-top: 110px !important ;
+    margin-left: 0px !important;
+   
+  }
+
+  .inputtext_style {
+    margin-left: 205px !important;
+  }
+
+  .container_home_text {
+    width: 100%;
+  }
+
+  .container_h1tittle {
+    margin-left: 40px !important;
+    width: 95% !important;
+  }
+
+  .container_infbalanço {
+    margin-left: 0px !important;
+  }
+
+  .cadast_itens_style {
+    margin: 60px !important;
+    font-size: small !important;
+  }
+
+  .container_searchbar {
+    width: 100% !important;
+    height: 60px !important;
+    display: grid !important;
+  
+  }
+
+
+  .container_infbalanço {
+    display: grid;
+    padding-top: 280px !important;
+    height: 300px;
+  }
+
+  .container_cadastro-elements {
+    height: 200px;
+  }
+
+  .container_cadast-restaurants {
+    height: 10% !important;
+  }
+
+  .container_options {
+    margin-left: 1px !important;
+
+  }
+
+  .container_blockhowitworks {
+    padding-left: 1% !important;
+    display: grid !important;
+    height: 1480px !important;
+    margin-top: 200px !important;
+    margin-bottom: 1px !important;
+  }
+
+  .style_img-inforestaurant {
+    width: 50%;
+  }
+
+  .span_circlue {
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: 30px !important;
+
+  }
+
+
+  .style_p-comotrabalhamos {
+    margin-left: 5px !important;
+  }
+
+  .container_tittleimgs {
+    font-size: small !important;
+    margin-right: 5px !important;
+  }
+
+  .style_h3-escolhaumsabor {
+    margin-right: 55px !important;
+  }
+
+  .buttonsearch_text {
+    width: 12% !important;
+  }
+
+  .imglogo_width {
+    width: 180px !important;
+    height: 22px !important;
+  }
+
+  .container_logo {
+    margin-left: 30px !important;
+  }
+
+  .style_text-comotrabalhamos {
+    width: 180px !important;
+    font-size: 15px;
+  }
+
+  .tst {
+    width: 16% !important;
+  }
+
+  .h2-bastaencomendar-enósentregamos {
+    font-size: 25px !important;
+  }
+
+  .h2-restaurantesemdestaque {
+    font-size: 25px !important;
+  }
+
+
+  .style-paragrafo-destaque {
+    margin-left: 2px !important;
+  }
+
+  .container_pai_restaurantedestaques {
+    width: 100% !important;
+  }
+
+  .container_restaurants-destaques {
+    width: 350px !important;
+    height: 350px !important;
+    margin-left: 50px !important;
+  }
+
+  .container_restaurants-destaques2 {
+    width: 350px !important;
+    height: 350px !important;
+    margin-right: 100px !important;
+  }
+
+  .style_imgs-destaques {
+    width: 80px;
+    height: 80px;
+  }
+
+  .style-h4-destaq {
+    margin-left: 20px !important;
+  }
+
+  .style_smalltext {
+    width: 200px !important;
+  }
+
+  .teste {
+    height: 100px !important;
+  }
+
+  .teste2 {
+    font-size:medium;
+  }
+
+
+}
+
+
+/* Móveis médios */
+@media (max-width: 375px) {
+  /* Estilos para telas médias */
+}
+
+
+
+
+
 .container_logo {
   width: 190px;
   height: 30px;
