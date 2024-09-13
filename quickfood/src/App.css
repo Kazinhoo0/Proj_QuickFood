@@ -44,7 +44,7 @@
 
 }
 
-
+/* 
 @media screen and (max-width:1727px) {
 
 
@@ -52,13 +52,13 @@
     font-size: 30px;
   }
 
-}
+} */
 
-@media screen and (max-width:1726px) {
+/* @media screen and (max-width:1726px) {
   .h1titlehome-style {
-    font-size: 25px;
-  }
-}
+    /* font-size: 25px; */
+
+
 
 .container_son {
   height: 720px;
@@ -79,6 +79,8 @@
 .h1titlehome-style {
   font-size: 35px;
 }
+
+
 
 
 @media screen and (max-width:1661px) {
@@ -464,7 +466,7 @@
 
 @media screen and (max-width: 767px) {
   .h1titlehome-style {
-    font-size: 13px;
+    font-size: 12px !important;
     margin-top: 110px !important;
     margin-left: 0px !important;
 
@@ -479,7 +481,7 @@
   }
 
   .container_h1tittle {
-    margin-left: 40px !important;
+    margin-left: 20px !important;
     width: 95% !important;
   }
 
@@ -493,7 +495,7 @@
   }
 
   .container_searchbar {
-    width: 88% !important;
+    width: 100% !important;
     height: 60px !important;
     display: grid !important;
 
@@ -502,12 +504,13 @@
 
   .container_infbalanço {
     display: grid;
-    padding-top: 280px !important;
-    height: 300px;
+    padding-bottom: 350px !important;
+    height: 85px;
+    padding-right: 80px;
   }
 
   .container_cadastro-elements {
-    height: 200px;
+    height: 350px;
   }
 
   .container_cadast-restaurants {
@@ -515,13 +518,18 @@
   }
 
   .container_options {
-    margin-left: 1px !important;
+    margin-left: 10px !important;
+    margin-top: 50px !important;
 
   }
 
-  .container_blockhowitworks {
-    padding-left: 1% !important;
 
+  .container_blockhowitworks {
+    padding-left: 25% !important;
+    display: grid !important;
+    height: 1480px !important;
+    margin-top: 200px !important;
+    margin-bottom: 1px !important;
   }
 
   .style_img-inforestaurant {
@@ -529,21 +537,38 @@
   }
 
   .span_circlue {
-    width: 10px !important;
-    height: 10px !important;
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: 30px !important;
 
+  }
+
+
+  .style_p-comotrabalhamos {
+    margin-left: 5px !important;
   }
 
   .container_tittleimgs {
     font-size: small !important;
+    margin-right: 5px !important;
+  }
+
+  .style_h3-escolhaumsabor {
+    margin-right: 55px !important;
   }
 
   .buttonsearch_text {
-    width: 12% !important;
+    width: 31.5% !important;
+    margin-left: 205px !important;
+  }
+
+  .imglogo_width {
+    width: 180px !important;
+    height: 22px !important;
   }
 
   .container_logo {
-    margin-left: 90px !important;
+    margin-left: 30px !important;
   }
 
   .style_text-comotrabalhamos {
@@ -563,6 +588,269 @@
     font-size: 25px !important;
   }
 
+  .style-paragrafo-destaque {
+    margin-left: 2px !important;
+  }
+
+  .container_pai_restaurantedestaques {
+    width: 100% !important;
+    display: grid !important;
+  }
+
+
+  .container_destaques {
+    height: 1500px !important;
+  }
+
+  .container_restaurants-destaques {
+    width: 320px !important;
+    height: 350px !important;
+    margin-left: 1px !important;
+    padding-top: 350px;
+
+  }
+
+  .container-in-destaque {
+    margin-left: 45px !important;
+  }
+
+  .style-heartfavorit {
+    margin-left: 1px !important;
+  }
+
+  .container_cabecalho-informacoes {
+    height: 1500px !important;
+  }
+
+  .style-img-redesociais {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  .container_infor-text {
+    display: grid !important;
+    margin-left: 25px !important;
+    padding-bottom: 1250px !important;
+  }
+
+  .container_restaurants-destaques2 {
+    width: 300px !important;
+    height: 350px !important;
+    margin-right: 250px !important;
+    padding-top: 260px;
+  }
+
+
+  .container_tittle-restaurantesemdestaque {
+    margin-left: 140px !important;
+    justify-content: start !important;
+
+  }
+
+  .container_gridpicanha {
+    margin: 100px !important;
+    justify-content: start !important;
+    margin-left: 50px !important;
+  }
+
+  .style_imgs-destaques {
+    width: 80px;
+    height: 80px;
+  }
+
+  .style-h4-destaq {
+    margin-left: 25px !important;
+  }
+
+  .style_smalltext {
+    width: 200px !important;
+    margin-left: 25px !important;
+  }
+
+  .teste {
+    height: 100px !important;
+    font-size: 24px !important;
+    justify-content: start !important;
+    margin-left: 230px;
+  }
+
+  .teste2 {
+    font-size: 13px !important;
+    justify-content: start !important;
+    margin-left: 240px;
+
+  }
+
+
+  .navbar_itens_style {
+    font-size: 10px;
+  }
+
+  .navbar_itens_style_orange {
+    font-size: 12px;
+    margin-left: 8px;
+  }
+}
+
+.navbar_style {
+  display: flex;
+  justify-content: end;
+}
+
+.style_navbar {
+  display: flex;
+}
+
+@media (max-width:480px) {
+  .container-second-login-register {
+    width: 100% !important;
+  }
+
+  .style-h2-loginpage {
+    font-size: 20px !important;
+  }
+
+  .style-criarconta {
+    font-size: 13px;
+  }
+
+  .style_tittlelogin-senha {
+    font-size: 20px;
+    margin-right: 150px;
+  }
+
+  .container_navbar_buttons {
+    
+  }
+
+  .container_h1headerloginpage {
+    justify-content: center !important;
+    margin-top: 150px !important;
+  }
+}
+
+@media (width: 480px) {
+  .navbar_style {
+    display: grid !important;
+  }
+
+  .h1titlehome-style {
+    font-size: 12px !important;
+    margin-top: 110px !important;
+    margin-left: 0px !important;
+
+  }
+
+  .inputtext_style {
+    margin-left: 50px !important;
+    width: 50% !important;
+  }
+
+  .container_home_text {
+    width: 100%;
+  }
+
+  .container_h1tittle {
+    margin-left: 20px !important;
+    width: 95% !important;
+  }
+
+  .cadast_itens_style {
+    margin: 60px !important;
+    font-size: small !important;
+  }
+
+  .container_searchbar {
+    width: 100% !important;
+    height: 60px !important;
+    display: grid !important;
+
+  }
+
+
+  .container_infbalanço {
+    display: grid;
+    padding-top: 280px !important;
+    height: 300px;
+  }
+
+  .container_cadastro-elements {
+    height: 350px;
+  }
+
+  .container_cadast-restaurants {
+    height: 10% !important;
+  }
+
+  .container_options {
+    margin-left: 1px !important;
+    margin-top: 50px !important;
+
+  }
+
+  .container_blockhowitworks {
+    padding-left: 20% !important;
+    display: grid !important;
+    height: 1480px !important;
+    margin-top: 200px !important;
+    margin-bottom: 1px !important;
+  }
+
+  .style_img-inforestaurant {
+    width: 50%;
+  }
+
+  .span_circlue {
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: 30px !important;
+
+  }
+
+
+  .style_p-comotrabalhamos {
+    margin-left: 5px !important;
+  }
+
+  .container_tittleimgs {
+    font-size: small !important;
+    margin-right: 5px !important;
+  }
+
+  .style_h3-escolhaumsabor {
+    margin-right: 55px !important;
+  }
+
+  .buttonsearch_text {
+    width: 53% !important;
+    margin-left: 50px !important;
+  }
+
+  .imglogo_width {
+    width: 180px !important;
+    height: 22px !important;
+  }
+
+  .container_logo {
+    margin-left: 30px !important;
+  }
+
+  .style_text-comotrabalhamos {
+    width: 180px !important;
+    font-size: 15px;
+  }
+
+  .tst {
+    width: 16% !important;
+  }
+
+  .h2-bastaencomendar-enósentregamos {
+    font-size: 25px !important;
+  }
+
+  .h2-restaurantesemdestaque {
+    font-size: 25px !important;
+  }
 
   .style-paragrafo-destaque {
     margin-left: 2px !important;
@@ -570,16 +858,52 @@
 
   .container_pai_restaurantedestaques {
     width: 100% !important;
-  }
-
-  .container_restaurants-destaques {
-    width: 350px !important;
-    height: 350px !important;
-    margin-left: 50px !important;
+    display: grid !important;
   }
 
   .container_restaurants-destaques2 {
-    width: 350px !important;
+    width: 100% !important;
+    padding-top: 260px;
+
+  }
+
+  .container_destaques {
+    height: 1500px !important;
+  }
+
+  .container_restaurants-destaques {
+    width: 320px !important;
+    height: 350px !important;
+    margin-left: 1px !important;
+    padding-top: 350px;
+
+  }
+
+  .container-in-destaque {
+    margin-left: 45px !important;
+  }
+
+  .style-heartfavorit {
+    margin-left: 1px !important;
+  }
+
+  .container_cabecalho-informacoes {
+    height: 1500px !important;
+  }
+
+  .style-img-redesociais {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  .container_infor-text {
+    display: grid !important;
+    margin-left: 5px !important;
+    padding-bottom: 1250px !important;
+  }
+
+  .container_restaurants-destaques2 {
+    width: 300px !important;
     height: 350px !important;
     margin-right: 100px !important;
   }
@@ -590,19 +914,53 @@
   }
 
   .style-h4-destaq {
-    margin-left: 20px !important;
+    margin-left: 25px !important;
   }
 
   .style_smalltext {
     width: 200px !important;
+    margin-left: 25px !important;
   }
-}
 
+  .teste {
+    height: 100px !important;
+    font-size: 24px !important;
+    justify-content: start !important;
+    margin-left: 105px !important;
+
+  }
+
+  .teste2 {
+    font-size: 13px !important;
+    justify-content: start !important;
+    margin-left: 120px !important;
+  }
+
+
+  .navbar_itens_style {
+    font-size: 10px;
+  }
+
+  .navbar_itens_style_orange {
+    font-size: 12px;
+    width: 40%;
+    margin-left: 200px;
+  }
+
+  .navbar_style {
+    display: grid;
+  }
+
+  .style_navbar {
+    display: grid;
+  }
+
+}
 
 /* Móveis pequenos */
 @media (max-width: 320px) {
   .h1titlehome-style {
-    font-size: 15px;
+    font-size: 12px !important;
     margin-top: 110px !important;
     margin-left: 0px !important;
 
@@ -617,7 +975,7 @@
   }
 
   .container_h1tittle {
-    margin-left: 10px !important;
+    margin-left: 20px !important;
     width: 95% !important;
   }
 
@@ -793,10 +1151,11 @@
 
   .teste {
     height: 100px !important;
+    font-size: 24px !important;
   }
 
   .teste2 {
-    font-size: medium;
+    font-size: 13px !important;
   }
 
 
@@ -827,6 +1186,7 @@
     font-size: 15px;
     margin-top: 110px !important;
     margin-left: 0px !important;
+    width: 75%;
 
   }
 
@@ -841,13 +1201,22 @@
   }
 
   .container_h1tittle {
-    margin-left: 10px !important;
+    margin-left: 45px !important;
+    margin-bottom: 25px !important;
     width: 95% !important;
   }
 
   .container_infbalanço {
-    margin-left: 0px !important;
+    display: grid;
+    padding-bottom: 420px !important;
+    height: 85px;
+    padding-right: 80px;
   }
+
+  .container_cadastro-elements {
+    height: 370px;
+  }
+
 
   .cadast_itens_style {
     margin: 60px !important;
@@ -866,10 +1235,6 @@
     display: grid;
     padding-top: 280px !important;
     height: 300px;
-  }
-
-  .container_cadastro-elements {
-    height: 200px;
   }
 
   .container_cadast-restaurants {
@@ -1022,10 +1387,15 @@
 
   .teste {
     height: 100px !important;
+    font-size: 25px !important;
+    justify-content: start !important;
+    margin-left: 50px;
   }
 
   .teste2 {
-    font-size: medium;
+    font-size: small;
+    justify-content: start !important;
+    margin-left: 50px;
   }
 
 
