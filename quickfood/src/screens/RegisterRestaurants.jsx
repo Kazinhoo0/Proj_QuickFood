@@ -60,8 +60,7 @@ export default function RegisterRestaurant() {
                     </nav>
                     <div className='container-login_text'>
                         <div className='container_h1headerloginpage'>
-                            <h1><strong>CADASTRAR USUARIO E RESTAURANTE</strong>
-                            </h1>
+                            <h1 className='style_h1page-register-restaurants'>CADASTRAR USUÁRIOS E RESTAURANTES</h1>
                         </div>
                     </div>
 

@@ -104,8 +104,7 @@ export default function Login() {
                     </nav>
                     <div className='container-login_text'>
                         <div className='container_h1headerloginpage'>
-                            <h1 className='style_tittlelogin-senha'><strong>LOGIN USUÁRIO/REGISTRAR</strong>
-                            </h1>
+                            <h1 className='style_tittlelogin-senha'>LOGIN USUÁRIO/REGISTRAR</h1>
                         </div>
                     </div>
 
