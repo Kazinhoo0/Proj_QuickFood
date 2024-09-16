@@ -220,6 +220,25 @@
   .style_tittlelogin-senha {
     margin-right: 50px;
   }
+
+
+  .style_h1page-register-restaurants {
+    color: white;
+    font-size: 30px;
+
+  }
+
+  .container_input-restaurants-register {
+    width: 250% !important;
+  }
+
+  .style-inputs-loginpage {
+    width: 95% !important;
+  }
+  
+  .style-input-loginpage-file {
+    width: 98%;
+  }
 }
 
 @media screen and (max-width:991px) {

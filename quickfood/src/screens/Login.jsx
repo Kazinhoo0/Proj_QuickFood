@@ -44,13 +44,13 @@ export default function Login() {
     }
 
 
-    const handleloginemuletor = () => {
-        if (email === 'lopeskazin@gmail.com' && senha === '123456') {
-            console.log('Executado com sucesso')
-            navigate('/gerenciarpratos')
-        }
+    // const handleloginuser = () => {
+    //     if (email === 'lopeskazin@gmail.com' && senha === '123456') {
+    //         console.log('Executado com sucesso')
+    //         navigate('/gerenciarpratos')
+    //     }
 
-    }
+    // }
 
 
     const handleenteraccount = async (event) => {
@@ -76,8 +76,6 @@ export default function Login() {
         }
     
     };
-
-
 
 
 

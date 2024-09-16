@@ -7,6 +7,7 @@ import imgmenufacebook from '../assets_imgs/facebook.png'
 import imgmenutwitter from '../assets_imgs/twitter.png'
 import imgtelefone from '../assets_imgs/phone.png'
 import { useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react';
 
 
 
@@ -34,6 +35,38 @@ export default function CreateAccount() {
     const handlenavigaterestaurant = () => {
         navigate('/Registrarrestaurantes')
         console.log("executado com sucesso")
+    }
+
+
+    const [nomecompleto, setNomecompleto] = useState("")
+    const [email, setemail] = useState("")
+    const [senha, setsenha] = useState("")
+    const [pais, setpais] = useState("")
+    const [cidade, setcidade] = useState("")
+
+
+    async function HandlecadastrarUsuario (nomecompleto, email , senha , cidade , pais) {
+        
+        const response = await fetch('http://localhost:3000/Criarconta', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ nomecompleto, email , senha , cidade , pais })
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log('Usuário cadastrado com ID:', data.id);
+
+        } else {
+            console.error('Erro ao cadastrar usuário');
+        }
+
+        setTimeout(() => {
+             navigate('/gerenciarpratos')
+            
+        }, 5000);
     }
 
 
@@ -72,15 +105,33 @@ export default function CreateAccount() {
                     <div className='container_input-restaurants-register'>
                         <h2 className='style-h2-loginpage' >CRIAR NOVA CONTA</h2>
                         <div className='container-input-registerrestaurants'>
-                            <form className='container-formulario-restaurants' action="">
+                            <form onSubmit={HandlecadastrarUsuario } className='container-formulario-restaurants' action="">
                                 <span>Nome Completo</span>
-                                <input className='style-inputs-loginpage' placeholder='Nome completo*' type="email" />
+                                <input  
+                                className='style-inputs-loginpage'
+                                 placeholder='Nome completo*'
+                                  type="text"
+                                  onChange={(e) => setNomecompleto(e.target.value)}
+                                  value={nomecompleto} />
                                 <span>Senha</span>
-                                <input className='style-inputs-loginpage' placeholder='Sua senha aqui*' type="password" />
+                                <input 
+                                className='style-inputs-loginpage'
+                                 placeholder='Sua senha aqui*'
+                                  type="password"
+                                  onChange={(e) => setsenha(e.target.value)}
+                                  value={senha} />
                                 <span>Cidade</span>
-                                <input className='style-inputs-loginpage' type="email" />
+                                <input
+                                 className='style-inputs-loginpage'
+                                  type="text"
+                                  onChange={(e) => setcidade(e.target.value)} />
                                 <span>Genero</span>
-                                <select className='style-inputs-loginpage' name="" id="">
+                                <select
+                                 className='style-inputs-loginpage'
+                                  name=""
+                                   id=""
+                                   onChange={(e) => setcidade(e.target.value)}
+                                   value={cidade}>
                                     <option value=""></option>
                                     <option value="feminino">Feminino</option>
                                     <option value="masculino">Masculino</option>
@@ -89,6 +140,7 @@ export default function CreateAccount() {
                                     <input type="checkbox" />
                                     <small>Concordo com os termos e condições</small>
                                 </div>
+
                                 <div className='container_buttoncriarconta'>
 
                                     <button className='style-button-loginpage'>Criar Conta</button>
@@ -103,11 +155,11 @@ export default function CreateAccount() {
 
                             <form className='container-formulario-restaurants' action="">
                                 <span className='style_spans'>Email</span>
-                                <input className='style-inputs-loginpage' placeholder='Seu email aqui*' type="email" />
+                                <input value={email} onChange={(e) => setemail(e.target.value)} className='style-inputs-loginpage' placeholder='Seu email aqui*' type="email" />
                                 <span>Confirmar Senha</span>
                                 <input className='style-inputs-loginpage' placeholder='Sua senha aqui*' type="password" />
                                 <span>Pais</span>
-                                <input className='style-inputs-loginpage' type="email" />
+                                <input value={pais} onChange={(e) => setpais(e.target.value)} className='style-inputs-loginpage' type="text" />
                                 <span>Foto Perfil</span>
                                 <input className='style-input-loginpage-file' placeholder='Escolher Imagem*' type="file" />
                             </form>
