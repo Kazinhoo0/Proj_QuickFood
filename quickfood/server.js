@@ -9,7 +9,7 @@ const cors = require('cors')
 
 
 app.use(cors({
-  origin:'http://localhost:3000',
+  origin: 'http://localhost:3000',
   methods: ['POST', 'GET', 'DELETE', 'PUT'],
   credentials: true,
 
@@ -25,14 +25,17 @@ const db = new sqlite3.Database('./database.db', (err) => {
 });
 
 db.run(`
+    
      CREATE TABLE IF NOT EXISTS usuários (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      nomecompleto TEXT NOT NULL,
-      email TEXT NOT NULL,
-      senha TEXT NOT NULL,
-      cidade TEXT NOT NULL,
-      pais TEXT NOT NULL
-    );
+      id integer primary key autoincrement,
+      nomecompleto text,
+      email text unique,
+      senha text,
+      pais text ,
+      cidade text
+
+     )
+    
 `);
 
 
@@ -52,11 +55,11 @@ app.post('/Login', (req, res) => {
   const { email, senha } = req.body;
 
   console.log(
-    'Novo login realizado por ', 'usuario:', username
+    'Novo login realizado pelo ', 'usuario:', email
   )
 
 
-  const query = `SELECT ID FROM usuarios where email = ? AND senha = ?`;
+  const query = `SELECT ID FROM usuários where email = ? AND senha = ?`;
 
   db.get(query, [email, senha], function (err, row) {
     if (err) {
@@ -77,12 +80,12 @@ app.post('/Login', (req, res) => {
 
 
 
-app.post('/Criarconta', (req, res) => {
+app.post('http://localhost:3000/Criarconta', (req, res) => {
   const { nomecompleto, email, senha, pais, cidade } = req.body;
 
   // Verifique se todos os campos estão presentes
   if (!nomecompleto || !email || !senha || !pais || !cidade) {
-      return res.status(400).json({ error: 'Todos os campos são obrigatórios' });
+    return res.status(400).json({ error: 'Todos os campos são obrigatórios' });
   }
 
   // Log para verificar se os dados estão chegando corretamente
@@ -92,22 +95,21 @@ app.post('/Criarconta', (req, res) => {
   const query = `INSERT INTO usuários (nomecompleto, email, senha, pais, cidade) VALUES (?, ?, ?, ?, ?)`;
 
   db.run(query, [nomecompleto, email, senha, pais, cidade], function (err) {
-      if (err) {
-          console.error('Erro ao inserir no banco de dados:', err.message);
-          return res.status(500).json({ error: 'Erro no servidor' });
-      }
-      res.status(201).json({ id: this.lastID });
+    if (err) {
+      console.error('Erro ao inserir no banco de dados:', err.message);
+      return res.status(500).json({ error: 'Erro no servidor' });
+    }
+    res.status(201).json({ id: this.lastID });
   });
 });
 
 
-  // Rota para a página inicial
+
+
+// Rota para a página inicial
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
-
-
-
 
 
 

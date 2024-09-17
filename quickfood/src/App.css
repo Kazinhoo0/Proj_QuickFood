@@ -41,6 +41,7 @@
 .container_fluid-home {
   /* border: 1px solid red; */
   width: 100%;
+  /* background-repeat:no-repeat; */
 
 }
 
@@ -63,6 +64,7 @@
 .container_son {
   height: 720px;
 }
+
 
 .style_navbar {
   /* border: 1px solid purple; */
@@ -235,7 +237,7 @@
   .style-inputs-loginpage {
     width: 95% !important;
   }
-  
+
   .style-input-loginpage-file {
     width: 98%;
   }
@@ -377,26 +379,26 @@
     width: 40% !important;
   }
 
-    /* resgitrar restaurants page */
+  /* resgitrar restaurants page */
 
 
-    .style_h1page-register-restaurants {
-      color: white;
-      font-size: 30px;
-  
-    }
-  
-    .container_input-restaurants-register {
-      width: 250% !important;
-    }
-  
-    .style-inputs-loginpage {
-      width: 95% !important;
-    }
-    
-    .style-input-loginpage-file {
-      width: 98%;
-    }
+  .style_h1page-register-restaurants {
+    color: white;
+    font-size: 30px;
+
+  }
+
+  .container_input-restaurants-register {
+    width: 250% !important;
+  }
+
+  .style-inputs-loginpage {
+    width: 95% !important;
+  }
+
+  .style-input-loginpage-file {
+    width: 98%;
+  }
 }
 
 
@@ -545,26 +547,26 @@
   }
 
 
-    /* resgitrar restaurants page */
+  /* resgitrar restaurants page */
 
 
-    .style_h1page-register-restaurants {
-      color: white;
-      font-size: 30px;
-  
-    }
-  
-    .container_input-restaurants-register {
-      width: 250% !important;
-    }
-  
-    .style-inputs-loginpage {
-      width: 80% !important;
-    }
-    
-    .style-input-loginpage-file {
-      width: 90%;
-    }
+  .style_h1page-register-restaurants {
+    color: white;
+    font-size: 30px;
+
+  }
+
+  .container_input-restaurants-register {
+    width: 250% !important;
+  }
+
+  .style-inputs-loginpage {
+    width: 80% !important;
+  }
+
+  .style-input-loginpage-file {
+    width: 90%;
+  }
 
 }
 
@@ -797,10 +799,10 @@
     margin-left: 8px;
   }
 
-   /* restaurants pages */
+  /* restaurants pages */
 
 
-   .container-login_text {
+  .container-login_text {
     margin-left: 85px !important;
     width: 65% !important;
   }
@@ -815,7 +817,7 @@
   }
 
   .container-sortby-searchrestaurants {
-    width:100% !important;
+    width: 100% !important;
   }
 
   .container-sortby {
@@ -855,10 +857,10 @@
   }
 
 
-   /* resgitrar restaurants page */
+  /* resgitrar restaurants page */
 
 
-   .style_h1page-register-restaurants {
+  .style_h1page-register-restaurants {
     color: white;
     font-size: 30px;
 
@@ -871,21 +873,21 @@
   .style-inputs-loginpage {
     width: 80% !important;
   }
-  
+
   .style-input-loginpage-file {
     width: 90%;
   }
 
 }
 
-  .navbar_style {
-    display: flex;
-    justify-content: end;
-  }
+.navbar_style {
+  display: flex;
+  justify-content: end;
+}
 
-  .style_navbar {
-    display: flex;
-  }
+.style_navbar {
+  display: flex;
+}
 
 @media (max-width:531px) {
   .container-second-login-register {
@@ -928,7 +930,7 @@
     display: grid;
     text-align: start !important;
   }
-  
+
   .container_tittle-restaurantesemdestaque {
     margin-left: 110px !important;
     justify-content: start !important;
@@ -1148,58 +1150,58 @@
 
 
 
-    /* restaurants pages */
+  /* restaurants pages */
 
 
-    .container-login_text {
-      margin-left: 85px !important;
-      width: 65% !important;
-    }
-  
-    .container_h1headerpesquisar-restaurants-page {
-      margin-top: 200px !important;
-    }
-
-    .container-principal-restaurants-search {
-      display: grid !important;
-      height: 880px !important;
-    }
-
-    .container-sortby-searchrestaurants {
-      width:100% !important;
-    }
-
-    .container-sortby {
-      width: 250px !important;
-    }
-
-    /*  Login page */
-
-    .container_input-login-register{
-      width: 60% !important;
-    }
-
-    /* resgitrar restaurants page */
-
-
-    .style_h1page-register-restaurants {
-      color: white;
-      font-size: 30px;
-
-    }
-
-    .container_input-restaurants-register {
-      width: 85% !important;
-    }
-
-    .style-inputs-loginpage {
-      width: 80% !important;
-    }
-    
-    .style-input-loginpage-file {
-      width: 90%;
-    }
+  .container-login_text {
+    margin-left: 85px !important;
+    width: 65% !important;
   }
+
+  .container_h1headerpesquisar-restaurants-page {
+    margin-top: 200px !important;
+  }
+
+  .container-principal-restaurants-search {
+    display: grid !important;
+    height: 880px !important;
+  }
+
+  .container-sortby-searchrestaurants {
+    width: 100% !important;
+  }
+
+  .container-sortby {
+    width: 250px !important;
+  }
+
+  /*  Login page */
+
+  .container_input-login-register {
+    width: 60% !important;
+  }
+
+  /* resgitrar restaurants page */
+
+
+  .style_h1page-register-restaurants {
+    color: white;
+    font-size: 30px;
+
+  }
+
+  .container_input-restaurants-register {
+    width: 85% !important;
+  }
+
+  .style-inputs-loginpage {
+    width: 80% !important;
+  }
+
+  .style-input-loginpage-file {
+    width: 90%;
+  }
+}
 
 @media (width: 480px) {
 
@@ -1445,7 +1447,7 @@
   }
 
   .container-sortby-searchrestaurants {
-    width:100% !important;
+    width: 100% !important;
   }
 
   .container-sortby {
@@ -1473,10 +1475,10 @@
   }
 
 
-   /* resgitrar restaurants page */
+  /* resgitrar restaurants page */
 
 
-   .style_h1page-register-restaurants {
+  .style_h1page-register-restaurants {
     color: white;
     font-size: 30px;
 
@@ -1489,7 +1491,7 @@
   .style-inputs-loginpage {
     width: 80% !important;
   }
-  
+
   .style-input-loginpage-file {
     width: 90%;
   }
@@ -1717,10 +1719,10 @@
     display: grid;
   }
 
-   /* restaurants pages */
+  /* restaurants pages */
 
 
-   .container-login_text {
+  .container-login_text {
     margin-left: 85px !important;
     width: 65% !important;
   }
@@ -1735,7 +1737,7 @@
   }
 
   .container-sortby-searchrestaurants {
-    width:100% !important;
+    width: 100% !important;
   }
 
   .container-sortby {
@@ -1746,10 +1748,10 @@
     width: 50% !important;
   }
 
-   /* resgitrar restaurants page */
+  /* resgitrar restaurants page */
 
 
-   .style_h1page-register-restaurants {
+  .style_h1page-register-restaurants {
     color: white;
     font-size: 30px;
 
@@ -1762,7 +1764,7 @@
   .style-inputs-loginpage {
     width: 80% !important;
   }
-  
+
   .style-input-loginpage-file {
     width: 90%;
   }
@@ -2009,10 +2011,10 @@
     display: grid;
   }
 
-   /* restaurants pages */
+  /* restaurants pages */
 
 
-   .container-login_text {
+  .container-login_text {
     margin-left: 85px !important;
     width: 65% !important;
   }
@@ -2027,7 +2029,7 @@
   }
 
   .container-sortby-searchrestaurants {
-    width:100% !important;
+    width: 100% !important;
   }
 
   .container-sortby {
@@ -2039,10 +2041,10 @@
   }
 
 
-   /* resgitrar restaurants page */
+  /* resgitrar restaurants page */
 
 
-   .style_h1page-register-restaurants {
+  .style_h1page-register-restaurants {
     color: white;
     font-size: 30px;
 
@@ -2055,7 +2057,7 @@
   .style-inputs-loginpage {
     width: 80% !important;
   }
-  
+
   .style-input-loginpage-file {
     width: 90%;
   }
@@ -2608,6 +2610,7 @@ strong {
 .style_tittlelogin-senha {
   color: white;
 }
+
 .container_home_text {
   /* border: 1px solid red; */
   display: grid;
@@ -3045,4 +3048,3 @@ lo:hover {
 .style_h1page-register-restaurants {
   color: white;
 }
-

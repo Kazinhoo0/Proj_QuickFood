@@ -45,14 +45,14 @@ export default function CreateAccount() {
     const [cidade, setcidade] = useState("")
 
 
-    async function HandlecadastrarUsuario (nomecompleto, email , senha , cidade , pais) {
+    async function HandlecadastrarUsuario (nomecompleto, email , senha , pais , cidade) {
         
         const response = await fetch('http://localhost:3000/Criarconta', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ nomecompleto, email , senha , cidade , pais })
+            body: JSON.stringify({ nomecompleto, email , senha , pais , cidade })
         });
 
         if (response.ok) {
@@ -105,7 +105,7 @@ export default function CreateAccount() {
                     <div className='container_input-restaurants-register'>
                         <h2 className='style-h2-loginpage' >CRIAR NOVA CONTA</h2>
                         <div className='container-input-registerrestaurants'>
-                            <form onSubmit={HandlecadastrarUsuario } className='container-formulario-restaurants' action="">
+                            <form className='container-formulario-restaurants' action="">
                                 <span>Nome Completo</span>
                                 <input  
                                 className='style-inputs-loginpage'
@@ -143,18 +143,16 @@ export default function CreateAccount() {
 
                                 <div className='container_buttoncriarconta'>
 
-                                    <button className='style-button-loginpage'>Criar Conta</button>
+                                    <button onClick={HandlecadastrarUsuario} className='style-button-loginpage'>Criar Conta</button>
                                     <p className='style-criarconta-a'>Ainda não tem uma conta ?
                                         <a onClick={handlenavigateLogin} className='style-link-a' > Faça Login</a>
                                     </p>
                                 </div>
 
-
-
                             </form>
 
-                            <form className='container-formulario-restaurants' action="">
-                                <span className='style_spans'>Email</span>
+                            <form onSubmit={HandlecadastrarUsuario} className='container-formulario-restaurants' action="">
+                            <span className='style_spans'>Email</span>
                                 <input value={email} onChange={(e) => setemail(e.target.value)} className='style-inputs-loginpage' placeholder='Seu email aqui*' type="email" />
                                 <span>Confirmar Senha</span>
                                 <input className='style-inputs-loginpage' placeholder='Sua senha aqui*' type="password" />
@@ -162,6 +160,7 @@ export default function CreateAccount() {
                                 <input value={pais} onChange={(e) => setpais(e.target.value)} className='style-inputs-loginpage' type="text" />
                                 <span>Foto Perfil</span>
                                 <input className='style-input-loginpage-file' placeholder='Escolher Imagem*' type="file" />
+
                             </form>
 
                         </div>
