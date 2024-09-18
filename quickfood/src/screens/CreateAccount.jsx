@@ -43,31 +43,32 @@ export default function CreateAccount() {
     const [senha, setsenha] = useState("")
     const [pais, setpais] = useState("")
     const [cidade, setcidade] = useState("")
+    const [genero, setgenero]= useState('masculino')
 
 
-    async function HandlecadastrarUsuario (nomecompleto, email , senha , pais , cidade) {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
         
         const response = await fetch('http://localhost:3000/Criarconta', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ nomecompleto, email , senha , pais , cidade })
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            nomecompleto,
+            senha,
+            cidade,
+            genero,
+            email
+          })
         });
-
+      
+        const data = await response.json();
+        
         if (response.ok) {
-            const data = await response.json();
-            console.log('Usuário cadastrado com ID:', data.id);
-
+          console.log("Usuário registrado com sucesso!", data);
         } else {
-            console.error('Erro ao cadastrar usuário');
+          console.log("Erro ao registrar:", data.message);
         }
-
-        setTimeout(() => {
-             navigate('/gerenciarpratos')
-            
-        }, 5000);
-    }
+      };
 
 
 
@@ -105,7 +106,8 @@ export default function CreateAccount() {
                     <div className='container_input-restaurants-register'>
                         <h2 className='style-h2-loginpage' >CRIAR NOVA CONTA</h2>
                         <div className='container-input-registerrestaurants'>
-                            <form className='container-formulario-restaurants' action="">
+                            <form onSubmit={handleSubmit} className='container-formulario-restaurants' action="">
+
                                 <span>Nome Completo</span>
                                 <input  
                                 className='style-inputs-loginpage'
@@ -113,6 +115,7 @@ export default function CreateAccount() {
                                   type="text"
                                   onChange={(e) => setNomecompleto(e.target.value)}
                                   value={nomecompleto} />
+
                                 <span>Senha</span>
                                 <input 
                                 className='style-inputs-loginpage'
@@ -120,22 +123,29 @@ export default function CreateAccount() {
                                   type="password"
                                   onChange={(e) => setsenha(e.target.value)}
                                   value={senha} />
+
                                 <span>Cidade</span>
                                 <input
                                  className='style-inputs-loginpage'
                                   type="text"
-                                  onChange={(e) => setcidade(e.target.value)} />
+                                  onChange={(e) => setcidade(e.target.value)}
+                                  value={cidade} />
+
                                 <span>Genero</span>
                                 <select
                                  className='style-inputs-loginpage'
                                   name=""
                                    id=""
-                                   onChange={(e) => setcidade(e.target.value)}
-                                   value={cidade}>
+                                   onChange={(e) => setgenero(e.target.value)}
+                                   value={genero}>
                                     <option value=""></option>
                                     <option value="feminino">Feminino</option>
                                     <option value="masculino">Masculino</option>
                                 </select>
+
+                                <span className='style_spans'>Email</span>
+                                <input value={email} onChange={(e) => setemail(e.target.value)} className='style-inputs-loginpage' placeholder='Seu email aqui*' type="email" />
+
                                 <div className='style-container-termosecondicoes'>
                                     <input type="checkbox" />
                                     <small>Concordo com os termos e condições</small>
@@ -143,7 +153,7 @@ export default function CreateAccount() {
 
                                 <div className='container_buttoncriarconta'>
 
-                                    <button onClick={HandlecadastrarUsuario} className='style-button-loginpage'>Criar Conta</button>
+                                    <button className='style-button-loginpage'>Criar Conta</button>
                                     <p className='style-criarconta-a'>Ainda não tem uma conta ?
                                         <a onClick={handlenavigateLogin} className='style-link-a' > Faça Login</a>
                                     </p>
@@ -151,9 +161,7 @@ export default function CreateAccount() {
 
                             </form>
 
-                            <form onSubmit={HandlecadastrarUsuario} className='container-formulario-restaurants' action="">
-                            <span className='style_spans'>Email</span>
-                                <input value={email} onChange={(e) => setemail(e.target.value)} className='style-inputs-loginpage' placeholder='Seu email aqui*' type="email" />
+                            <form className='container-formulario-restaurants' action="">
                                 <span>Confirmar Senha</span>
                                 <input className='style-inputs-loginpage' placeholder='Sua senha aqui*' type="password" />
                                 <span>Pais</span>
