@@ -19,6 +19,7 @@ app.use(cors({
 
 }))
 
+
 const secretkey = 'K2$%542!!'
 
 
@@ -82,22 +83,41 @@ app.post('/Criarconta', (req, res) => {
   // Criptografar a senha inserida pelo usuário
   const hashedPassword = bcrypt.hashSync(senha, 10);
 
+  //console para visualizar a senha criptografada
   console.log('senha criptografada: ', hashedPassword)
 
 
   // Log para verificar se os dados estão chegando corretamente
   console.log('Dados recebidos:', { nomecompleto, senha, cidade, genero, email });
 
-  // Inserir dados no banco de dados SQLite
-  db.run(`INSERT INTO users (nomecompleto, senha, cidade, genero, email) VALUES (?, ?, ?, ?, ?)`,
-    [nomecompleto, hashedPassword, cidade, genero, email],
-    function (err) {
-      if (err) {
-        res.status(500).json({ message: 'Erro ao registrar o usuário.' });
-        console.error('erro ai inserir no banco de dados' + err)
+
+ const query = `SELECT email FROM users WHERE email = ?`
+
+  db.get(query, [email], function (err, row) {
+    if (err) {
+      console.error("Erro ao verificar o email:", err.message);
+      return res.status(500).json({ error: 'Erro ao verificar o email.' });
+    }
+
+    // Verifique se o email já existe
+    if (row) {
+      return res.status(400).json({ error: 'Já existe uma conta criada com este email.' });
+    }
+
+    // Se o email não existir, insira o novo usuário
+    db.run(
+      `INSERT INTO users (nomecompleto, senha, cidade, genero, email) VALUES (?, ?, ?, ?, ?)`,
+      [nomecompleto, hashedPassword, cidade, genero, email],
+      function (err) {
+        if (err) {
+          console.error('Erro ao inserir no banco de dados:', err.message);
+          return res.status(500).json({ error: 'Erro ao registrar o usuário.' });
+        }
+
+        res.status(201).json({ message: 'Usuário registrado com sucesso!' });
       }
-      res.status(201).json({ message: 'Usuário registrado com sucesso!' });
-    });
+    );
+  });
 });
 
 
