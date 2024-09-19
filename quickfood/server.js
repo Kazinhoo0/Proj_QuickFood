@@ -19,22 +19,7 @@ app.use(cors({
 
 }))
 
-const secret = 'K2$%542!!'
-
-// conexão com o banco de dados sqlite
-// const db = new sqlite3.Database('./database.db', (err) => {
-//   if (err) {
-//     console.error('Erro ao conectar ao banco de dados:', err.message);
-//   } else {
-//     console.log('Conectado ao banco de dados SQLite.');
-//   }
-// });
-
-// db.run(`
-
-//     DROP TABLE usuários
-
-// `);
+const secretkey = 'K2$%542!!'
 
 
 // Servir arquivos estáticos da pasta build
@@ -50,18 +35,18 @@ app.post('/Login', (req, res) => {
   const { email, senha } = req.body;
 
 
-  if (!email && !senha) {
-    console.log('nome e senha são obrigatorios')
+  if (!email || !senha) {
+    return res.status(400).json({ message: 'Email e senha são obrigatórios' });
   }
 
   console.log(
-    'Novo login realizado pelo ', 'usuario:', email
+    'Nova tentativa de login feito por ', 'email:', email
   )
 
 
-  const query = `SELECT ID FROM users where email = ? AND senha = ?`;
+  const query = `SELECT id, senha FROM users WHERE email = ?`;
 
-  db.get(query, [email, senha], function (err, row) {
+  db.get(query, [email], function (err, row) {
     if (err) {
       console.error('Erro ao inserir no banco de dados:', err.message);
       return res.status(500).json({ error: err.message });
@@ -69,15 +54,21 @@ app.post('/Login', (req, res) => {
 
 
     if (row) {
-      res.status(200).json({ success: true, id: row.id, message: 'Login Bem-sucedido' });
+
+      const isPasswordValid = bcrypt.compareSync(senha, row.senha);
+
+      if (isPasswordValid) {
+
+      const token = jwt.sign({ id: row.id, email }, secretkey, { expiresIn: '1h' });
+      res.status(200).json({ success: true, id: row.id, token, message: 'Login bem-sucedido' });
     } else {
-      res.status(400).json({ success: false, message: 'Tentativa de login não autorizada' });
+      res.status(400).json({ success: false, message: 'Senha incorreta' });
     }
-
-  });
-
+  } else {
+    res.status(400).json({ success: false, message: 'Email não encontrado' });
+  }
 });
-
+});
 
 
 app.post('/Criarconta', (req, res) => {

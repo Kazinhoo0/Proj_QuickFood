@@ -56,7 +56,7 @@ export default function Login() {
     const handleenteraccount = async (event) => {
         event.preventDefault();
     
-        const response = await fetch('/Login', {
+        const response = await fetch('http://localhost:3000/Login', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, senha })
@@ -64,23 +64,22 @@ export default function Login() {
         });
     
         const data = await response.json();
+
         if (data.success) {
           localStorage.setItem('token', data.token);
           localStorage.setItem('email', email)
+          
           setTimeout(() => {
             navigate('/gerenciarpratos')
           }, 2000);
     
         } else {
-          alert('Login falhou');
-        }
-    
-    };
-
-
-
-
-
+            // Exibindo mensagem de erro
+            alert(data.message || 'Login falhou');
+          }
+        } 
+      
+       
     return (
         <div className="home-container">
             <div style={{ backgroundImage: `url(${topimg_home})` }} className="container_fluid-home">
@@ -112,6 +111,7 @@ export default function Login() {
                 <div className='container-second-login-register'>
                     <div className='container_input-login-register'>
                         <h2 className='style-h2-loginpage' >LOGIN SUA CONTA</h2>
+
                         <form onSubmit={handleenteraccount} className='container-formulario-login' action="">
                             <span>Email</span>
                             <input className='style-inputs-loginpage' placeholder='Seu email aqui*' type="email"
@@ -125,9 +125,8 @@ export default function Login() {
                                 onChange={(e) => Setsenha(e.target.value)}
                                 value={senha} />
                             <button className='style-button-loginpage'>Entrar</button>
-
-
                         </form>
+                        
                         <div className='container-nothaveaccount'>
                             <p className='style-criarconta'>Ainda não tem uma conta ?
                                 <a onClick={handlenavigatecreateaccount} className='style-link-a' >Criar Conta</a>
