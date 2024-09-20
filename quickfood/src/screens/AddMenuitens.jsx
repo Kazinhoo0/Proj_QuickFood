@@ -8,11 +8,22 @@ import imgmenufacebook from '../assets_imgs/facebook.png'
 import imgmenutwitter from '../assets_imgs/twitter.png'
 import imgtelefone from '../assets_imgs/phone.png'
 import { useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 
 
 
 export default function AddMenuItens() {
 
+    const [nomeitem, setNomeItem] = useState('')
+    const [preco, setPreço] = useState('')
+    const [Ingredientes, setIngredientes] = useState('')
+    const [fotomenu, setFotoMenu] = useState('')
+
+    const [userdata, setUserData] = useState({
+
+        nomecompleto: '',
+        email: ''
+    })
 
     const navigate = useNavigate('')
 
@@ -38,6 +49,17 @@ export default function AddMenuItens() {
     }
 
 
+    useEffect(() => {
+        const nomecompleto = localStorage.getItem('nomecompleto')
+        const email = localStorage.getItem('email')
+
+        setUserData({
+            nomecompleto: nomecompleto || '',
+            email: email || ''
+        })
+    })
+
+
 
 
 
@@ -56,7 +78,7 @@ export default function AddMenuItens() {
                                 <lo className='navbar_itens-style_logon-pages'> <a onClick={handlenavigateadditens}>Adicionar itens</a></lo>
                                 <lo className='navbar_itens-style_logon-pages'> <a onClick={handlenavigatemeuspratos}>Meus pratos</a></lo>
                                 <lo className='navbar_itens-style_logon-pages'><a onClick={handlenavigateordenarrequisições}>Ordenar requisições</a></lo>
-                                <lo className='navbar_username-logon'><a> Kauã Lopes</a></lo>
+                                <lo className='navbar_username-logon'><a>{userdata.nomecompleto}</a></lo>
                                 <lo className='navbar_itens_style_onpages-logon'><a onClick={handlenavigatehome}>SAIR</a></lo>
 
                             </ul>
@@ -75,28 +97,43 @@ export default function AddMenuItens() {
                 <div className='container-second-login-register'>
                     <div className='container_input-restaurants-register'>
                         <h2 className='style-h2-loginpage' >CADASTRAR MENUS</h2>
-                        <div className='container-input-registerrestaurants'>
-                            <form className='container-formulario-restaurants' action="">
+                        <div className='container-input-additens'>
+                            <form className='container-formulario-restaurants_pageadditens' action="">
                                 <span>Nome item</span>
-                                <input className='style-inputs-loginpage' placeholder='Nome completo*' type="email" />
-                                <span>Preço</span>
-                                <input className='style-inputs-loginpage' type="email" />
-                                <div>
-                                    <button className='style-button-loginpage'>Entrar</button>
-                                </div>
+                                <input onChange={(e) => setNomeItem(e.target.value)} className='style-inputs-additenspag ' placeholder='Nome completo*' type="email" />
+                                <span className='style_span_pageadditens'>Preço</span>
+                                <input onChange={(e) => setPreço(e.target.value)} className='style-inputs-additenspag ' type="email" />
                             </form>
 
-                            <form className='container-formulario-restaurants' action="">
+                            <form className='container-formulario-restaurants_pageadditens2' action="">
                                 <span>Ingredientes</span>
-                                <input className='style-inputs-additenspag ' placeholder='Seu email aqui*' type="email" />
+                                <input onChange={(e) => setIngredientes(e.target.value)} className='style-inputs-additenspag ' placeholder='Seu email aqui*' type="email" />
                                 <span>Foto Menu</span>
-                                <input className='style-inputs-additenspag2 ' placeholder='Sua senha aqui*' type="file" />
+                                <input onChange={(e) => setFotoMenu(e.target.value)} className='style-inputs-additenspag ' placeholder='Sua senha aqui*' type="file" />
 
-                               
+
                             </form>
+                        </div>
+                        <div className='container_type_additens' >
+                            <span className='style_span_types'>Escolha o tipo do item</span>
+                            <div className='container_checkbox_type' >
+                                <input className='style_checkbox_additens' type="checkbox" />
+                                <small>Kebabs</small>
+                                <input className='style_checkbox_additens' type="checkbox" />
+                                <small>Chicken</small>
+                                <input className='style_checkbox_additens' type="checkbox" />
+                                <small>Burgers</small>
+                                <input className='style_checkbox_additens' type="checkbox" />
+                                <small>Biryani</small>
+                            </div>
+                            <div>
+
+                            </div>
 
                         </div>
+
                     </div>
+
                 </div>
             </div>
 

@@ -1,6 +1,5 @@
 import topimg_home from '../assets_imgs/cover-photo20.jpg'
 import logo from '../assets_imgs/logo_quickfood.png'
-import optionsimg from '../assets_imgs/options-img.png'
 import imgemail from '../assets_imgs/mail.png'
 import imgmenuinstagram from '../assets_imgs/instagram.png'
 import imgmenufacebook from '../assets_imgs/facebook.png'
@@ -8,10 +7,24 @@ import imgmenutwitter from '../assets_imgs/twitter.png'
 import imgtelefone from '../assets_imgs/phone.png'
 import { useNavigate } from 'react-router-dom'
 import imgprofileteste from '../assets_imgs/user.png'
+import { useEffect, useState } from 'react'
 
 
 
 export default function MyFoods() {
+
+
+    const [userdata, setUserData] = useState({
+
+        nomecompleto: '',
+        pais: '',
+        email: '',
+        cidade: '',
+        genero: ''
+
+
+    })
+
 
 
     const navigate = useNavigate('')
@@ -38,6 +51,27 @@ export default function MyFoods() {
     }
 
 
+    useEffect(() => {
+        const nomecompleto = localStorage.getItem('nomecompleto')
+        const email = localStorage.getItem('email')
+        const genero = localStorage.getItem('genero')
+        const pais = localStorage.getItem('pais')
+        const cidade = localStorage.getItem('cidade')
+
+        if (nomecompleto || email || genero || pais || cidade) {
+            setUserData ({
+
+                nomecompleto: nomecompleto || '',
+                email: email || '',
+                genero: genero || '',
+                pais: pais || '',
+                cidade: cidade || ''
+
+            })
+        }
+    }, [])
+
+
     return (
         <div className="home-container">
             <div style={{ backgroundImage: `url(${topimg_home})` }} className="container_fluid-pagmyfoods">
@@ -53,7 +87,7 @@ export default function MyFoods() {
                                 <lo className='navbar_itens-style_logon-pages'> <a onClick={handlenavigateadditens}>Adicionar itens</a></lo>
                                 <lo className='navbar_itens-style_logon-pages'> <a onClick={handlenavigatemeuspratos}>Meus pratos</a></lo>
                                 <lo className='navbar_itens-style_logon-pages'><a onClick={handlenavigateordenarrequisições}>Ordenar requisições</a></lo>
-                                <lo className='navbar_username-logon'><a> Kauã Lopes</a></lo>
+                                <lo className='navbar_username-logon'><a>{userdata.nomecompleto}</a></lo>
                                 <lo className='navbar_itens_style_onpages-logon'><a onClick={handlenavigatehome}>SAIR</a></lo>
 
                             </ul>
@@ -68,7 +102,7 @@ export default function MyFoods() {
                         </div>
 
                         <div className='container_username'>
-                            <h2>Kauã Lopes</h2>
+                            <h2>{userdata.nomecompleto}</h2>
                             <small>Apple Juice, Beef Roast, Cheese Burger</small>
                         </div>
                     </div>

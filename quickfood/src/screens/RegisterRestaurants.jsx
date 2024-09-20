@@ -1,6 +1,5 @@
 import topimg_home from '../assets_imgs/fb-subheader-4.jpg'
 import logo from '../assets_imgs/logo_quickfood.png'
-import optionsimg from '../assets_imgs/options-img.png'
 import imgemail from '../assets_imgs/mail.png'
 import imgmenuinstagram from '../assets_imgs/instagram.png'
 import imgmenufacebook from '../assets_imgs/facebook.png'
@@ -88,9 +87,9 @@ export default function RegisterRestaurant() {
                                     <input type="checkbox" />
                                     <small>Concordo com os termos e condições</small>
                                 </div>
-                                <div>
 
-                                    <button className='style-button-loginpage'>Entrar</button>
+                                <div>
+                                    <button className='style-button-loginpage'>Registrar</button>
                                 </div>
 
 

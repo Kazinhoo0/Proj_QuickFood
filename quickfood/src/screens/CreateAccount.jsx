@@ -1,6 +1,5 @@
 import topimg_home from '../assets_imgs/fb-subheader-4.jpg';
 import logo from '../assets_imgs/logo_quickfood.png';
-import optionsimg from '../assets_imgs/options-img.png';
 import imgemail from '../assets_imgs/mail.png';
 import imgmenuinstagram from '../assets_imgs/instagram.png';
 import imgmenutwitter from '../assets_imgs/twitter.png';
@@ -51,8 +50,7 @@ export default function CreateAccount() {
     const [genero, setgenero] = useState('masculino')
 
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    const handleCadastrarUsuario = async () => {
 
         const response = await fetch('http://localhost:3000/Criarconta', {
             method: 'POST',
@@ -66,9 +64,9 @@ export default function CreateAccount() {
             })
         });
 
-        const data = await response.json();
 
         if (response.ok) {
+            const data = await response.json();
             Toastify(
                 {
                     text: 'Usuário criado com sucesso!',
@@ -113,15 +111,28 @@ export default function CreateAccount() {
         else {
             Toastify({
                 text: 'Já existe uma conta com este email',
+                position: 'center',
                 style: {
                     background: '#db2d0e',
-                    color: '#ffffff',
-                    position: 'center'
+                    color: '#ffffff'
+                    
                 }
             }).showToast();
 
             console.log('Já existe uma conta com este email')
         }
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault(); 
+        handleCadastrarUsuario(nomecompleto, genero, email, pais, cidade); 
+        localStorage.setItem('nomecompleto' , nomecompleto);
+        localStorage.setItem('email', email);
+        localStorage.setItem('genero' , genero);
+        localStorage.setItem('pais' , pais);
+        localStorage.setItem('cidade', cidade )
+
+        console.log(nomecompleto + genero + email, pais, cidade)
     };
 
 
