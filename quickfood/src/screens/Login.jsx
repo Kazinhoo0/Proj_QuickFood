@@ -6,14 +6,23 @@ import imgmenufacebook from '../assets_imgs/facebook.png'
 import imgmenutwitter from '../assets_imgs/twitter.png'
 import imgtelefone from '../assets_imgs/phone.png'
 import { useNavigate } from 'react-router-dom'
-import { useState } from 'react'
-
+import { useEffect, useState } from 'react'
+import Toastify from 'toastify-js';
+import { MutatingDots } from 'react-loader-spinner'
 
 
 export default function Login() {
 
-    const [email, Setemail] = useState('')
-    const [senha, Setsenha] = useState('')
+    const [email, setEmail] = useState('')
+    const [senha, setSenha] = useState('')
+    const [loader, setLoader] = useState(false)
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoader(false)
+        }, 5000)
+    })
+
 
     const navigate = useNavigate('')
 
@@ -42,7 +51,6 @@ export default function Login() {
         navigate('/Criarconta')
     }
 
-
     // const handleloginuser = () => {
     //     if (email === 'lopeskazin@gmail.com' && senha === '123456') {
     //         console.log('Executado com sucesso')
@@ -52,31 +60,55 @@ export default function Login() {
     // }
 
 
-    const handleenteraccount = async (event) => {
-        event.preventDefault();
+    const handleenteraccount = async (e) => {
+        e.preventDefault();
+        
+        setLoader(true); // Começa a carregar
     
-        const response = await fetch('http://localhost:3000/Login', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, senha })
+        
+        setTimeout(async () => {
+            const response = await fetch('http://localhost:3000/Login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, senha })
+            });
+            
+            const data = await response.json();
     
-        });
+            if (data.success) {
+                localStorage.setItem('token', data.token);
+                localStorage.setItem('email', email);
+                localStorage.setItem('nomecompleto', data.nomecompleto);
     
-        const data = await response.json();
-
-        if (data.success) {
-          localStorage.setItem('token', data.token);
-          localStorage.setItem('email', email)
-          
-          setTimeout(() => {
-            navigate('/gerenciarpratos')
-          }, 2000);
+                Toastify({
+                    text: 'Login efetuado com sucesso!',
+                    position: 'center',
+                    style: {
+                        background: '#33ff00',
+                        color: '#ffffff'
+                    }
+                }).showToast();
     
-        } else {
-            // Exibindo mensagem de erro
-            alert(data.message || 'Login falhou');
-          }
-        } 
+                // Garantindo que o loader seja visível por pelo menos 2 segundos
+                setTimeout(() => {
+                    setLoader(false); 
+                    navigate('/gerenciarpratos'); 
+                }, 2000); 
+    
+            } else {
+                setLoader(false);
+    
+                Toastify({
+                    text: 'Não foi possível realizar o login!',
+                    position: 'center',
+                    style: {
+                        background: '#db2d0e',
+                        color: '#ffffff'
+                    }
+                }).showToast();
+            }
+        }, 1000); 
+    };
       
        
     return (
@@ -106,25 +138,46 @@ export default function Login() {
 
                 </div>
             </div>
-            <div className='container-principal-login-register'>
-                <div className='container-second-login-register'>
-                    <div className='container_input-login-register'>
-                        <h2 className='style-h2-loginpage' >LOGIN SUA CONTA</h2>
+            <div className="container-principal-login-register">
+                <div className="container-second-login-register">
+                    <div className="container_input-login-register">
+                        <h2 className="style-h2-loginpage">LOGIN SUA CONTA</h2>
 
-                        <form onSubmit={handleenteraccount} className='container-formulario-login' action="">
-                            <span>Email</span>
-                            <input className='style-inputs-loginpage' placeholder='Seu email aqui*' type="email"
-                                onChange={(e) => Setemail(e.target.value)}
-                                value={email} />
-                            <span>Senha</span>
-                            <input
-                                className='style-inputs-loginpage'
-                                placeholder='Sua senha aqui'
-                                type="password"
-                                onChange={(e) => Setsenha(e.target.value)}
-                                value={senha} />
-                            <button className='style-button-loginpage'>Entrar</button>
-                        </form>
+                        {loader ? (
+                            
+                            <MutatingDots
+                                visible={true}
+                                height="100"
+                                width="100"
+                                color="#4fa94d"
+                                secondaryColor="#4fa94d"
+                                radius="12.5"
+                                wrapperStyle={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}
+                                ariaLabel="mutating-dots-loading"
+                            />
+                        
+                        ) : (
+
+                            <form onSubmit={handleenteraccount} className="container-formulario-login">
+                                <span>Email</span>
+                                <input
+                                    className="style-inputs-loginpage"
+                                    placeholder="Seu email aqui*"
+                                    type="email"
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    value={email}
+                                />
+                                <span>Senha</span>
+                                <input
+                                    className="style-inputs-loginpage"
+                                    placeholder="Sua senha aqui"
+                                    type="password"
+                                    onChange={(e) => setSenha(e.target.value)}
+                                    value={senha}
+                                />
+                                <button className="style-button-loginpage">Entrar</button>
+                            </form>
+                        )}
                         
                         <div className='container-nothaveaccount'>
                             <p className='style-criarconta'>Ainda não tem uma conta ?

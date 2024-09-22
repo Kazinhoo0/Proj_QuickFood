@@ -45,7 +45,7 @@ app.post('/Login', (req, res) => {
   )
 
 
-  const query = `SELECT id, senha FROM users WHERE email = ?`;
+  const query = `SELECT id, senha, nomecompleto FROM users WHERE email = ?`;
 
   db.get(query, [email], function (err, row) {
     if (err) {
@@ -61,7 +61,13 @@ app.post('/Login', (req, res) => {
       if (isPasswordValid) {
 
       const token = jwt.sign({ id: row.id, email }, secretkey, { expiresIn: '1h' });
-      res.status(200).json({ success: true, id: row.id, token, message: 'Login bem-sucedido' });
+      res.status(200).json({ 
+        success: true,
+        id: row.id,
+        token: token,
+        message: 'Login bem-sucedido',
+        nomecompleto:row.nomecompleto
+        });
     } else {
       res.status(400).json({ success: false, message: 'Senha incorreta' });
     }

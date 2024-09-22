@@ -9,12 +9,28 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Toastify from 'toastify-js';
 import "toastify-js/src/toastify.css"
+import { MutatingDots } from 'react-loader-spinner'
 
 
 
 
 
 export default function CreateAccount() {
+
+    const [nomecompleto, setNomecompleto] = useState("")
+    const [email, setemail] = useState("")
+    const [senha, setsenha] = useState("")
+    const [confirmarsenha, setconfirmarsenha] = useState('')
+    const [pais, setpais] = useState("")
+    const [cidade, setcidade] = useState("")
+    const [genero, setgenero] = useState('masculino')
+    const [loader, setLoader] = useState(false)
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoader(false)
+        }, 5000)
+    })
 
 
     const navigate = useNavigate('')
@@ -41,92 +57,98 @@ export default function CreateAccount() {
     }
 
 
-    const [nomecompleto, setNomecompleto] = useState("")
-    const [email, setemail] = useState("")
-    const [senha, setsenha] = useState("")
-    const [confirmarsenha, setconfirmarsenha] = useState('')
-    const [pais, setpais] = useState("")
-    const [cidade, setcidade] = useState("")
-    const [genero, setgenero] = useState('masculino')
+
 
 
     const handleCadastrarUsuario = async () => {
+        
+        setTimeout(async () => {
+            const response = await fetch('http://localhost:3000/Criarconta', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    nomecompleto,
+                    senha,
+                    cidade,
+                    genero,
+                    email
+                })
+            });
 
-        const response = await fetch('http://localhost:3000/Criarconta', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                nomecompleto,
-                senha,
-                cidade,
-                genero,
-                email
-            })
-        });
 
+            if (response.ok) {
 
-        if (response.ok) {
-            const data = await response.json();
-            Toastify(
-                {
-                    text: 'Usuário criado com sucesso!',
-                    position: 'center',
-                    style: {
-                        background: '#ff7b00',
-                        color: '#ffffff'
-                    }
+                const data = await response.json();
 
-                }
-            ).showToast();
-            console.log("Usuário registrado com sucesso!", data);
-        }
-        if (!nomecompleto || !senha || !cidade || !genero || !email) {
-            Toastify(
-                {
-                    text: 'Todos os campos precisam ser preenchidos',
-                    position: 'center',
-                    style: {
-                        background: '#ff7b00',
-                        color: '#ffffff'
-                    }
+                if (data.sucess) {
 
-                }
-            ).showToast();
-            console.log("Todos os campos precisam ser preenchidos");
-        }
-        if (senha != confirmarsenha) {
-            Toastify(
-                {
-                    text: 'Ops! As senhas precisam ser iguais!',
-                    position: 'center',
-                    style: {
-                        background: '#ff7b00',
-                        color: '#ffffff'
-                    }
+                    Toastify(
+                        {
+                            text: 'Usuário criado com sucesso!',
+                            position: 'center',
+                            style: {
+                                background: '#ff7b00',
+                                color: '#ffffff'
+                            }
 
-                }
-            ).showToast();
-            console.log("Ops! As senhas precisam ser iguais!");
-        }
-        else {
-            Toastify({
-                text: 'Já existe uma conta com este email',
-                position: 'center',
-                style: {
-                    background: '#db2d0e',
-                    color: '#ffffff'
+                        }
+                    ).showToast();
+                    console.log("Usuário registrado com sucesso!", data);
+                    setTimeout(() => {
+                        setLoader(false); 
+                        navigate('/gerenciarpratos'); 
+                    }, 2000); 
                     
                 }
-            }).showToast();
+            }
+            // if (!nomecompleto || !senha || !cidade || !genero || !email) {
+            //     Toastify(
+            //         {
+            //             text: 'Todos os campos precisam ser preenchidos',
+            //             position: 'center',
+            //             style: {
+            //                 background: '#ff7b00',
+            //                 color: '#ffffff'
+            //             }
 
-            console.log('Já existe uma conta com este email')
-        }
-    };
+            //         }
+            //     ).showToast();
+            //     console.log("Todos os campos precisam ser preenchidos");
+            // }
+            if (senha != confirmarsenha) {
+                Toastify(
+                    {
+                        text: 'Ops! As senhas precisam ser iguais!',
+                        position: 'center',
+                        style: {
+                            background: '#ff7b00',
+                            color: '#ffffff'
+                        }
+
+                    }
+                ).showToast();
+                console.log("Ops! As senhas precisam ser iguais!");
+            }
+            else {
+                Toastify({
+                    text: 'Já existe uma conta com este email',
+                    position: 'center',
+                    style: {
+                        background: '#db2d0e',
+                        color: '#ffffff'
+                        
+                    }
+                }).showToast();
+
+                console.log('Já existe uma conta com este email')
+            }
+        }, 1000)
+    
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
         handleCadastrarUsuario(nomecompleto, genero, email, pais, cidade); 
-        localStorage.setItem('nomecompleto' , nomecompleto);
         localStorage.setItem('email', email);
         localStorage.setItem('genero' , genero);
         localStorage.setItem('pais' , pais);
@@ -170,7 +192,26 @@ export default function CreateAccount() {
                 <div className='container-second-login-register'>
                     <div className='container_input-restaurants-register'>
                         <h2 className='style-h2-loginpage' >CRIAR NOVA CONTA</h2>
-                        <div className='container-input-registerrestaurants'>
+
+
+                        {loader ? (
+                            
+                            <MutatingDots
+                                visible={true}
+                                height="100"
+                                width="100"
+                                color="#4fa94d"
+                                secondaryColor="#4fa94d"
+                                radius="12.5"
+                                wrapperStyle={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}
+                                ariaLabel="mutating-dots-loading"
+                            />
+                        
+                        ) : (
+
+                         <div className='container-input-registerrestaurants'>
+                            
+
                             <form className='container-formulario-restaurants' action="">
 
                                 <span>Nome Completo</span>
@@ -250,8 +291,9 @@ export default function CreateAccount() {
                                 </div>
                             </div>
                         </div>
-
+                        )}
                     </div>
+                        
                 </div>
             </div>
 
