@@ -2688,10 +2688,11 @@ strong {
 }
 
 .style-inputs-additenspag {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 35px;
   margin-bottom: 60px;
-
+  border-radius: 5px;
+  border: 1px solid rgb(184, 180, 180)
 }
 
 
@@ -2771,7 +2772,7 @@ strong {
 
 .container-formulario-restaurants_pageadditens {
   width: 50%;
-  border: 1px solid rgb(0, 0, 0);
+  /* border: 1px solid rgb(0, 0, 0); */
   height: 190px;
   display: grid;
   padding: 15px;
@@ -2779,7 +2780,7 @@ strong {
 
 .container-formulario-restaurants2 {
   width: 50%;
-  border: 1px solid rgb(0, 0, 0);
+  /* border: 1px solid rgb(0, 0, 0); */
   height: 300px;
   display: grid;
   padding: 15px;
@@ -2787,7 +2788,7 @@ strong {
 
 .container-formulario-restaurants_pageadditens2 {
   width: 50%;
-  border: 1px solid rgb(0, 0, 0);
+  /* border: 1px solid rgb(0, 0, 0); */
   height: 190px;
   display: grid;
   padding: 15px;
@@ -2808,31 +2809,57 @@ strong {
 }
 
 .container-input-additens {
-  border: 1px solid rgb(0, 81, 255);
+  /* border: 1px solid rgb(0, 81, 255); */
   display: flex;
   height: 222px;
   /* background-color: white; */
 }
 
 .container_type_additens {
-  border: 1px solid rgb(209, 58, 83);
+  /* border: 1px solid rgb(255, 0, 0); */
   height: 183px;
 }
 
 .style_span_types {
   padding: 20px;
+  font-weight: bold;
+}
+
+.style_span_pageadditens {
+  font-weight: bold;
+
 }
 
 
 .container_checkbox_type {
-  padding-top: 10px;
-  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  display: flex;
+  align-content: start;
+  justify-content: start;
+}
+
+.style_button_createmenu {
+  /* border: 1px solid rgb(252, 7, 231); */
+  margin-top: 20px;
+  height: 50px;
+}
+
+.style_buttoncreatemenu {
+  background-color: #ffa500;
+  border: none;
+  border-radius: 5px;
+  height: 35px;
+  width: 140px;
+  color: white;
+  margin-left: 15px;
+  margin-top: 10px;
 }
 
 
 .style_checkbox_additens {
-  margin-left: 140px;
-  
+  margin-left: 150px;
+
 }
 
 .container_filho_inputs {
@@ -2988,11 +3015,19 @@ a:hover {
 }
 
 .container-principal-login-register-myfoods {
-  height: 100px;
+  height: 500px;
   display: flex;
   align-content: center;
   justify-content: center;
   background-color: rgba(219, 218, 218, 0.664);
+  border: 1px solid red;
+}
+
+.container_menufoods {
+  border: 1px solid red;
+  width: 80%;
+  display: grid;
+  justify-content: center;
 }
 
 .container_cabecalho-informacoes-myfoods {
@@ -3054,23 +3089,52 @@ a:hover {
   color: white;
 }
 
-.list-foods {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  width: 50%;
-  height: 50%;
-  margin: 20px;
-  /* border: 1px solid black; */
+.container_Foodstittle {
+  width: 1000px;
+  text-align: center;
+  height: 20%;
+  margin-top: 20px;
+  border: 1px solid black;
   background-color: white;
+
 }
+
+.container_itens {
+  border: 1px solid red;
+  height: 120px;
+  background-color: rgb(255, 255, 255);
+  justify-content: center;
+  align-content: center;
+  display: flex;
+}
+
+.container_img {
+  border: 1px solid red;
+  align-content: start;
+  justify-content: start;
+  width: 25%;
+}
+
+.container_nomeitem_ingredientes {
+  border: 1px solid red;
+  width: 45%;
+}
+
+.container_preço {
+  border: 1px solid red;
+  width: 25%;
+}
+
+.style_imgitensmenu {}
+
+
 
 .navbar_itens_style_onpages-logon {
   padding: 10px;
   margin-left: 10px;
   text-align: center;
   border: 1px solid orange;
-  background-color: orange;
+  background-color: #ffa500;
   color: white;
   border-radius: 5px;
   cursor: pointer;

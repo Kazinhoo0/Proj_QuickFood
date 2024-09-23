@@ -107,7 +107,7 @@ export default function Login() {
                     }
                 }).showToast();
             }
-        }, 1000); 
+        }, 2000); 
     };
       
        

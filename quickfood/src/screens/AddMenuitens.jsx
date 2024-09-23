@@ -16,8 +16,17 @@ export default function AddMenuItens() {
 
     const [nomeitem, setNomeItem] = useState('')
     const [preco, setPreço] = useState('')
-    const [Ingredientes, setIngredientes] = useState('')
+    const [ingredientes, setIngredientes] = useState('')
     const [fotomenu, setFotoMenu] = useState('')
+    //                                                    // 
+    const [kebabs, setKebabs] = useState('')
+    const [chicken, setChicken] = useState('')
+    const [burguers, setBurgers] = useState('')
+    const [massas, setMassas] = useState('')
+    const [japoneses, setJaponeses] = useState('')
+    const [bebida, setBebida] = useState('')
+    const [carnes, setCarnes] = useState('')
+    const [salada, setSalada] = useState('')
 
     const [userdata, setUserData] = useState({
 
@@ -48,6 +57,10 @@ export default function AddMenuItens() {
         console.log("executado com sucesso")
     }
 
+    const handleAdicionaritem = () => {
+        console.log('itens enviados com sucesso')
+    }
+
 
     useEffect(() => {
         const nomecompleto = localStorage.getItem('nomecompleto')
@@ -58,6 +71,19 @@ export default function AddMenuItens() {
             email: email || ''
         })
     })
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        handleAdicionaritem(nomeitem,preco,ingredientes, fotomenu)
+        localStorage.setItem('nomeitem' , nomeitem)
+        localStorage.setItem('preco' , preco)
+        localStorage.setItem('ingredientes' , ingredientes)
+        localStorage.setItem('fotomenu' , fotomenu)
+
+        console.log('nomeitem -', nomeitem, 'preço -', preco, -  'ingredientes -', ingredientes, - 'fotolink -', fotomenu)
+
+    }
 
 
 
@@ -99,35 +125,103 @@ export default function AddMenuItens() {
                         <h2 className='style-h2-loginpage' >CADASTRAR MENUS</h2>
                         <div className='container-input-additens'>
                             <form className='container-formulario-restaurants_pageadditens' action="">
-                                <span>Nome item</span>
-                                <input onChange={(e) => setNomeItem(e.target.value)} className='style-inputs-additenspag ' placeholder='Nome completo*' type="email" />
+                                <span className='style_span_pageadditens'>Nome item</span>
+                                <input
+                                    onChange={(e) => setNomeItem(e.target.value)}
+                                    className='style-inputs-additenspag'
+                                    placeholder='Nome completo*'
+                                    type="email"
+                                    value={nomeitem} />
                                 <span className='style_span_pageadditens'>Preço</span>
-                                <input onChange={(e) => setPreço(e.target.value)} className='style-inputs-additenspag ' type="email" />
+                                <input
+                                    onChange={(e) => setPreço(e.target.value)}
+                                    className='style-inputs-additenspag'
+                                    placeholder='Preço em numero inteiro'
+                                    type="email"
+                                    value={preco} />
                             </form>
 
                             <form className='container-formulario-restaurants_pageadditens2' action="">
-                                <span>Ingredientes</span>
-                                <input onChange={(e) => setIngredientes(e.target.value)} className='style-inputs-additenspag ' placeholder='Seu email aqui*' type="email" />
-                                <span>Foto Menu</span>
-                                <input onChange={(e) => setFotoMenu(e.target.value)} className='style-inputs-additenspag ' placeholder='Sua senha aqui*' type="file" />
+                                <span className='style_span_pageadditens'>Ingredientes</span>
+                                <input
+                                    onChange={(e) => setIngredientes(e.target.value)}
+                                    className='style-inputs-additenspag'
+                                    placeholder='Seu email aqui*'
+                                    type="email"
+                                    value={ingredientes} />
+                                <span className='style_span_pageadditens'>Foto Menu</span>
+                                <input
+                                    onChange={(e) => setFotoMenu(e.target.value)}
+                                    className='style-inputs-additenspag'
+                                    placeholder='Sua senha aqui*'
+                                    type="file"
+                                    value={fotomenu} />
 
 
                             </form>
                         </div>
                         <div className='container_type_additens' >
-                            <span className='style_span_types'>Escolha o tipo do item</span>
+                            <span className='style_span_types'>Escolha o tipo do item: </span>
                             <div className='container_checkbox_type' >
-                                <input className='style_checkbox_additens' type="checkbox" />
-                                <small>Kebabs</small>
-                                <input className='style_checkbox_additens' type="checkbox" />
-                                <small>Chicken</small>
-                                <input className='style_checkbox_additens' type="checkbox" />
-                                <small>Burgers</small>
-                                <input className='style_checkbox_additens' type="checkbox" />
-                                <small>Biryani</small>
-                            </div>
-                            <div>
+                                <input
+                                    className='style_checkbox_additens'
+                                    type="checkbox"
+                                    onChange={(e) => setMassas(e.target.value)}
+                                    value={massas}
 
+                                />
+                                <small>Massas</small>
+                                <input
+                                    className='style_checkbox_additens'
+                                    type="checkbox"
+                                    onChange={(e) => setKebabs(e.target.value)}
+                                    value={kebabs} />
+                                <small>Kebabs</small>
+                                <input
+                                    className='style_checkbox_additens'
+                                    type="checkbox"
+                                    onChange={(e) => setChicken(e.target.value)}
+                                    value={chicken}
+                                />
+                                <small>Frangos</small>
+                                <input
+                                    className='style_checkbox_additens'
+                                    type="checkbox"
+                                    onChange={(e) => setBurgers(e.target.value)}
+                                    value={burguers} />
+                                <small>Hamburguer</small>
+                            </div>
+
+                            <div className='container_checkbox_type'>
+                                <input
+                                    className='style_checkbox_additens'
+                                    type="checkbox"
+                                    onChange={(e) => setBebida(e.target.value)}
+                                    value={bebida} />
+                                    
+                                <small>Bebida</small>
+                                <input
+                                    className='style_checkbox_additens'
+                                    type="checkbox"
+                                    onChange={(e) => setJaponeses(e.target.value)}
+                                    value={japoneses} />
+                                <small>Japones</small>
+                                <input
+                                    className='style_checkbox_additens'
+                                    type="checkbox"
+                                    onChange={(e) => setCarnes(e.target.value)}
+                                    value={carnes} />
+                                <small>Carnes</small>
+                                <input
+                                    className='style_checkbox_additens'
+                                    type="checkbox"
+                                    onChange={(e) => setSalada(e.target.value)}
+                                    value={salada} />
+                                <small>Salada</small>
+                            </div>
+
+                            <div className='style_button_createmenu'>
+                                <button onClick={handleSubmit} className='style_buttoncreatemenu'>ADICIONAR ITEM</button>
                             </div>
 
                         </div>

@@ -148,13 +148,13 @@ export default function CreateAccount() {
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
-        handleCadastrarUsuario(nomecompleto, genero, email, pais, cidade); 
+        handleCadastrarUsuario(genero, email, pais, cidade); 
         localStorage.setItem('email', email);
         localStorage.setItem('genero' , genero);
         localStorage.setItem('pais' , pais);
         localStorage.setItem('cidade', cidade )
 
-        console.log(nomecompleto + genero + email, pais, cidade)
+        console.log(genero + email, pais, cidade)
     };
 
 

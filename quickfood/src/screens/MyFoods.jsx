@@ -20,7 +20,11 @@ export default function MyFoods() {
         pais: '',
         email: '',
         cidade: '',
-        genero: ''
+        genero: '',
+        nomeitem: '',
+        preco: '',
+        ingredientes: '',
+        fotomenu: ''
 
 
     })
@@ -57,15 +61,23 @@ export default function MyFoods() {
         const genero = localStorage.getItem('genero')
         const pais = localStorage.getItem('pais')
         const cidade = localStorage.getItem('cidade')
+        const nomeitem = localStorage.getItem('nomecompleto')
+        const preco = localStorage.getItem('preco')
+        const ingredientes = localStorage.getItem('ingredientes')
+        const fotomenu = localStorage.getItem('fotomenu')
 
-        if (nomecompleto || email || genero || pais || cidade) {
-            setUserData ({
+        if (nomecompleto || email || genero || pais || cidade || nomeitem || preco || ingredientes || fotomenu) {
+            setUserData({
 
                 nomecompleto: nomecompleto || '',
                 email: email || '',
                 genero: genero || '',
                 pais: pais || '',
-                cidade: cidade || ''
+                cidade: cidade || '',
+                nomeitem: nomeitem || '',
+                preco: preco || '',
+                ingredientes: ingredientes || '',
+                fotomenu: fotomenu || ''
 
             })
         }
@@ -109,12 +121,30 @@ export default function MyFoods() {
 
                 </div>
             </div>
-            <div className='container-principal-login-register-myfoods'>
-                <div className='list-foods' >
-                    <h3>Foods</h3>
-                </div>
-            </div>
 
+            <div className='container-principal-login-register-myfoods'>
+                <div className='container_menufoods'>
+                    <div className='container_Foodstittle' >
+                        <h3>Foods</h3>
+                    </div>
+                    <div className='container_itens'>
+                        <div className='container_img'>
+                            <img className='style_imgitensmenu' src={userdata.fotomenu} alt="" />
+                        </div>
+                        <div className='container_nomeitem_ingredientes'>
+                            <h3>{userdata.nomeitem}</h3>
+                            
+                            <h3>{userdata.ingredientes}</h3>
+                        </div>
+                        <div className='container_preço'>
+                            <h4>{userdata.preco}</h4>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <p>{userdata.nomeitem}</p>
             <div className='container_cabecalho-informacoes-myfoods'>
                 <div className='container_infor-text'>
                     <div className='container-menus-tela'>
