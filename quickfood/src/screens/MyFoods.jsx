@@ -48,6 +48,29 @@ export default function MyFoods() {
     }, [])
 
 
+    
+
+    // const fetchpratos = async () => {
+
+
+    //     const response = await fetch('http://localhost:3000/Adicionaritensmenu', {
+    //             method: 'POST',
+    //             headers: { 'Content-Type': 'application/json' },
+    //             body: JSON.stringify({ nomeitem, preco, ingredientes, fotomenu })
+    //         });
+            
+    //         const data = await response.json();
+
+    //         if (data.success) {
+    //             setPratos(data.items);
+    //         } else {
+    //             setErr(data.message)
+    //         }
+    
+    //     }
+    
+
+
     const navigate = useNavigate('')
 
 
