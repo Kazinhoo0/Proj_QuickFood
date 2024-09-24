@@ -2846,7 +2846,7 @@ strong {
 }
 
 .style_buttoncreatemenu {
-  background-color: #ffa500;
+  background-color: #ff8800;
   border: none;
   border-radius: 5px;
   height: 35px;
@@ -2854,6 +2854,7 @@ strong {
   color: white;
   margin-left: 15px;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 

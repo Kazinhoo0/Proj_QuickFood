@@ -33,10 +33,10 @@ app.use(bodyParser.json());
 
 
 app.post('/Login', (req, res) => {
-  const { email, senha } = req.body;
+  const { email, senha, userid } = req.body;
 
 
-  if (!email || !senha) {
+  if (!email || !senha || !userid) {
     return res.status(400).json({ message: 'Email e senha são obrigatórios' });
   }
 
@@ -45,9 +45,9 @@ app.post('/Login', (req, res) => {
   )
 
 
-  const query = `SELECT id, senha, nomecompleto FROM users WHERE email = ?`;
+  const query = `SELECT id, senha, nomecompleto FROM users WHERE email = ? and id = ?`;
 
-  db.get(query, [email], function (err, row) {
+  db.get(query, [email, userid], function (err, row) {
     if (err) {
       console.error('Erro ao inserir no banco de dados:', err.message);
       return res.status(500).json({ error: err.message });
@@ -60,21 +60,21 @@ app.post('/Login', (req, res) => {
 
       if (isPasswordValid) {
 
-      const token = jwt.sign({ id: row.id, email }, secretkey, { expiresIn: '1h' });
-      res.status(200).json({ 
-        success: true,
-        id: row.id,
-        token: token,
-        message: 'Login bem-sucedido',
-        nomecompleto:row.nomecompleto
+        const token = jwt.sign({ id: row.id, email }, secretkey, { expiresIn: '1h' });
+        res.status(200).json({
+          success: true,
+          id: row.id,
+          token: token,
+          message: 'Login bem-sucedido',
+          nomecompleto: row.nomecompleto
         });
+      } else {
+        res.status(400).json({ success: false, message: 'Senha incorreta' });
+      }
     } else {
-      res.status(400).json({ success: false, message: 'Senha incorreta' });
+      res.status(400).json({ success: false, message: 'Email não encontrado' });
     }
-  } else {
-    res.status(400).json({ success: false, message: 'Email não encontrado' });
-  }
-});
+  });
 });
 
 
@@ -97,7 +97,7 @@ app.post('/Criarconta', (req, res) => {
   console.log('Dados recebidos:', { nomecompleto, senha, cidade, genero, email });
 
 
- const query = `SELECT email FROM users WHERE email = ?`
+  const query = `SELECT email FROM users WHERE email = ?`
 
   db.get(query, [email], function (err, row) {
     if (err) {
@@ -128,10 +128,10 @@ app.post('/Criarconta', (req, res) => {
 
 
 app.post('/Adicionaritensmenu', (req, res) => {
-  const { nomeitem, preco, ingredientes, fotomenu} = req.body;
+  const { nomeitem, preco, ingredientes, fotomenu, userid } = req.body;
 
 
-  if (!nomeitem || !preco || !ingredientes || !fotomenu ) {
+  if (!nomeitem || !preco || !ingredientes || !fotomenu || !userid) {
     return res.status(400).json({ message: 'Todos os campos são obrigatórios' });
   }
 
@@ -140,43 +140,51 @@ app.post('/Adicionaritensmenu', (req, res) => {
   )
 
 
-  const query = `INSERT INTO comidas (nomeitem,preco,ingredientes,fotomenu) VALUES (?, ?, ?, ?)`;
-  
-  db.run(query, [nomeitem,preco,ingredientes,fotomenu], function (err, row) {
+
+  const query = `INSERT INTO comidas (nome, preco, ingredientes, img_url, user_id ) VALUES (?, ?, ?, ?, ?)`;
+
+  db.run(query, [nomeitem, preco, ingredientes, fotomenu, userid], function (err, row) {
     if (err) {
       console.error('Erro ao inserir no banco de dados:', err.message);
       return res.status(500).json({ error: err.message });
-  }
+    }
 
-  res.status(201).json({
+
+    res.status(201).json({
       success: true,
       id: this.lastID, // ID do último item inserido
       message: 'Item adicionado com sucesso'
+    });
   });
-});
 });
 
 
 
 
 app.post('/gerenciarpratos', (req, res) => {
-  const { nomeitem, preco, ingredientes, fotomenu} = req.body;
+  const { userid } = req.body;
 
 
-  const query = `SELECT nomeitem, preco, ingredientes,fotomenu FROM comidas (?, ?, ?, ?)`;
+  if (!userid) {
+    return res.status(400).json({message: 'id do usuário é obrigatório'})
   
-  db.all(query, [], function (err, row) {
+  }
+
+
+  const query = `SELECT * FROM comidas WHERE userid = ?`;
+
+  db.all(query, [userid], function (err, rows) {
     if (err) {
       console.error('Erro ao consultar o banco de dados:', err.message);
       return res.status(500).json({ error: err.message });
     }
 
     // Se houver itens no banco, retorna-os
-    if (row.length > 0) {
+    if (rows.length > 0) {
       res.status(200).json({
         success: true,
         message: 'Itens encontrados com sucesso',
-        items: row
+        items: rows
       });
     } else {
       // Caso não haja itens na tabela

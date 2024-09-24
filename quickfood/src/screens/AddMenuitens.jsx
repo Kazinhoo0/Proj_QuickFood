@@ -15,9 +15,9 @@ import Toastify from 'toastify-js';
 
 export default function AddMenuItens() {
 
-    const [novoPrato, setNovoPrato] = useState({nomeitem: '', preco: '', ingredientes: '', fotomenu: '' })
+    const [novoPrato, setNovoPrato] = useState({ nomeitem: '', preco: '', ingredientes: '', fotomenu: '' })
     // 
-    const [typesComidas, setTypescomidas] = useState({kebabs: '', frango: '', hamburguer: '', massas: '', japoneses: '',bebida: '', carnes: '', salada: ''}) 
+    const [typesComidas, setTypescomidas] = useState({ kebabs: false, frango: false, hamburguer: false, massas: false, japoneses: false, bebida: false, carnes: false, salada: false })
     // 
 
 
@@ -65,53 +65,67 @@ export default function AddMenuItens() {
         })
     }, [])
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
+        const userid = localStorage.getItem('userid')
+
+        if (!userid) {
+            Toastify({
+                text: 'Usuário não autenticado!',
+                position: 'center',
+                style: {
+                    background: '#db2d0e',
+                    color: '#ffffff'
+                }
+            }).showToast();
+            return
+        }
 
 
-        setTimeout(async () => {
-            const response = await fetch('http://localhost:3000/Adicionaritensmenu', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    nomeitem: novoPrato.nomeitem, 
-                    preco: novoPrato.preco,
-                    ingredientes: novoPrato.ingredientes, 
-                    fotomenu: novoPrato.fotomenu,
-                    })
-            });
-            
-            const data = await response.json();
+        const response = await fetch('http://localhost:3000/Adicionaritensmenu', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                nomeitem: novoPrato.nomeitem,
+                preco: novoPrato.preco,
+                ingredientes: novoPrato.ingredientes,
+                fotomenu: novoPrato.fotomenu,
+                userid: userid
 
-            if (data.success) {
-                localStorage.setItem('token', data.token);
-                setNovoPrato({nomeitem: '', preco: '', ingredientes: '', fotomenu: ''})
 
-                Toastify({
-                    text: 'Sucesso ao adiconar novo item!',
-                    position: 'center',
-                    style: {
-                        background: '#33ff00',
-                        color: '#ffffff'
-                    }
-                }).showToast();
 
-                // Garantindo que o loader seja visível por pelo menos 2 segundos
-                setTimeout(() => {
-                    navigate('/gerenciarpratos')
-                }, 2000); 
+            })
+        });
 
-            } else {
+        const data = await response.json();
 
-                Toastify({
-                    text: 'Erro ao adicionar este item!',
-                    position: 'center',
-                    style: {
-                        background: '#db2d0e',
-                        color: '#ffffff'
-                    }
-                }).showToast();
-            }
-        }); 
+        if (data.success) {
+            localStorage.setItem('token', data.token);
+            setNovoPrato({ nomeitem: '', preco: '', ingredientes: '', fotomenu: '', userid: '' })
+
+            Toastify({
+                text: 'Sucesso ao adiconar novo item!',
+                position: 'center',
+                style: {
+                    background: '#33ff00',
+                    color: '#ffffff'
+                }
+            }).showToast();
+
+            // Garantindo que o loader seja visível por pelo menos 2 segundos
+            setTimeout(() => {
+                navigate('/gerenciarpratos')
+            }, 2000);
+
+        } else {
+            Toastify({
+                text: 'Erro ao adicionar este item!',
+                position: 'center',
+                style: {
+                    background: '#db2d0e',
+                    color: '#ffffff'
+                }
+            }).showToast();
+        }
     }
 
 
@@ -153,14 +167,14 @@ export default function AddMenuItens() {
                             <form className='container-formulario-restaurants_pageadditens' action="">
                                 <span className='style_span_pageadditens'>Nome item</span>
                                 <input
-                                    onChange={(e) => setNovoPrato({...novoPrato, nomeitem: e.target.value})}
+                                    onChange={(e) => setNovoPrato({ ...novoPrato, nomeitem: e.target.value })}
                                     className='style-inputs-additenspag'
                                     placeholder='Nome completo*'
                                     type="text"
                                     value={novoPrato.nomeitem} />
                                 <span className='style_span_pageadditens'>Preço</span>
                                 <input
-                                    onChange={(e) => setNovoPrato({...novoPrato, preco: e.target.value})}
+                                    onChange={(e) => setNovoPrato({ ...novoPrato, preco: e.target.value })}
                                     className='style-inputs-additenspag'
                                     placeholder='Preço em numero inteiro'
                                     type="number"
@@ -170,14 +184,14 @@ export default function AddMenuItens() {
                             <form className='container-formulario-restaurants_pageadditens2' action="">
                                 <span className='style_span_pageadditens'>Ingredientes</span>
                                 <input
-                                    onChange={(e) => setNovoPrato({...novoPrato, ingredientes: e.target.value})}
+                                    onChange={(e) => setNovoPrato({ ...novoPrato, ingredientes: e.target.value })}
                                     className='style-inputs-additenspag'
                                     placeholder='Seu email aqui*'
                                     type="text"
                                     value={novoPrato.ingredientes} />
                                 <span className='style_span_pageadditens'>Foto Menu</span>
                                 <input
-                                    onChange={(e) => setNovoPrato({...novoPrato, fotomenu: e.target.value})}
+                                    onChange={(e) => setNovoPrato({ ...novoPrato, fotomenu: e.target.value })}
                                     className='style-inputs-additenspag'
                                     placeholder='Sua senha aqui*'
                                     type="file"
@@ -192,7 +206,7 @@ export default function AddMenuItens() {
                                 <input
                                     className='style_checkbox_additens'
                                     type="checkbox"
-                                    onChange={(e) => setTypescomidas({...typesComidas, massas: e.target.value})}
+                                    onChange={(e) => setTypescomidas({ ...typesComidas, massas: e.target.checked })}
                                     value={typesComidas.massas}
 
                                 />
@@ -201,15 +215,15 @@ export default function AddMenuItens() {
                                 <input
                                     className='style_checkbox_additens'
                                     type="checkbox"
-                                    onChange={(e) => setTypescomidas({...typesComidas, kebabs: e.tager.value})}
+                                    onChange={(e) => setTypescomidas({ ...typesComidas, kebabs: e.tager.checked })}
                                     value={typesComidas.kebabs} />
                                 <small>Kebabs</small>
-                                
+
 
                                 <input
                                     className='style_checkbox_additens'
                                     type="checkbox"
-                                    onChange={(e) => setTypescomidas({...typesComidas, frangos: e.target.value})}
+                                    onChange={(e) => setTypescomidas({ ...typesComidas, frangos: e.target.checked })}
                                     value={typesComidas.frango}
                                 />
                                 <small>Frangos</small>
@@ -218,7 +232,7 @@ export default function AddMenuItens() {
                                 <input
                                     className='style_checkbox_additens'
                                     type="checkbox"
-                                    onChange={(e) => setTypescomidas({...typesComidas, hamburguer: e.target.value})}
+                                    onChange={(e) => setTypescomidas({ ...typesComidas, hamburguer: e.target.checked })}
                                     value={typesComidas.hamburguer} />
                                 <small>Hamburguer</small>
 
@@ -229,16 +243,16 @@ export default function AddMenuItens() {
                                 <input
                                     className='style_checkbox_additens'
                                     type="checkbox"
-                                    onChange={(e) => setTypescomidas({...typesComidas, bebida: e.target.value})}
+                                    onChange={(e) => setTypescomidas({ ...typesComidas, bebida: e.target.checked })}
                                     value={typesComidas.bebida} />
-                                    
+
                                 <small>Bebida</small>
 
 
                                 <input
                                     className='style_checkbox_additens'
                                     type="checkbox"
-                                    onChange={(e) => setTypescomidas(e.target.value)}
+                                    onChange={(e) => setTypescomidas(e.target.checked)}
                                     value={typesComidas.japoneses} />
                                 <small>Japones</small>
 
@@ -246,7 +260,7 @@ export default function AddMenuItens() {
                                 <input
                                     className='style_checkbox_additens'
                                     type="checkbox"
-                                    onChange={(e) => setTypescomidas({...typesComidas, carnes: e.target.value})}
+                                    onChange={(e) => setTypescomidas({ ...typesComidas, carnes: e.target.checked })}
                                     value={typesComidas.carnes} />
                                 <small>Carnes</small>
 
@@ -254,7 +268,7 @@ export default function AddMenuItens() {
                                 <input
                                     className='style_checkbox_additens'
                                     type="checkbox"
-                                    onChange={(e) => setTypescomidas({...typesComidas, salada: e.target.value})}
+                                    onChange={(e) => setTypescomidas({ ...typesComidas, salada: e.target.checked })}
                                     value={typesComidas.salada} />
                                 <small>Salada</small>
 

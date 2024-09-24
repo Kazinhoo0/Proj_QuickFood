@@ -62,24 +62,27 @@ export default function Login() {
 
     const handleenteraccount = async (e) => {
         e.preventDefault();
-        
+
         setLoader(true); // Começa a carregar
-    
-        
+
+
         setTimeout(async () => {
             const response = await fetch('http://localhost:3000/Login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, senha })
             });
-            
+
             const data = await response.json();
-    
+
             if (data.success) {
                 localStorage.setItem('token', data.token);
                 localStorage.setItem('email', email);
                 localStorage.setItem('nomecompleto', data.nomecompleto);
-    
+                localStorage.setItem('userid', data.userid)
+
+                
+
                 Toastify({
                     text: 'Login efetuado com sucesso!',
                     position: 'center',
@@ -88,16 +91,16 @@ export default function Login() {
                         color: '#ffffff'
                     }
                 }).showToast();
-    
+
                 // Garantindo que o loader seja visível por pelo menos 2 segundos
                 setTimeout(() => {
-                    setLoader(false); 
-                    navigate('/gerenciarpratos'); 
-                }, 2000); 
-    
+                    setLoader(false);
+                    navigate('/gerenciarpratos');
+                }, 2000);
+
             } else {
                 setLoader(false);
-    
+
                 Toastify({
                     text: 'Não foi possível realizar o login!',
                     position: 'center',
@@ -107,10 +110,10 @@ export default function Login() {
                     }
                 }).showToast();
             }
-        }, 2000); 
+        }, 2000);
     };
-      
-       
+
+
     return (
         <div className="home-container">
             <div style={{ backgroundImage: `url(${topimg_home})` }} className="container_fluid-home">
@@ -144,7 +147,7 @@ export default function Login() {
                         <h2 className="style-h2-loginpage">LOGIN SUA CONTA</h2>
 
                         {loader ? (
-                            
+
                             <MutatingDots
                                 visible={true}
                                 height="100"
@@ -152,10 +155,10 @@ export default function Login() {
                                 color="#4fa94d"
                                 secondaryColor="#4fa94d"
                                 radius="12.5"
-                                wrapperStyle={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}
+                                wrapperStyle={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}
                                 ariaLabel="mutating-dots-loading"
                             />
-                        
+
                         ) : (
 
                             <form onSubmit={handleenteraccount} className="container-formulario-login">
@@ -178,7 +181,7 @@ export default function Login() {
                                 <button className="style-button-loginpage">Entrar</button>
                             </form>
                         )}
-                        
+
                         <div className='container-nothaveaccount'>
                             <p className='style-criarconta'>Ainda não tem uma conta ?
                                 <a onClick={handlenavigatecreateaccount} className='style-link-a' >Criar Conta</a>

@@ -13,9 +13,6 @@ import { useEffect, useState } from 'react'
 
 export default function MyFoods() {
 
-     
-      
-
 
     const [userdata, setUserData] = useState({
 
@@ -26,20 +23,12 @@ export default function MyFoods() {
         genero: '',
     })
 
-    const [itens, setItens] = useState([])
-
-
-
-    useEffect(() => {
-        const SalvarItens = JSON.parse(localStorage.getItem('items')) || [];
-        setItens(SalvarItens);
-    }, [])
 
     useEffect(() => {
         const nomecompleto = localStorage.getItem('nomecompleto')
 
         if (nomecompleto) {
-            setUserData ({
+            setUserData({
 
                 nomecompleto: nomecompleto || '',
 
@@ -48,27 +37,8 @@ export default function MyFoods() {
     }, [])
 
 
-    
-
-    // const fetchpratos = async () => {
-
-
-    //     const response = await fetch('http://localhost:3000/Adicionaritensmenu', {
-    //             method: 'POST',
-    //             headers: { 'Content-Type': 'application/json' },
-    //             body: JSON.stringify({ nomeitem, preco, ingredientes, fotomenu })
-    //         });
-            
-    //         const data = await response.json();
-
-    //         if (data.success) {
-    //             setPratos(data.items);
-    //         } else {
-    //             setErr(data.message)
-    //         }
-    
-    //     }
-    
+    const [pratos, setPratos] = useState([])
+    const [loading, setLoading] = useState('')
 
 
     const navigate = useNavigate('')
@@ -93,6 +63,46 @@ export default function MyFoods() {
         navigate('/Ordenarrequisicoes')
         console.log("executado com sucesso")
     }
+
+
+
+
+    useEffect (() => {
+        const fetchPratos = async () => {
+        try {
+
+            
+            const response = await fetch('http://localhost:3000/gerenciarpratos', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+
+            });
+        
+        
+
+            const data = await response.json();
+            console.log('Dados recebidos:', data);
+    
+            if (data.success) {
+              setPratos(data.items); // Armazena os itens no estado
+            } else {
+              console.log('Nenhum item encontrado');
+            }
+          } catch (error) {
+            console.error('Erro ao buscar os pratos:', error);
+          } finally {
+            setLoading(false); // Remove o loading após a requisição
+          }
+        };
+    
+        fetchPratos(); // Executa a função ao montar o componente
+      }, []);
+    
+      if (loading) {
+        return <div>Carregando...</div>; // Exibe um loading enquanto carrega
+    }
+            
+
 
 
 
@@ -139,27 +149,24 @@ export default function MyFoods() {
                     <div className='container_Foodstittle' >
                         <h3>Foods</h3>
                     </div>
-                    {itens.length > 0 ? (
-                         itens.map((item,index) => (
+                    
+                        {pratos.map((prato, index) => (
+                                <div key={index} className='container_itens'>
+                                    <div className='container_img'>
+                                        <img className='style_imgitensmenu' src={prato.fotomenu} alt="" />
+                                    </div>
+                                    <div className='container_nomeitem_ingredientes'>
+                                        <h3>{prato.nomeitem}</h3>
 
-                       
-                        <div key={index} className='container_itens'>
-                                <div className='container_img'>
-                                    <img className='style_imgitensmenu' src={item.fotomenu} alt="" />
+                                        <h3>{prato.ingredientes}</h3>
+                                    </div>
+                                    <div className='container_preço'>
+                                        <h4>{prato.preco}</h4>
+                                    </div>
                                 </div>
-                                <div className='container_nomeitem_ingredientes'>
-                                    <h3>{item.nomeitem}</h3>
-                                    
-                                    <h3>{item.ingredientes}</h3>
-                                </div>
-                                <div className='container_preço'>
-                                    <h4>{item.preco}</h4>
-                                </div>
-                        </div>
                         ))
-                    )   : (
-                        <p>Nehum item adicionado.</p>
-                    )}
+                        }
+                    
                 </div>
 
             </div>
