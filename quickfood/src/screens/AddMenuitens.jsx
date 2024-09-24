@@ -72,21 +72,45 @@ export default function AddMenuItens() {
         })
     })
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    setTimeout(async () => {
+        const response = await fetch('http://localhost:3000/Adicionaritensmenu', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ nomeitem, preco, ingredientes, fotomenu })
+        });
+        
+        const data = await response.json();
 
-        handleAdicionaritem(nomeitem,preco,ingredientes, fotomenu)
-        localStorage.setItem('nomeitem' , nomeitem)
-        localStorage.setItem('preco' , preco)
-        localStorage.setItem('ingredientes' , ingredientes)
-        localStorage.setItem('fotomenu' , fotomenu)
+        if (data.success) {
+            localStorage.setItem('token', data.token);
 
-        console.log('nomeitem -', nomeitem, 'preço -', preco, -  'ingredientes -', ingredientes, - 'fotolink -', fotomenu)
+            Toastify({
+                text: 'Sucesso ao adiconar novo item!',
+                position: 'center',
+                style: {
+                    background: '#33ff00',
+                    color: '#ffffff'
+                }
+            }).showToast();
 
-    }
+            // Garantindo que o loader seja visível por pelo menos 2 segundos
+            setTimeout(() => {
+                setLoader(false); 
+                navigate('/gerenciarpratos')
+            }, 2000); 
 
+        } else {
 
-
+            Toastify({
+                text: 'Erro ao adicionar este item!',
+                position: 'center',
+                style: {
+                    background: '#db2d0e',
+                    color: '#ffffff'
+                }
+            }).showToast();
+        }
+    }, 2000); 
 
 
     return (
@@ -130,14 +154,14 @@ export default function AddMenuItens() {
                                     onChange={(e) => setNomeItem(e.target.value)}
                                     className='style-inputs-additenspag'
                                     placeholder='Nome completo*'
-                                    type="email"
+                                    type="text"
                                     value={nomeitem} />
                                 <span className='style_span_pageadditens'>Preço</span>
                                 <input
                                     onChange={(e) => setPreço(e.target.value)}
                                     className='style-inputs-additenspag'
                                     placeholder='Preço em numero inteiro'
-                                    type="email"
+                                    type="number"
                                     value={preco} />
                             </form>
 
@@ -147,7 +171,7 @@ export default function AddMenuItens() {
                                     onChange={(e) => setIngredientes(e.target.value)}
                                     className='style-inputs-additenspag'
                                     placeholder='Seu email aqui*'
-                                    type="email"
+                                    type="text"
                                     value={ingredientes} />
                                 <span className='style_span_pageadditens'>Foto Menu</span>
                                 <input

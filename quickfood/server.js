@@ -127,6 +127,52 @@ app.post('/Criarconta', (req, res) => {
 });
 
 
+app.post('/Adicionaritensmenu', (req, res) => {
+  const { nomeitem, preco, ingredientes, fotomenu} = req.body;
+
+
+  if (!nomeitem || !preco || !ingredientes || !fotomenu ) {
+    return res.status(400).json({ message: 'Todos os campos são obrigatórios' });
+  }
+
+  console.log(
+    'Novo item adicionado', 'nome do item:', nomeitem
+  )
+
+
+  const query = `INSERT INTO comidas (nomeitem,preco,ingredientes,fotomenu) VALUES (?, ?, ?, ?)`;
+  
+  db.run(query, [nomeitem,preco,ingredientes,fotomenu], function (err, row) {
+    if (err) {
+      console.error('Erro ao inserir no banco de dados:', err.message);
+      return res.status(500).json({ error: err.message });
+    }
+
+
+    if (row) {
+
+      const isPasswordValid = bcrypt.compareSync(senha, row.senha);
+
+      if (isPasswordValid) {
+
+      const token = jwt.sign({ id: row.id, email }, secretkey, { expiresIn: '1h' });
+      res.status(200).json({ 
+        success: true,
+        id: row.id,
+        token: token,
+        message: 'Login bem-sucedido',
+        nomecompleto:row.nomecompleto
+        });
+    } else {
+      res.status(400).json({ success: false, message: 'Senha incorreta' });
+    }
+  } else {
+    res.status(400).json({ success: false, message: 'Email não encontrado' });
+  }
+});
+});
+
+
 
 
 // Rota para a página inicial
