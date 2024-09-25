@@ -33,10 +33,10 @@ app.use(bodyParser.json());
 
 
 app.post('/Login', (req, res) => {
-  const { email, senha, userid } = req.body;
+  const { email, senha,} = req.body;
 
 
-  if (!email || !senha || !userid) {
+  if (!email || !senha) {
     return res.status(400).json({ message: 'Email e senha são obrigatórios' });
   }
 
@@ -45,36 +45,39 @@ app.post('/Login', (req, res) => {
   )
 
 
-  const query = `SELECT id, senha, nomecompleto FROM users WHERE email = ? and id = ?`;
+  const query = `SELECT id, senha, nomecompleto FROM users WHERE email = ?`;
 
-  db.get(query, [email, userid], function (err, row) {
-    if (err) {
-      console.error('Erro ao inserir no banco de dados:', err.message);
-      return res.status(500).json({ error: err.message });
-    }
-
-
-    if (row) {
-
-      const isPasswordValid = bcrypt.compareSync(senha, row.senha);
-
-      if (isPasswordValid) {
-
-        const token = jwt.sign({ id: row.id, email }, secretkey, { expiresIn: '1h' });
-        res.status(200).json({
-          success: true,
-          id: row.id,
-          token: token,
-          message: 'Login bem-sucedido',
-          nomecompleto: row.nomecompleto
-        });
-      } else {
-        res.status(400).json({ success: false, message: 'Senha incorreta' });
+  db.get(query, [email], function (err, row) {
+      if (err) {
+        console.error('Erro ao inserir no banco de dados:', err.message);
+        return res.status(500).json({ error: err.message });
       }
-    } else {
-      res.status(400).json({ success: false, message: 'Email não encontrado' });
-    }
-  });
+
+
+      if (row) {
+
+        const isPasswordValid = bcrypt.compareSync(senha, row.senha);
+
+        if (isPasswordValid) {
+
+          const token = jwt.sign({ id: row.id, email }, secretkey, { expiresIn: '1h' });
+          res.status(200).json({
+            success: true,
+            id: row.id,
+            token: token,
+            message: 'Login bem-sucedido',
+            nomecompleto: row.nomecompleto
+          });
+        } else {
+          res.status(400).json({ success: false, message: 'Senha incorreta' });
+        }
+      } else {
+        res.status(400).json({ success: false, message: 'Email não encontrado' });
+      }
+
+
+    
+    });
 });
 
 
@@ -171,7 +174,7 @@ app.post('/gerenciarpratos', (req, res) => {
   }
 
 
-  const query = `SELECT * FROM comidas WHERE userid = ?`;
+  const query = `SELECT * FROM comidas WHERE user_id = ?`;
 
   db.all(query, [userid], function (err, rows) {
     if (err) {

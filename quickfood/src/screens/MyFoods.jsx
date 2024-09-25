@@ -21,20 +21,9 @@ export default function MyFoods() {
         email: '',
         cidade: '',
         genero: '',
+        userid: ''
     })
 
-
-    useEffect(() => {
-        const nomecompleto = localStorage.getItem('nomecompleto')
-
-        if (nomecompleto) {
-            setUserData({
-
-                nomecompleto: nomecompleto || '',
-
-            })
-        }
-    }, [])
 
 
     const [pratos, setPratos] = useState([])
@@ -68,6 +57,14 @@ export default function MyFoods() {
 
 
     useEffect (() => {
+        const userid = localStorage.getItem('userid')
+        const nomecompleto = localStorage.getItem('nomecompleto')
+        setUserData( {
+            userid: userid || '',
+            nomecompleto: nomecompleto || ''
+        })
+
+         
         const fetchPratos = async () => {
         try {
 
@@ -75,6 +72,7 @@ export default function MyFoods() {
             const response = await fetch('http://localhost:3000/gerenciarpratos', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({userid})
 
             });
         

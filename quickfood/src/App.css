@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: celogocontainer_itensnter;
 }
 
 .App-logo {
@@ -3021,11 +3021,11 @@ a:hover {
   align-content: center;
   justify-content: center;
   background-color: rgba(219, 218, 218, 0.664);
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .container_menufoods {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 80%;
   display: grid;
   justify-content: center;
@@ -3095,13 +3095,13 @@ a:hover {
   text-align: center;
   height: 20%;
   margin-top: 20px;
-  border: 1px solid black;
   background-color: white;
+  font-size: x-large;
 
 }
 
 .container_itens {
-  border: 1px solid red;
+  border: 1px solid rgb(104, 102, 102);
   height: 120px;
   background-color: rgb(255, 255, 255);
   justify-content: center;
@@ -3110,19 +3110,19 @@ a:hover {
 }
 
 .container_img {
-  border: 1px solid red;
+  /* border: 1px solid rgb(0, 0, 0); */
   align-content: start;
   justify-content: start;
   width: 25%;
 }
 
 .container_nomeitem_ingredientes {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 45%;
 }
 
 .container_preço {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 25%;
 }
 
