@@ -138,6 +138,18 @@
     width: 110px !important;
   }
 
+  /* pagina de cadastrar menus */
+
+
+  .style_checkbox_additens {
+    margin-left: 120px !important;
+  }
+
+  .container_input-restaurants-register {
+    width: 95% !important;
+  }
+
+
 
 
 
@@ -184,6 +196,20 @@
 
   .buttonsearch_text {
     width: 12% !important;
+  }
+
+  /* responsividade pagina cadastrar menus */
+
+  .style_checkbox_additens {
+    margin-left: 120px !important;
+  }
+
+  .container_input-restaurants-register {
+    width: 95% !important;
+  }
+
+  .container-second-login-register {
+    width: 60% !important;
   }
 
 }
@@ -388,14 +414,16 @@
     font-size: 25px !important;
   }
 
-  .style_tittlelogin-senha {
-    margin-right: 100px;
-  }
+
 
   .style-button-loginpage {
     width: 55% !important;
     height: 35px !important;
   }
+
+  /* resgitrar restaurants page */
+
+
 
   /* resgitrar restaurants page */
 
@@ -406,16 +434,91 @@
 
   }
 
-  .container_input-restaurants-register {
-    width: 250% !important;
-  }
 
   .style-inputs-loginpage {
-    width: 95% !important;
+    width: 80% !important;
   }
 
   .style-input-loginpage-file {
-    width: 98%;
+    width: 90%;
+  }
+
+
+  .style_checkbox_additens {
+    /* margin-left: 120px !important; */
+
+  }
+
+  .style-small-pagmenu {
+    /* margin-bottom: 50px !important; */
+  }
+
+  .style-inputs-additenspag {}
+
+  .container_input-restaurants-register {
+    width: 85% !important;
+    margin-right: 40px !important;
+    height: 950px !important;
+  }
+
+  .container-input-additens {
+    display: grid !important;
+  }
+
+  .style-inputs-additenspag {
+    margin-bottom: 0px !important;
+    width: 180% !important;
+  }
+
+  .container-second-login-register {
+    width: 80% !important;
+  }
+
+  .custom-file-button {
+    width: 172% !important;
+
+  }
+
+  .style_tittlelogin-senha {
+    font-size: 30px;
+    margin-left: 300px !important;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+  }
+
+  .container-principal-restaurants-register {
+    height: 1500px !important;
+  }
+
+  .container_type_additens {
+    margin-top: 230px !important;
+    width: 90% !important;
+  }
+
+  .container_checkbox_type {
+    display: flex !important;
+    border: none !important;
+    padding-left: 20px !important;
+  }
+
+  .style_button_sair {
+    font-size: 15px !important;
+    /* margin-right: 350px !important; */
+    width: 10% !important;
+    padding: 5px;
+    margin-left: 10px;
+    text-align: center;
+    border: 1px solid orange;
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .style_checkbox_additens {
+    margin-left: 70px !important;
+
   }
 }
 
@@ -551,14 +654,6 @@
     font-size: 13px;
   }
 
-  .style_tittlelogin-senha {
-    font-size: 20px;
-    margin-right: 190px;
-    margin-top: 50px;
-    color: white;
-    text-align: center;
-  }
-
 
   .style-button-loginpage {
     width: 55% !important;
@@ -587,11 +682,79 @@
     width: 90%;
   }
 
+  .container_input-restaurants-register {
+    width: 85% !important;
+    margin-right: 40px !important;
+    height: 950px !important;
+  }
+
+  .container-second-login-register {
+    width: 80% !important;
+  }
+
+  .container-input-additens {
+    display: grid !important;
+  }
+
+  .style-inputs-additenspag {
+    margin-bottom: 0px !important;
+    width: 180% !important;
+  }
+
+  .custom-file-button {
+    width: 117% !important;
+
+  }
+
+  .style_tittlelogin-senha {
+    font-size: 30px;
+    margin-right: 470px !important;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+  }
+
+  .container-principal-restaurants-register {
+    height: 1500px !important;
+  }
+
+  .container_type_additens {
+    margin-top: 230px !important;
+    width: 90% !important;
+  }
+
+  .container_checkbox_type {
+    display: flex !important;
+    border: none !important;
+    padding-right: 0px !important;
+  }
+
+  .style_button_sair {
+    font-size: 15px !important;
+    /* margin-right: 350px !important; */
+    width: 10% !important;
+    padding: 5px;
+    margin-left: 10px;
+    text-align: center;
+    border: 1px solid orange;
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+  .style_checkbox_additens {
+    margin-left: 70px !important;
+
+  }
+
+
 }
 
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 773px) {
   .h1titlehome-style {
     font-size: 12px !important;
     margin-top: 110px !important;
@@ -810,7 +973,7 @@
 
 
   .navbar_itens_style {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .navbar_itens_style_orange {
@@ -882,9 +1045,6 @@
 
   }
 
-  .container_input-restaurants-register {
-    width: 250% !important;
-  }
 
   .style-inputs-loginpage {
     width: 80% !important;
@@ -892,6 +1052,79 @@
 
   .style-input-loginpage-file {
     width: 90%;
+  }
+
+
+  .style_checkbox_additens {
+    /* margin-left: 120px !important; */
+
+  }
+
+  .style-small-pagmenu {
+    /* margin-bottom: 50px !important; */
+  }
+
+  .style-inputs-additenspag {}
+
+  .container_input-restaurants-register {
+    width: 85% !important;
+    margin-right: 40px !important;
+    height: 950px !important;
+  }
+
+  .container-input-additens {
+    display: grid !important;
+  }
+
+  .style-inputs-additenspag {
+    margin-bottom: 0px !important;
+    width: 180% !important;
+  }
+
+  .container-second-login-register {
+    width: 80% !important;
+  }
+
+  .custom-file-button {
+    width: 172% !important;
+
+  }
+
+  .style_tittlelogin-senha {
+    font-size: 30px;
+    margin-left: 280px !important;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+  }
+
+  .container-principal-restaurants-register {
+    height: 1500px !important;
+  }
+
+  .container_type_additens {
+    margin-top: 230px !important;
+    width: 90% !important;
+  }
+
+  .container_checkbox_type {
+    display: grid !important;
+    border: none !important;
+    padding-left: 20px !important;
+  }
+
+  .style_button_sair {
+    font-size: 15px !important;
+    /* margin-right: 350px !important; */
+    width: 10% !important;
+    padding: 5px;
+    margin-left: 10px;
+    text-align: center;
+    border: 1px solid orange;
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
   }
 
 }
@@ -1217,6 +1450,80 @@
   .style-input-loginpage-file {
     width: 90%;
   }
+
+
+  /* registrar menus/itens page */
+
+
+  .style_checkbox_additens {
+    /* margin-left: 120px !important; */
+
+  }
+
+  .style-small-pagmenu {
+    /* margin-bottom: 50px !important; */
+  }
+
+  .style-inputs-additenspag {}
+
+  .container_input-restaurants-register {
+    width: 85% !important;
+    margin-right: 40px !important;
+    height: 950px !important;
+  }
+
+  .container-input-additens {
+    display: grid !important;
+  }
+
+  .style-inputs-additenspag {
+    margin-bottom: 0px !important;
+    width: 130% !important;
+  }
+
+  .custom-file-button {
+    width: 117% !important;
+
+  }
+
+  .style_tittlelogin-senha {
+    font-size: 20px;
+    margin-left: 200px !important;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+  }
+
+  .container-principal-restaurants-register {
+    height: 1500px !important;
+  }
+
+  .container_type_additens {
+    margin-top: 230px !important;
+    width: 90% !important;
+  }
+
+  .container_checkbox_type {
+    display: grid !important;
+    border: none !important;
+    padding-left: 20px !important;
+  }
+
+  .style_button_sair {
+    font-size: 12px !important;
+    width: 40% !important;
+    margin-right: 350px !important;
+    width: 20% !important;
+    padding: 5px;
+    margin-left: 10px;
+    text-align: center;
+    border: 1px solid orange;
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
 }
 
 @media (width: 480px) {
@@ -1482,13 +1789,7 @@
     font-size: 13px;
   }
 
-  .style_tittlelogin-senha {
-    font-size: 20px;
-    margin-left: 10px;
-    margin-top: 50px;
-    color: white;
-    text-align: center;
-  }
+
 
 
   /* resgitrar restaurants page */
@@ -1511,6 +1812,80 @@
   .style-input-loginpage-file {
     width: 90%;
   }
+
+  /* registrar menus/itens page */
+
+
+  .style_checkbox_additens {
+    /* margin-left: 120px !important; */
+
+  }
+
+  .style-small-pagmenu {
+    /* margin-bottom: 50px !important; */
+  }
+
+  .style-inputs-additenspag {}
+
+  .container_input-restaurants-register {
+    width: 85% !important;
+    margin-right: 40px !important;
+    height: 950px !important;
+  }
+
+  .container-input-additens {
+    display: grid !important;
+  }
+
+  .style-inputs-additenspag {
+    margin-bottom: 0px !important;
+    width: 130% !important;
+  }
+
+  .custom-file-button {
+    width: 117% !important;
+
+  }
+
+  .style_tittlelogin-senha {
+    font-size: 20px;
+    margin-left: 200px !important;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+  }
+
+  .container-principal-restaurants-register {
+    height: 1500px !important;
+  }
+
+  .container_type_additens {
+    margin-top: 230px !important;
+    width: 90% !important;
+  }
+
+  .container_checkbox_type {
+    display: grid !important;
+    border: none !important;
+    padding-left: 20px !important;
+  }
+
+  .style_button_sair {
+    font-size: 12px !important;
+    width: 40% !important;
+    margin-right: 350px !important;
+    width: 20% !important;
+    padding: 5px;
+    margin-left: 10px;
+    text-align: center;
+    border: 1px solid orange;
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
 }
 
 /* Móveis pequenos */
@@ -1723,6 +2098,25 @@
     font-size: 12px;
     width: 40%;
     margin-right: 250px;
+
+  }
+
+  .container_h1headerloginpage {}
+
+  .style_button_sair {
+    font-size: 12px !important;
+    width: 40% !important;
+    margin-right: 250px !important;
+    width: 20% !important;
+
+    padding: 5px;
+    margin-left: 10px;
+    text-align: center;
+    border: 1px solid orange;
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
   }
 
 
@@ -1783,6 +2177,62 @@
 
   .style-input-loginpage-file {
     width: 90%;
+  }
+
+  /* responsividade pagina adicionar menus */
+
+  .style_checkbox_additens {
+    /* margin-left: 120px !important; */
+
+  }
+
+  .style-small-pagmenu {
+    /* margin-bottom: 50px !important; */
+  }
+
+  .style-inputs-additenspag {}
+
+  .container_input-restaurants-register {
+    width: 85% !important;
+    margin-right: 40px !important;
+    height: 950px !important;
+  }
+
+  .container-input-additens {
+    display: grid !important;
+  }
+
+  .style-inputs-additenspag {
+    margin-bottom: 0px !important;
+    width: 130% !important;
+  }
+
+  .custom-file-button {
+    width: 117% !important;
+
+  }
+
+  .style_tittlelogin-senha {
+    font-size: 20px;
+    margin-left: 70px;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+  }
+
+  .container-principal-restaurants-register {
+    height: 1500px !important;
+  }
+
+  .container_type_additens {
+    margin-top: 230px !important;
+    width: 90% !important;
+  }
+
+  .container_checkbox_type {
+    display: grid !important;
+    border: none !important;
+    padding-left: 20px !important;
   }
 
 
@@ -2079,6 +2529,80 @@
   }
 
 
+  /* registrar menus/itens page */
+
+
+  .style_checkbox_additens {
+    /* margin-left: 120px !important; */
+
+  }
+
+  .style-small-pagmenu {
+    /* margin-bottom: 50px !important; */
+  }
+
+  .style-inputs-additenspag {}
+
+  .container_input-restaurants-register {
+    width: 85% !important;
+    margin-right: 40px !important;
+    height: 950px !important;
+  }
+
+  .container-input-additens {
+    display: grid !important;
+  }
+
+  .style-inputs-additenspag {
+    margin-bottom: 0px !important;
+    width: 130% !important;
+  }
+
+  .custom-file-button {
+    width: 117% !important;
+
+  }
+
+  .style_tittlelogin-senha {
+    font-size: 20px;
+    margin-left: 70px !important;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+  }
+
+  .container-principal-restaurants-register {
+    height: 1500px !important;
+  }
+
+  .container_type_additens {
+    margin-top: 230px !important;
+    width: 90% !important;
+  }
+
+  .container_checkbox_type {
+    display: grid !important;
+    border: none !important;
+    padding-left: 20px !important;
+  }
+
+  .style_button_sair {
+    font-size: 12px !important;
+    width: 40% !important;
+    margin-right: 250px !important;
+    width: 20% !important;
+
+    padding: 5px;
+    margin-left: 10px;
+    text-align: center;
+    border: 1px solid orange;
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
 }
 
 
@@ -2194,7 +2718,9 @@ strong {
   height: 33px;
   background-color: orange;
   color: white;
-  Font-weight: bold
+  Font-weight: bold;
+  cursor: pointer;
+
 }
 
 .container_options {
@@ -2832,6 +3358,7 @@ strong {
 
 
 .container_checkbox_type {
+  border: 1px solid grey;
   padding-top: 20px;
   padding-bottom: 5px;
   display: flex;
@@ -3000,9 +3527,15 @@ strong {
 }
 
 a:hover {
-  color: rgb(255, 102, 0);
+  color: #ff6600;
 }
 
+button:hover {
+  background-color: #ffffff;
+  color: #ff6600;
+  font-weight: bold;
+  border: 1px solid rgb(255, 145, 0);
+}
 
 
 /* Página MyFoods */
@@ -3091,22 +3624,25 @@ a:hover {
 }
 
 .container_Foodstittle {
+  /* border: 1px solid red; */
   width: 1000px;
   text-align: center;
-  height: 20%;
+  height: 30%;
   margin-top: 20px;
+  padding-bottom: 15px;
   background-color: white;
   font-size: x-large;
 
 }
 
 .container_itens {
-  border: 1px solid rgb(104, 102, 102);
+  /* border: 1px solid rgb(255, 0, 0); */
   height: 120px;
   background-color: rgb(255, 255, 255);
   justify-content: center;
   align-content: center;
   display: flex;
+  border-top: 1px solid grey;
 }
 
 .container_img {
@@ -3118,7 +3654,7 @@ a:hover {
 
 .container_nomeitem_ingredientes {
   /* border: 1px solid red; */
-  width: 45%;
+  width: 55%;
 }
 
 .container_preço {
@@ -3225,3 +3761,51 @@ lo:hover {
 .style_h1page-register-restaurants {
   color: white;
 }
+
+
+
+/* estilos do input type file */
+
+/* Estilizar o botão personalizado */
+.custom-file-button {
+  background-color: #e7e7e7;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-file-button:hover {
+  background-color: #d1d1d1;
+}
+
+
+/* Estilizar o botão personalizado */
+.custom-file-button {
+  background-color: #e7e7e7;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-file-button:hover {
+  background-color: #d1d1d1;
+}
+
+/* Estilizar o texto do nome do arquivo */
+.custom-file-name {
+  margin-left: 10px;
+  color: #666;
+}
+
+/* Estilizar o ícone do botão */
+.custom-file-icon {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+}
+
+
+.style-small-pagmenu {}

@@ -141,18 +141,18 @@ export default function AddMenuItens() {
                         </div>
                         <div className='container_navbar_buttons'>
                             <ul className='navbar_style'>
-                                <lo className='navbar_itens-style_logon-pages'> <a onClick={handlenavigateadditens}>Adicionar itens</a></lo>
-                                <lo className='navbar_itens-style_logon-pages'> <a onClick={handlenavigatemeuspratos}>Meus pratos</a></lo>
-                                <lo className='navbar_itens-style_logon-pages'><a onClick={handlenavigateordenarrequisições}>Ordenar requisições</a></lo>
-                                <lo className='navbar_username-logon'><a>{userdata.nomecompleto}</a></lo>
-                                <lo className='navbar_itens_style_onpages-logon'><a onClick={handlenavigatehome}>SAIR</a></lo>
+                                <lo className='navbar_itens_style'><a onClick={handlenavigateadditens} >Adicionar itens</a></lo>
+                                <lo className='navbar_itens_style'><a onClick={handlenavigatemeuspratos} >Meus pratos</a></lo>
+                                <lo className='navbar_itens_style'><a onClick={handlenavigateordenarrequisições} >Ordenar requisições</a></lo>
+                                <lo className='navbar_itens_style'><a>{userdata.nomecompleto}</a></lo>
+                                <lo className='style_button_sair'><a onClick={handlenavigatehome}>SAIR</a></lo>
 
                             </ul>
                         </div>
                     </nav>
                     <div className='container-login_text'>
                         <div className='container_h1headerloginpage'>
-                            <h1><strong>CADASTRAMENTO DE MENUS/ITENS</strong>
+                            <h1 className='style_tittlelogin-senha'>CADASTRAMENTO DE MENUS/ITENS
                             </h1>
                         </div>
                     </div>
@@ -192,7 +192,7 @@ export default function AddMenuItens() {
                                 <span className='style_span_pageadditens'>Foto Menu</span>
                                 <input
                                     onChange={(e) => setNovoPrato({ ...novoPrato, fotomenu: e.target.value })}
-                                    className='style-inputs-additenspag'
+                                    className='custom-file-button'
                                     placeholder='Sua senha aqui*'
                                     type="file"
                                     value={novoPrato.fotomenu} />
@@ -203,6 +203,7 @@ export default function AddMenuItens() {
                         <div className='container_type_additens' >
                             <span className='style_span_types'>Escolha o tipo do item: </span>
                             <div className='container_checkbox_type' >
+
                                 <input
                                     className='style_checkbox_additens'
                                     type="checkbox"
@@ -210,7 +211,7 @@ export default function AddMenuItens() {
                                     value={typesComidas.massas}
 
                                 />
-                                <small>Massas</small>
+                                <small className='style-small-pagmenu'>Massas</small>
 
                                 <input
                                     className='style_checkbox_additens'

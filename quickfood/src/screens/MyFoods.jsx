@@ -56,50 +56,50 @@ export default function MyFoods() {
 
 
 
-    useEffect (() => {
+    useEffect(() => {
         const userid = localStorage.getItem('userid')
         const nomecompleto = localStorage.getItem('nomecompleto')
-        setUserData( {
+        setUserData({
             userid: userid || '',
             nomecompleto: nomecompleto || ''
         })
 
-         
+
         const fetchPratos = async () => {
-        try {
+            try {
 
-            
-            const response = await fetch('http://localhost:3000/gerenciarpratos', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({userid})
 
-            });
-        
-        
+                const response = await fetch('http://localhost:3000/gerenciarpratos', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ userid })
 
-            const data = await response.json();
-            console.log('Dados recebidos:', data);
-    
-            if (data.success) {
-              setPratos(data.items); // Armazena os itens no estado
-            } else {
-              console.log('Nenhum item encontrado');
+                });
+
+
+
+                const data = await response.json();
+                console.log('Dados recebidos:', data);
+
+                if (data.success) {
+                    setPratos(data.items); // Armazena os itens no estado
+                } else {
+                    console.log('Nenhum item encontrado');
+                }
+            } catch (error) {
+                console.error('Erro ao buscar os pratos:', error);
+            } finally {
+                setLoading(false); // Remove o loading após a requisição
             }
-          } catch (error) {
-            console.error('Erro ao buscar os pratos:', error);
-          } finally {
-            setLoading(false); // Remove o loading após a requisição
-          }
         };
-    
+
         fetchPratos(); // Executa a função ao montar o componente
-      }, []);
-    
-      if (loading) {
+    }, []);
+
+    if (loading) {
         return <div>Carregando...</div>; // Exibe um loading enquanto carrega
     }
-            
+
 
 
 
@@ -145,26 +145,28 @@ export default function MyFoods() {
             <div className='container-principal-login-register-myfoods'>
                 <div className='container_menufoods'>
                     <div className='container_Foodstittle' >
-                        <h3>Foods</h3>
+                        <h3  style={{paddingBottom: '5px'}}>Foods</h3>
                     </div>
-                    
-                        {pratos.map((prato, index) => (
-                                <div key={index} className='container_itens'>
-                                    <div className='container_img'>
-                                        <img className='style_imgitensmenu' src={prato.fotomenu} alt="" />
-                                    </div>
-                                    <div className='container_nomeitem_ingredientes'>
-                                        <h3>{prato.nomeitem}</h3>
+                    <div style={{height: '220px', paddingBottom: '130px', overflowY: 'Auto' }}>
+                         {pratos.map((prato, index) => ( 
+                        <div key={index} className='container_itens'>
+                            <div className='container_img'>
+                                <img className='style_imgitensmenu' src={prato.fotomenu} alt="" />
+                            </div>
+                            <div className='container_nomeitem_ingredientes'>
+                                <h3>Item: {prato.nome}</h3>
 
-                                        <h3>{prato.ingredientes}</h3>
-                                    </div>
-                                    <div className='container_preço'>
-                                        <h4>{prato.preco}</h4>
-                                    </div>
-                                </div>
-                        ))
-                        }
-                    
+                                <h3>Ingredientes: {prato.ingredientes}</h3>
+                            </div>
+                            <div className='container_preço'>
+                                <h4>R$:{prato.preco}</h4>
+                            </div>
+                        </div>
+                          ))
+                         }
+                    </div>
+
+
                 </div>
 
             </div>

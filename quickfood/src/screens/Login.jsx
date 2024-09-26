@@ -175,7 +175,7 @@ export default function Login() {
                                 <span>Senha</span>
                                 <input
                                     className="style-inputs-loginpage"
-                                    placeholder="Sua senha aqui"
+                                    placeholder="Sua senha aqui*"
                                     type="password"
                                     onChange={(e) => setSenha(e.target.value)}
                                     value={senha}

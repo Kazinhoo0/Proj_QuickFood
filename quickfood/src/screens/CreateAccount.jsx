@@ -61,7 +61,7 @@ export default function CreateAccount() {
 
 
     const handleCadastrarUsuario = async () => {
-        
+
         setTimeout(async () => {
             const response = await fetch('http://localhost:3000/Criarconta', {
                 method: 'POST',
@@ -95,10 +95,10 @@ export default function CreateAccount() {
                     ).showToast();
                     console.log("Usuário registrado com sucesso!", data);
                     setTimeout(() => {
-                        setLoader(false); 
-                        navigate('/gerenciarpratos'); 
-                    }, 2000); 
-                    
+                        setLoader(false);
+                        navigate('/gerenciarpratos');
+                    }, 2000);
+
                 }
             }
             // if (!nomecompleto || !senha || !cidade || !genero || !email) {
@@ -136,23 +136,23 @@ export default function CreateAccount() {
                     style: {
                         background: '#db2d0e',
                         color: '#ffffff'
-                        
+
                     }
                 }).showToast();
 
                 console.log('Já existe uma conta com este email')
             }
         }, 1000)
-    
+
     }
 
     const handleSubmit = (e) => {
-        e.preventDefault(); 
-        handleCadastrarUsuario(genero, email, pais, cidade); 
+        e.preventDefault();
+        handleCadastrarUsuario(genero, email, pais, cidade);
         localStorage.setItem('email', email);
-        localStorage.setItem('genero' , genero);
-        localStorage.setItem('pais' , pais);
-        localStorage.setItem('cidade', cidade )
+        localStorage.setItem('genero', genero);
+        localStorage.setItem('pais', pais);
+        localStorage.setItem('cidade', cidade)
 
         console.log(genero + email, pais, cidade)
     };
@@ -195,7 +195,7 @@ export default function CreateAccount() {
 
 
                         {loader ? (
-                            
+
                             <MutatingDots
                                 visible={true}
                                 height="100"
@@ -203,97 +203,98 @@ export default function CreateAccount() {
                                 color="#4fa94d"
                                 secondaryColor="#4fa94d"
                                 radius="12.5"
-                                wrapperStyle={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}
+                                wrapperStyle={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}
                                 ariaLabel="mutating-dots-loading"
                             />
-                        
+
                         ) : (
 
-                         <div className='container-input-registerrestaurants'>
-                            
-
-                            <form className='container-formulario-restaurants' action="">
-
-                                <span>Nome Completo</span>
-                                <input
-                                    className='style-inputs-loginpage'
-                                    placeholder='Nome completo*'
-                                    type="text"
-                                    onChange={(e) => setNomecompleto(e.target.value)}
-                                    value={nomecompleto} />
-
-                                <span>Senha</span>
-                                <input
-                                    className='style-inputs-loginpage'
-                                    placeholder='Sua senha aqui*'
-                                    type="password"
-                                    onChange={(e) => setsenha(e.target.value)}
-                                    value={senha} />
-
-                                <span>Cidade</span>
-                                <input
-                                    className='style-inputs-loginpage'
-                                    type="text"
-                                    onChange={(e) => setcidade(e.target.value)}
-                                    value={cidade} />
-
-                                <span>Genero</span>
-                                <select
-
-                                    className='style-inputs-loginpage'
-                                    name=""
-                                    id=""
-                                    onChange={(e) => setgenero(e.target.value)}
-                                    value={genero}>
-                                    <option value=""></option>
-                                    <option value="feminino">Feminino</option>
-                                    <option value="masculino">Masculino</option>
-
-                                </select>
-
-                                <span className='style_spans'>Email</span>
-                                <input value={email} onChange={(e) => setemail(e.target.value)} className='style-inputs-loginpage' placeholder='Seu email aqui*' type="email" />
+                            <div className='container-input-registerrestaurants'>
 
 
-                            </form>
+                                <form className='container-formulario-restaurants' action="">
+
+                                    <span>Nome Completo</span>
+                                    <input
+                                        className='style-inputs-loginpage'
+                                        placeholder='Nome completo*'
+                                        type="text"
+                                        onChange={(e) => setNomecompleto(e.target.value)}
+                                        value={nomecompleto} />
+
+                                    <span>Senha</span>
+                                    <input
+                                        className='style-inputs-loginpage'
+                                        placeholder='Sua senha aqui*'
+                                        type="password"
+                                        onChange={(e) => setsenha(e.target.value)}
+                                        value={senha} />
+
+                                    <span>Cidade</span>
+                                    <input
+                                        className='style-inputs-loginpage'
+                                        type="text"
+                                        onChange={(e) => setcidade(e.target.value)}
+                                        value={cidade}
+                                        placeholder='Ex: Rio de janeiro' />
+
+                                    <span>Genero</span>
+                                    <select
+
+                                        className='style-inputs-loginpage'
+                                        name=""
+                                        id=""
+                                        onChange={(e) => setgenero(e.target.value)}
+                                        value={genero}>
+                                        <option value=""></option>
+                                        <option value="feminino">Feminino</option>
+                                        <option value="masculino">Masculino</option>
+
+                                    </select>
+
+                                    <span className='style_spans'>Email</span>
+                                    <input value={email} onChange={(e) => setemail(e.target.value)} className='style-inputs-loginpage' placeholder='Seu email aqui*' type="email" />
+
+
+                                </form>
 
 
 
-                            <div className='container-formulario-restaurants' action="">
+                                <div className='container-formulario-restaurants' action="">
 
-                                <span>Confirmar Senha</span>
-                                <input
-                                    className='style-inputs-loginpage'
-                                    placeholder='Sua senha aqui*'
-                                    type="password"
-                                    onChange={(e) => setconfirmarsenha(e.target.value)}
-                                    value={confirmarsenha} />
+                                    <span>Confirmar Senha</span>
+                                    <input
+                                        className='style-inputs-loginpage'
+                                        placeholder='Sua senha aqui*'
+                                        type="password"
+                                        onChange={(e) => setconfirmarsenha(e.target.value)}
+                                        value={confirmarsenha} />
 
-                                <span>Pais</span>
-                                <input value={pais} onChange={(e) => setpais(e.target.value)} className='style-inputs-loginpage' type="text" />
-                                <small className='style_naoobrigatoriotext'>*Não obrigatório</small>
+                                    <span>Pais</span>
+                                    <input value={pais} onChange={(e) => setpais(e.target.value)} className='style-inputs-loginpage' type="text" placeholder='Ex: Brasil' />
+                                    <small className='style_naoobrigatoriotext'>*Não obrigatório</small>
 
-                                <span>Foto Perfil</span>
-                                <input className='style-input-loginpage-file' placeholder='Escolher Imagem*' type="file" />
-                                <small className='style_naoobrigatoriotext'>*Não obrigatório</small>
+                                    <span>Foto Perfil</span>
+                                    <input className='custom-file-button' placeholder='Escolher Imagem*' type="file" />
+                                    <small className='style_naoobrigatoriotext'>*Não obrigatório</small>
 
-                                <div className='style-container-termosecondicoes'>
-                                    <input type="checkbox" />
-                                    <small >Concordo com os termos e condições</small>
-                                </div>
+                                    <div className='style-container-termosecondicoes'>
+                                        <input type="checkbox" />
+                                        <small >Concordo com os termos e condições</small>
+                                    </div>
 
-                                <div className='container_buttoncriarconta'>
+                                    <div className='container_buttoncriarconta'>
 
-                                    <button onClick={handleSubmit} className='style-button-loginpage'>Criar Conta</button>
-                                    <p className='style-criarconta-a'>Ainda não tem uma conta ?
-                                        <a onClick={handlenavigateLogin} className='style-link-a' > Faça Login</a>
-                                    </p>
+                                        <button onClick={handleSubmit} className='style-button-loginpage'>Criar Conta</button>
+                                        <p className='style-criarconta-a'>Ainda não tem uma conta ?
+                                            <a onClick={handlenavigateLogin} className='style-link-a' > Faça Login</a>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         )}
                     </div>
-                        
+
                 </div>
             </div>
 
