@@ -45,6 +45,12 @@
 
 }
 
+.container_checkbox_type {
+  border: none !important;
+
+}
+
+
 /* 
 @media screen and (max-width:1727px) {
 
@@ -85,7 +91,7 @@
 
 
 
-@media screen and (max-width:1661px) {
+@media screen and (max-width:1700px) {
 
 
   .h1titlehome-style {
@@ -141,15 +147,94 @@
   /* pagina de cadastrar menus */
 
 
-  .style_checkbox_additens {
-    margin-left: 120px !important;
-  }
-
   .container_input-restaurants-register {
     width: 95% !important;
   }
 
 
+  .style_button_sair {
+    font-size: 15px !important;
+    margin-right: 100px !important;
+    width: 5% !important;
+    padding: 5px;
+    margin-left: 10px;
+    text-align: center;
+    border: 1px solid orange;
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .style_checkbox_additens {
+    margin-left: 90px !important;
+  }
+
+
+
+  /* Pagina meu pratos */
+
+  .container_picture_son {
+    width: 100px !important;
+    height: 100px !important;
+    margin-left: 0px !important;
+  }
+
+  .style-img-profile {
+    width: 100px !important;
+    height: 100px !important;
+    margin-right: 10px !important;
+  }
+
+  .container_username {
+    width: 100% !important;
+    margin-left: 40px !important;
+    margin-bottom: 1px !important;
+  }
+
+  /* .style_titulo_pagesafterlogin {
+        font: 10px !important;
+        margin-top: 0px !important;
+        margin-left: 100px !important;
+      }  */
+
+  /* .style_descrição_pagesafterlogin {
+        font-size: 12px !important;
+        margin-top: 140px !important;
+        margin-left: 15px !important;
+      } */
+
+  /* .container_username {
+        width: 70% !important;
+        justify-content: end !important;
+        align-content: end !important;
+        display: flex !important;
+        margin-left: 120px !important;
+      } */
+
+  .container_Foodstittle {
+    width: 1350px !important;
+  }
+
+  .container_itens {
+    display: flex !important;
+  }
+
+  .container_preço {
+    padding-bottom: 35px !important;
+  }
+
+  .container_nomeitem_ingredientes {
+    padding-top: 15px !important;
+  }
+
+  .container_cabecalho-informacoes-myfoods {
+    height: 1180px !important;
+  }
+
+  .container_infor-text {
+    height: 0px !important;
+  }
 
 
 
@@ -210,6 +295,85 @@
 
   .container-second-login-register {
     width: 60% !important;
+  }
+
+  .style_button_sair {
+    font-size: 15px !important;
+    margin-right: 100px !important;
+    width: 5% !important;
+    padding: 5px;
+    margin-left: 10px;
+    text-align: center;
+    border: 1px solid orange;
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+  /* Pagina meu pratos */
+
+  .container_picture_son {
+    width: 100px !important;
+    height: 100px !important;
+    margin-left: 0px !important;
+  }
+
+  .style-img-profile {
+    width: 100px !important;
+    height: 100px !important;
+    margin-right: 10px !important;
+  }
+
+  .container_username {
+    width: 100% !important;
+    margin-left: 40px !important;
+    margin-bottom: 1px !important;
+  }
+
+  /* .style_titulo_pagesafterlogin {
+        font: 10px !important;
+        margin-top: 0px !important;
+        margin-left: 100px !important;
+      }  */
+
+  /* .style_descrição_pagesafterlogin {
+        font-size: 12px !important;
+        margin-top: 140px !important;
+        margin-left: 15px !important;
+      } */
+
+  /* .container_username {
+        width: 70% !important;
+        justify-content: end !important;
+        align-content: end !important;
+        display: flex !important;
+        margin-left: 120px !important;
+      } */
+
+  .container_Foodstittle {
+    width: 1100px !important;
+  }
+
+  .container_itens {
+    display: flex !important;
+  }
+
+  .container_preço {
+    padding-bottom: 35px !important;
+  }
+
+  .container_nomeitem_ingredientes {
+    padding-top: 15px !important;
+  }
+
+  .container_cabecalho-informacoes-myfoods {
+    height: 1180px !important;
+  }
+
+  .container_infor-text {
+    height: 0px !important;
   }
 
 }
@@ -283,6 +447,88 @@
   .style-input-loginpage-file {
     width: 98%;
   }
+
+  .style_button_sair {
+    font-size: 15px !important;
+    margin-right: 70px !important;
+    width: 10% !important;
+    padding: 5px;
+    margin-left: 10px;
+    text-align: center;
+    border: 1px solid orange;
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+
+  /* Pagina meu pratos */
+
+  .container_picture_son {
+    width: 100px !important;
+    height: 100px !important;
+    margin-left: 0px !important;
+  }
+
+  .style-img-profile {
+    width: 100px !important;
+    height: 100px !important;
+    margin-right: 10px !important;
+  }
+
+  .container_username {
+    width: 100% !important;
+    margin-left: 40px !important;
+    margin-bottom: 1px !important;
+  }
+
+  /* .style_titulo_pagesafterlogin {
+        font: 10px !important;
+        margin-top: 0px !important;
+        margin-left: 100px !important;
+      }  */
+
+  /* .style_descrição_pagesafterlogin {
+        font-size: 12px !important;
+        margin-top: 140px !important;
+        margin-left: 15px !important;
+      } */
+
+  /* .container_username {
+        width: 70% !important;
+        justify-content: end !important;
+        align-content: end !important;
+        display: flex !important;
+        margin-left: 120px !important;
+      } */
+
+  .container_Foodstittle {
+    width: 1080px !important;
+  }
+
+  .container_itens {
+    display: flex !important;
+  }
+
+  .container_preço {
+    padding-bottom: 35px !important;
+  }
+
+  .container_nomeitem_ingredientes {
+    padding-top: 15px !important;
+  }
+
+  .container_cabecalho-informacoes-myfoods {
+    height: 1180px !important;
+  }
+
+  .container_infor-text {
+    height: 0px !important;
+  }
+
+
 }
 
 @media screen and (max-width:991px) {
@@ -293,8 +539,6 @@
     margin-left: 20px !important;
 
   }
-
-
 
   .container_home_text {
     width: 100%;
@@ -443,18 +687,6 @@
     width: 90%;
   }
 
-
-  .style_checkbox_additens {
-    /* margin-left: 120px !important; */
-
-  }
-
-  .style-small-pagmenu {
-    /* margin-bottom: 50px !important; */
-  }
-
-  .style-inputs-additenspag {}
-
   .container_input-restaurants-register {
     width: 85% !important;
     margin-right: 40px !important;
@@ -481,14 +713,14 @@
 
   .style_tittlelogin-senha {
     font-size: 30px;
-    margin-left: 300px !important;
+    margin-right: 100px !important;
     margin-top: 80px;
     color: white;
     text-align: center;
   }
 
   .container-principal-restaurants-register {
-    height: 1500px !important;
+    height: 1100px !important;
   }
 
   .container_type_additens {
@@ -520,6 +752,74 @@
     margin-left: 70px !important;
 
   }
+
+
+  /* Pagina meu pratos */
+
+  .container_picture_son {
+    width: 100px !important;
+    height: 100px !important;
+    margin-left: 0px !important;
+  }
+
+  .style-img-profile {
+    width: 100px !important;
+    height: 100px !important;
+    margin-right: 10px !important;
+  }
+
+  .container_username {
+    width: 100% !important;
+    margin-left: 40px !important;
+    margin-bottom: 1px !important;
+  }
+
+  /* .style_titulo_pagesafterlogin {
+        font: 10px !important;
+        margin-top: 0px !important;
+        margin-left: 100px !important;
+      }  */
+
+  /* .style_descrição_pagesafterlogin {
+        font-size: 12px !important;
+        margin-top: 140px !important;
+        margin-left: 15px !important;
+      } */
+
+  /* .container_username {
+        width: 70% !important;
+        justify-content: end !important;
+        align-content: end !important;
+        display: flex !important;
+        margin-left: 120px !important;
+      } */
+
+  .container_Foodstittle {
+    width: 900px !important;
+  }
+
+  .container_itens {
+    display: flex !important;
+  }
+
+  .container_preço {
+    padding-bottom: 35px !important;
+  }
+
+  .container_nomeitem_ingredientes {
+    padding-top: 15px !important;
+  }
+
+  .container_cabecalho-informacoes-myfoods {
+    height: 1180px !important;
+  }
+
+  .container_infor-text {
+    height: 0px !important;
+  }
+
+
+
 }
 
 
@@ -708,14 +1008,14 @@
 
   .style_tittlelogin-senha {
     font-size: 30px;
-    margin-right: 470px !important;
+    margin-right: 200px !important;
     margin-top: 80px;
     color: white;
     text-align: center;
   }
 
   .container-principal-restaurants-register {
-    height: 1500px !important;
+    height: 1100px !important;
   }
 
   .container_type_additens {
@@ -733,6 +1033,7 @@
     font-size: 15px !important;
     /* margin-right: 350px !important; */
     width: 10% !important;
+    /* height: 15%; */
     padding: 5px;
     margin-left: 10px;
     text-align: center;
@@ -748,6 +1049,73 @@
     margin-left: 70px !important;
 
   }
+
+
+  /* Pagina meu pratos */
+
+  .container_picture_son {
+    width: 100px !important;
+    height: 100px !important;
+    margin-left: 0px !important;
+  }
+
+  .style-img-profile {
+    width: 100px !important;
+    height: 100px !important;
+    margin-right: 10px !important;
+  }
+
+  .container_username {
+    width: 100% !important;
+    margin-left: 40px !important;
+    margin-bottom: 1px !important;
+  }
+
+  /* .style_titulo_pagesafterlogin {
+      font: 10px !important;
+      margin-top: 0px !important;
+      margin-left: 100px !important;
+    }  */
+
+  /* .style_descrição_pagesafterlogin {
+      font-size: 12px !important;
+      margin-top: 140px !important;
+      margin-left: 15px !important;
+    } */
+
+  /* .container_username {
+      width: 70% !important;
+      justify-content: end !important;
+      align-content: end !important;
+      display: flex !important;
+      margin-left: 120px !important;
+    } */
+
+  .container_Foodstittle {
+    width: 800px !important;
+  }
+
+  .container_itens {
+    display: flex !important;
+  }
+
+  .container_preço {
+    padding-bottom: 35px !important;
+  }
+
+  .container_nomeitem_ingredientes {
+    padding-top: 15px !important;
+  }
+
+  .container_cabecalho-informacoes-myfoods {
+    height: 1180px !important;
+  }
+
+  .container_infor-text {
+    height: 0px !important;
+  }
+
+
 
 
 }
@@ -1025,7 +1393,7 @@
 
   .style_tittlelogin-senha {
     font-size: 20px;
-    margin-left: 300px;
+    margin-right: 200px !important;
     margin-top: 50px;
     color: white;
     text-align: center;
@@ -1054,17 +1422,6 @@
     width: 90%;
   }
 
-
-  .style_checkbox_additens {
-    /* margin-left: 120px !important; */
-
-  }
-
-  .style-small-pagmenu {
-    /* margin-bottom: 50px !important; */
-  }
-
-  .style-inputs-additenspag {}
 
   .container_input-restaurants-register {
     width: 85% !important;
@@ -1099,7 +1456,7 @@
   }
 
   .container-principal-restaurants-register {
-    height: 1500px !important;
+    height: 1100px !important;
   }
 
   .container_type_additens {
@@ -1125,6 +1482,71 @@
     color: white;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+
+  /* Pagina meu pratos */
+
+  .container_picture_son {
+    width: 100px !important;
+    height: 100px !important;
+    margin-left: 0px !important;
+  }
+
+  .style-img-profile {
+    width: 100px !important;
+    height: 100px !important;
+    margin-right: 10px !important;
+  }
+
+  .container_username {
+    width: 100% !important;
+    margin-left: 40px !important;
+    margin-bottom: 1px !important;
+  }
+
+  /* .style_titulo_pagesafterlogin {
+    font: 10px !important;
+    margin-top: 0px !important;
+    margin-left: 100px !important;
+  }  */
+
+  /* .style_descrição_pagesafterlogin {
+    font-size: 12px !important;
+    margin-top: 140px !important;
+    margin-left: 15px !important;
+  } */
+
+  /* .container_username {
+    width: 70% !important;
+    justify-content: end !important;
+    align-content: end !important;
+    display: flex !important;
+    margin-left: 120px !important;
+  } */
+
+  .container_Foodstittle {
+    width: 600px !important;
+  }
+
+  .container_itens {
+    display: flex !important;
+  }
+
+  .container_preço {
+    padding-bottom: 35px !important;
+  }
+
+  .container_nomeitem_ingredientes {
+    padding-top: 15px !important;
+  }
+
+  .container_cabecalho-informacoes-myfoods {
+    height: 1180px !important;
+  }
+
+  .container_infor-text {
+    height: 0px !important;
   }
 
 }
@@ -1455,17 +1877,6 @@
   /* registrar menus/itens page */
 
 
-  .style_checkbox_additens {
-    /* margin-left: 120px !important; */
-
-  }
-
-  .style-small-pagmenu {
-    /* margin-bottom: 50px !important; */
-  }
-
-  .style-inputs-additenspag {}
-
   .container_input-restaurants-register {
     width: 85% !important;
     margin-right: 40px !important;
@@ -1495,7 +1906,7 @@
   }
 
   .container-principal-restaurants-register {
-    height: 1500px !important;
+    height: 1100px !important;
   }
 
   .container_type_additens {
@@ -1511,7 +1922,6 @@
 
   .style_button_sair {
     font-size: 12px !important;
-    width: 40% !important;
     margin-right: 350px !important;
     width: 20% !important;
     padding: 5px;
@@ -1522,6 +1932,65 @@
     color: white;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+
+  /* Pagina meu pratos */
+
+  .container_picture_son {
+    width: 80px !important;
+    height: 80px !important;
+    margin-left: 270px !important;
+  }
+
+  .style-img-profile {
+    width: 80px !important;
+    height: 80px !important;
+    margin-right: 10px !important;
+  }
+
+  .style_titulo_pagesafterlogin {
+    font: 10px !important;
+    margin-top: 130px !important;
+    margin-left: 200px !important;
+  }
+
+  .style_descrição_pagesafterlogin {
+    font-size: 12px !important;
+    margin-top: 140px !important;
+    margin-left: 15px !important;
+  }
+
+  .container_username {
+    width: 70% !important;
+    justify-content: end !important;
+    align-content: end !important;
+    display: flex !important;
+    margin-left: 120px !important;
+  }
+
+  .container_Foodstittle {
+    width: 400px !important;
+  }
+
+  .container_itens {
+    display: flex !important;
+  }
+
+  .container_preço {
+    padding-bottom: 35px !important;
+  }
+
+  .container_nomeitem_ingredientes {
+    padding-top: 15px !important;
+  }
+
+  .container_cabecalho-informacoes-myfoods {
+    height: 1180px !important;
+  }
+
+  .container_infor-text {
+    height: 0px !important;
   }
 
 }
@@ -1816,16 +2285,6 @@
   /* registrar menus/itens page */
 
 
-  .style_checkbox_additens {
-    /* margin-left: 120px !important; */
-
-  }
-
-  .style-small-pagmenu {
-    /* margin-bottom: 50px !important; */
-  }
-
-  .style-inputs-additenspag {}
 
   .container_input-restaurants-register {
     width: 85% !important;
@@ -1856,7 +2315,7 @@
   }
 
   .container-principal-restaurants-register {
-    height: 1500px !important;
+    height: 1100px !important;
   }
 
   .container_type_additens {
@@ -1872,7 +2331,6 @@
 
   .style_button_sair {
     font-size: 12px !important;
-    width: 40% !important;
     margin-right: 350px !important;
     width: 20% !important;
     padding: 5px;
@@ -1883,6 +2341,66 @@
     color: white;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+
+
+  /* Pagina meu pratos */
+
+  .container_picture_son {
+    width: 80px !important;
+    height: 80px !important;
+    margin-left: 250px !important;
+  }
+
+  .style-img-profile {
+    width: 80px !important;
+    height: 80px !important;
+    margin-right: 10px !important;
+  }
+
+  .style_titulo_pagesafterlogin {
+    font: 10px !important;
+    margin-top: 130px !important;
+    margin-left: 100px !important;
+  }
+
+  .style_descrição_pagesafterlogin {
+    font-size: 12px !important;
+    margin-top: 140px !important;
+    margin-left: 10px !important;
+  }
+
+  .container_username {
+    width: 70% !important;
+    justify-content: end !important;
+    align-content: end !important;
+    display: flex !important;
+    margin-left: 120px !important;
+  }
+
+  .container_Foodstittle {
+    width: 400px !important;
+  }
+
+  .container_itens {
+    display: grid !important;
+  }
+
+  .container_preço {
+    padding-bottom: 35px !important;
+  }
+
+  .container_nomeitem_ingredientes {
+    padding-top: 15px !important;
+  }
+
+  .container_cabecalho-informacoes-myfoods {
+    height: 1180px !important;
+  }
+
+  .container_infor-text {
+    height: 0px !important;
   }
 
 
@@ -2101,7 +2619,6 @@
 
   }
 
-  .container_h1headerloginpage {}
 
   .style_button_sair {
     font-size: 12px !important;
@@ -2181,16 +2698,6 @@
 
   /* responsividade pagina adicionar menus */
 
-  .style_checkbox_additens {
-    /* margin-left: 120px !important; */
-
-  }
-
-  .style-small-pagmenu {
-    /* margin-bottom: 50px !important; */
-  }
-
-  .style-inputs-additenspag {}
 
   .container_input-restaurants-register {
     width: 85% !important;
@@ -2221,7 +2728,7 @@
   }
 
   .container-principal-restaurants-register {
-    height: 1500px !important;
+    height: 1100px !important;
   }
 
   .container_type_additens {
@@ -2236,8 +2743,77 @@
   }
 
 
-}
+  /* Pagina meu pratos */
 
+  .container_picture_son {
+    width: 80px !important;
+    height: 80px !important;
+    margin-left: 150px !important;
+  }
+
+  .style-img-profile {
+    width: 80px !important;
+    height: 80px !important;
+    margin-right: 10px !important;
+  }
+
+  .style_titulo_pagesafterlogin {
+    font: 10px !important;
+    margin-top: 130px !important;
+    margin-right: 10px !important;
+  }
+
+  .style_descrição_pagesafterlogin {
+    font-size: 12px !important;
+    margin-top: 140px !important;
+    margin-right: 15px !important;
+  }
+
+  .container_username {
+    width: 70% !important;
+    justify-content: end !important;
+    align-content: end !important;
+    display: flex !important;
+    margin-left: 120px !important;
+  }
+
+  .container_Foodstittle {
+    width: 300px !important;
+  }
+
+  .container_itens {
+    display: grid !important;
+  }
+
+  .container_preço {
+    padding-bottom: 35px !important;
+  }
+
+  .container_nomeitem_ingredientes {
+    padding-top: 15px !important;
+  }
+
+  .container_cabecalho-informacoes-myfoods {
+    height: 1180px !important;
+  }
+
+  .container_infor-text {
+    height: 0px !important;
+  }
+
+  /* ordernar requisições */
+
+  .container_options-meuspedidos {
+    display: grid !important;
+    height: 150px !important;
+
+  }
+
+  .container_organizarpedidos {
+    margin-right: 212px !important;
+  }
+
+}
 
 /* Móveis médios */
 @media (max-width: 375px) {
@@ -2532,17 +3108,6 @@
   /* registrar menus/itens page */
 
 
-  .style_checkbox_additens {
-    /* margin-left: 120px !important; */
-
-  }
-
-  .style-small-pagmenu {
-    /* margin-bottom: 50px !important; */
-  }
-
-  .style-inputs-additenspag {}
-
   .container_input-restaurants-register {
     width: 85% !important;
     margin-right: 40px !important;
@@ -2572,7 +3137,7 @@
   }
 
   .container-principal-restaurants-register {
-    height: 1500px !important;
+    height: 1100px !important;
   }
 
   .container_type_additens {
@@ -2591,7 +3156,6 @@
     width: 40% !important;
     margin-right: 250px !important;
     width: 20% !important;
-
     padding: 5px;
     margin-left: 10px;
     text-align: center;
@@ -2600,6 +3164,65 @@
     color: white;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+
+  /* Pagina meu pratos */
+
+  .container_picture_son {
+    width: 80px !important;
+    height: 80px !important;
+    margin-left: 163px !important;
+  }
+
+  .style-img-profile {
+    width: 80px !important;
+    height: 80px !important;
+    margin-right: 10px !important;
+  }
+
+  .style_titulo_pagesafterlogin {
+    font: 10px !important;
+    margin-top: 130px !important;
+    margin-right: 10px !important;
+  }
+
+  .style_descrição_pagesafterlogin {
+    font-size: 12px !important;
+    margin-top: 140px !important;
+    margin-right: 15px !important;
+  }
+
+  .container_username {
+    width: 70% !important;
+    justify-content: end !important;
+    align-content: end !important;
+    display: flex !important;
+    margin-left: 120px !important;
+  }
+
+  .container_Foodstittle {
+    width: 320px !important;
+  }
+
+  .container_itens {
+    display: grid !important;
+  }
+
+  .container_preço {
+    padding-bottom: 35px !important;
+  }
+
+  .container_nomeitem_ingredientes {
+    padding-top: 15px !important;
+  }
+
+  .container_cabecalho-informacoes-myfoods {
+    height: 1180px !important;
+  }
+
+  .container_infor-text {
+    height: 0px !important;
   }
 
 
@@ -2677,6 +3300,10 @@
   /* border: 1px solid rgb(255, 255, 255); */
 
 
+}
+
+.style_checkbox_additens {
+  margin-left: 100px;
 }
 
 h1 {
@@ -3074,6 +3701,21 @@ strong {
   margin-left: 10px;
   margin-top: 5px;
 }
+
+.style_button_sair {
+  font-size: 15px !important;
+  /* margin-right: 350px !important; */
+  width: 5%;
+  padding: 5px;
+  margin-left: 10px;
+  text-align: center;
+  border: 1px solid orange;
+  background-color: orange;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 
 
 .container-categoriasmenu-popular-cities {
@@ -3662,9 +4304,9 @@ button:hover {
   width: 25%;
 }
 
-.style_imgitensmenu {}
-
-
+.style_a_paginasafterlogin {
+  font-weight: bolder;
+}
 
 .navbar_itens_style_onpages-logon {
   padding: 10px;
@@ -3687,6 +4329,7 @@ button:hover {
   font-weight: bolder;
 }
 
+
 .navbar_username-logon {
   padding: 10px;
   margin-left: 10px;
@@ -3698,10 +4341,7 @@ button:hover {
 }
 
 
-
-
 /* Página Meus pedidos */
-
 
 .container-principal-meuspedidos {
   height: 300px;
@@ -3740,11 +4380,16 @@ button:hover {
 }
 
 .style-options-meuspedidos {
-  padding: 80px;
+  padding: 5px;
   /* border: 1px solid yellow; */
   cursor: pointer;
   font-weight: bolder;
 
+}
+
+.style_container_lista_pagordernarreq {
+  border: 1px solid red;
+  margin-top: 70px !important;
 }
 
 .style-imgs-meuspedidos {
@@ -3761,7 +4406,6 @@ lo:hover {
 .style_h1page-register-restaurants {
   color: white;
 }
-
 
 
 /* estilos do input type file */
@@ -3806,6 +4450,3 @@ lo:hover {
   right: 8px;
   transform: translateY(-50%);
 }
-
-
-.style-small-pagmenu {}

@@ -108,7 +108,7 @@ export default function MyFoods() {
         <div className="home-container">
             <div style={{ backgroundImage: `url(${topimg_home})` }} className="container_fluid-pagmyfoods">
                 <div className="container_son-myfoods">
-                    <nav className="style_navbar">
+                <nav className="style_navbar">
                         <div className='container_logo'>
                             <a onClick={handlenavigatehome} className='imglogo_position'>
                                 <img className='imglogo_width' src={logo} alt="" />
@@ -116,16 +116,15 @@ export default function MyFoods() {
                         </div>
                         <div className='container_navbar_buttons'>
                             <ul className='navbar_style'>
-                                <lo className='navbar_itens-style_logon-pages'> <a onClick={handlenavigateadditens}>Adicionar itens</a></lo>
-                                <lo className='navbar_itens-style_logon-pages'> <a onClick={handlenavigatemeuspratos}>Meus pratos</a></lo>
-                                <lo className='navbar_itens-style_logon-pages'><a onClick={handlenavigateordenarrequisições}>Ordenar requisições</a></lo>
-                                <lo className='navbar_username-logon'><a>{userdata.nomecompleto}</a></lo>
-                                <lo className='navbar_itens_style_onpages-logon'><a onClick={handlenavigatehome}>SAIR</a></lo>
+                                <lo className='navbar_itens_style'><a className='style_a_paginasafterlogin' onClick={handlenavigateadditens} >Adicionar itens</a></lo>
+                                <lo className='navbar_itens_style'><a className='style_a_paginasafterlogin' onClick={handlenavigatemeuspratos} >Meus pratos</a></lo>
+                                <lo className='navbar_itens_style'><a className='style_a_paginasafterlogin' onClick={handlenavigateordenarrequisições} >Ordenar requisições</a></lo>
+                                <lo className='navbar_itens_style'><a  style={{color: 'orange', fontWeight: 'bolder'}}>{userdata.nomecompleto}</a></lo>
+                                <lo className='style_button_sair'><a className='style_a_paginasafterlogin' onClick={handlenavigatehome}>SAIR</a></lo>
 
                             </ul>
                         </div>
                     </nav>
-
                     <div className='container_userprofile-myfoods' >
                         <div className='container_picture-father' >
                             <div className='container_picture_son'>
@@ -134,8 +133,8 @@ export default function MyFoods() {
                         </div>
 
                         <div className='container_username'>
-                            <h2>{userdata.nomecompleto}</h2>
-                            <small>Apple Juice, Beef Roast, Cheese Burger</small>
+                            <h2 className='style_titulo_pagesafterlogin'>{userdata.nomecompleto}</h2>
+                            <small className='style_descrição_pagesafterlogin' >Apple Juice, Beef Roast, Cheese Burger</small>
                         </div>
                     </div>
 
@@ -145,25 +144,25 @@ export default function MyFoods() {
             <div className='container-principal-login-register-myfoods'>
                 <div className='container_menufoods'>
                     <div className='container_Foodstittle' >
-                        <h3  style={{paddingBottom: '5px'}}>Foods</h3>
+                        <h3 style={{ paddingBottom: '5px' }}>Foods</h3>
                     </div>
-                    <div style={{height: '220px', paddingBottom: '130px', overflowY: 'Auto' }}>
-                         {pratos.map((prato, index) => ( 
-                        <div key={index} className='container_itens'>
+                    <div style={{ height: '220px', paddingBottom: '130px', overflowY: 'Auto' }}>
+                        {/* {pratos.map((prato, index) => (  */}
+                        <div className='container_itens'>
                             <div className='container_img'>
-                                <img className='style_imgitensmenu' src={prato.fotomenu} alt="" />
+                                <img className='style_imgitensmenu' alt="" />
                             </div>
                             <div className='container_nomeitem_ingredientes'>
-                                <h3>Item: {prato.nome}</h3>
+                                <h3>Item:</h3>
 
-                                <h3>Ingredientes: {prato.ingredientes}</h3>
+                                <h3>Ingredientes:</h3>
                             </div>
                             <div className='container_preço'>
-                                <h4>R$:{prato.preco}</h4>
+                                <h4>R$:</h4>
                             </div>
                         </div>
-                          ))
-                         }
+                        {/* ))
+                         } */}
                     </div>
 
 

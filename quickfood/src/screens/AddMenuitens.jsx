@@ -141,11 +141,11 @@ export default function AddMenuItens() {
                         </div>
                         <div className='container_navbar_buttons'>
                             <ul className='navbar_style'>
-                                <lo className='navbar_itens_style'><a onClick={handlenavigateadditens} >Adicionar itens</a></lo>
-                                <lo className='navbar_itens_style'><a onClick={handlenavigatemeuspratos} >Meus pratos</a></lo>
-                                <lo className='navbar_itens_style'><a onClick={handlenavigateordenarrequisições} >Ordenar requisições</a></lo>
-                                <lo className='navbar_itens_style'><a>{userdata.nomecompleto}</a></lo>
-                                <lo className='style_button_sair'><a onClick={handlenavigatehome}>SAIR</a></lo>
+                                <lo className='navbar_itens_style'><a className='style_a_paginasafterlogin' onClick={handlenavigateadditens} >Adicionar itens</a></lo>
+                                <lo className='navbar_itens_style'><a className='style_a_paginasafterlogin' onClick={handlenavigatemeuspratos} >Meus pratos</a></lo>
+                                <lo className='navbar_itens_style'><a className='style_a_paginasafterlogin' onClick={handlenavigateordenarrequisições} >Ordenar requisições</a></lo>
+                                <lo className='navbar_itens_style'><a  style={{color: 'orange', fontWeight: 'bolder'}}>{userdata.nomecompleto}</a></lo>
+                                <lo className='style_button_sair'><a className='style_a_paginasafterlogin' onClick={handlenavigatehome}>SAIR</a></lo>
 
                             </ul>
                         </div>

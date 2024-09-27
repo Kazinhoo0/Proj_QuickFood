@@ -50,7 +50,7 @@ export default function MyOrders() {
         const email = localStorage.getItem('email')
 
         if (nomecompleto || email) {
-            setUserData ({
+            setUserData({
 
                 nomecompleto: nomecompleto || '',
                 email: email || '',
@@ -72,11 +72,11 @@ export default function MyOrders() {
                         </div>
                         <div className='container_navbar_buttons'>
                             <ul className='navbar_style'>
-                            <lo className='navbar_itens-style_logon-pages'> <a onClick={handlenavigateadditens}>Adicionar itens</a></lo>
-                                <lo className='navbar_itens-style_logon-pages'> <a onClick={handlenavigatemeuspratos}>Meus pratos</a></lo>
-                                <lo className='navbar_itens-style_logon-pages'><a onClick={handlenavigateordenarrequisições}>Ordenar requisições</a></lo>
-                                <lo className='navbar_username-logon'><a>{userdata.nomecompleto}</a></lo>
-                                <lo className='navbar_itens_style_onpages-logon'><a onClick={handlenavigatehome}>SAIR</a></lo>
+                                <lo className='navbar_itens_style'><a className='style_a_paginasafterlogin' onClick={handlenavigateadditens} >Adicionar itens</a></lo>
+                                <lo className='navbar_itens_style'><a className='style_a_paginasafterlogin' onClick={handlenavigatemeuspratos} >Meus pratos</a></lo>
+                                <lo className='navbar_itens_style'><a className='style_a_paginasafterlogin' onClick={handlenavigateordenarrequisições} >Ordenar requisições</a></lo>
+                                <lo className='navbar_itens_style'><a style={{ color: 'orange', fontWeight: 'bolder' }}>{userdata.nomecompleto}</a></lo>
+                                <lo className='style_button_sair'><a className='style_a_paginasafterlogin' onClick={handlenavigatehome}>SAIR</a></lo>
 
                             </ul>
                         </div>
@@ -90,8 +90,8 @@ export default function MyOrders() {
                         </div>
 
                         <div className='container_username'>
-                            <h2>{userdata.nomecompleto}</h2>
-                            <small>Apple Juice, Beef Roast, Cheese Burger</small>
+                            <h2 className='style_titulo_pagesafterlogin'>{userdata.nomecompleto}</h2>
+                            <small className='style_descrição_pagesafterlogin' >Apple Juice, Beef Roast, Cheese Burger</small>
                         </div>
                     </div>
 
@@ -100,7 +100,7 @@ export default function MyOrders() {
             <div className='container-principal-meuspedidos'>
                 <div className='container_organizarpedidos' >
                     <div className='container_options-meuspedidos'>
-                        <ul>
+                        <ul className='style_container_lista_pagordernarreq'>
                             <lo className='style-options-meuspedidos'><img className='style-imgs-meuspedidos' src={imgpendente} alt="" />Pendente</lo>
                             <lo className='style-options-meuspedidos'><img className='style-imgs-meuspedidos' src={imgcaminho} alt="" />Em transito</lo>
                             <lo className='style-options-meuspedidos'><img className='style-imgs-meuspedidos' src={imgentregue} alt="" />Entregues</lo>
