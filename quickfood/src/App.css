@@ -234,6 +234,8 @@
 
   .container_infor-text {
     height: 0px !important;
+    margin-left: 100px !important;
+    margin-bottom: 200px !important;
   }
 
 
@@ -374,8 +376,9 @@
 
   .container_infor-text {
     height: 0px !important;
+    margin-left: 100px !important;
+    margin-bottom: 200px !important;
   }
-
 }
 
 @media screen and (max-width: 1223px) {
@@ -526,6 +529,8 @@
 
   .container_infor-text {
     height: 0px !important;
+    margin-left: 100px !important;
+    margin-bottom: 200px !important;
   }
 
 
@@ -816,8 +821,9 @@
 
   .container_infor-text {
     height: 0px !important;
+    margin-left: 100px !important;
+    margin-bottom: 200px !important;
   }
-
 
 
 }
@@ -1113,6 +1119,8 @@
 
   .container_infor-text {
     height: 0px !important;
+    margin-left: 100px !important;
+    margin-bottom: 200px !important;
   }
 
 
@@ -1547,6 +1555,7 @@
 
   .container_infor-text {
     height: 0px !important;
+    
   }
 
 }
@@ -2801,6 +2810,10 @@
     height: 0px !important;
   }
 
+
+
+
+
   /* ordernar requisições */
 
   .container_options-meuspedidos {
@@ -2812,6 +2825,20 @@
   .container_organizarpedidos {
     margin-right: 212px !important;
   }
+
+  .style-imgs-meuspedidos {
+
+    margin-right: 35px !important;
+  }
+  .style_container_lista_pagordernarreq {
+    margin-left: 30px !important;
+    margin-bottom: 50px !important;
+  }
+
+  /* .container_result-options {
+      
+  } */
+
 
 }
 
