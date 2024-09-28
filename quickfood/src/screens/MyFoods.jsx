@@ -147,22 +147,22 @@ export default function MyFoods() {
                         <h3 style={{ paddingBottom: '5px' }}>Foods</h3>
                     </div>
                     <div style={{ height: '220px', paddingBottom: '130px', overflowY: 'Auto' }}>
-                        {/* {pratos.map((prato, index) => (  */}
-                        <div className='container_itens'>
+                         {pratos.map((prato, index) => ( 
+                        <div key={index} className='container_itens'>
                             <div className='container_img'>
-                                <img className='style_imgitensmenu' alt="" />
+                                <img className='style_imgitensmenu' src={prato.fotomenu} alt="" />
                             </div>
                             <div className='container_nomeitem_ingredientes'>
-                                <h3>Item:</h3>
+                                <h3>Item: {prato.nome}</h3>
 
-                                <h3>Ingredientes:</h3>
+                                <h3>Ingredientes: {prato.ingredientes}</h3>
                             </div>
                             <div className='container_preço'>
-                                <h4>R$:</h4>
+                                <h4>R$: {prato.preco}</h4>
                             </div>
                         </div>
-                        {/* ))
-                         } */}
+                         ))
+                         } 
                     </div>
 
 
