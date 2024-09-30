@@ -100,11 +100,10 @@ export default function Login() {
                     navigate('/gerenciarpratos');
                 }, 2000);
 
-            } else {
-                setLoader(false);
-
+            } 
+            else {
                 Toastify({
-                    text: 'Não foi possível realizar o login!',
+                    text: 'Usuário não cadastrado, porfavor crie uma conta!',
                     position: 'center',
                     style: {
                         background: '#db2d0e',
@@ -112,6 +111,31 @@ export default function Login() {
                     }
                 }).showToast();
             }
+
+            if (!senha || !email) {
+                Toastify({
+                    text: 'Todos os campos precisam estar preenchidos!',
+                    position: 'center',
+                    style: {
+                        background: '#db2d0e',
+                        color: '#ffffff'
+                    }
+                }).showToast();
+            }
+            
+
+            // else {
+            //     setLoader(false);
+
+            //     Toastify({
+            //         text: 'Não foi possível realizar o login!',
+            //         position: 'center',
+            //         style: {
+            //             background: '#db2d0e',
+            //             color: '#ffffff'
+            //         }
+            //     }).showToast();
+            // }
         }, 2000);
     };
 

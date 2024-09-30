@@ -56,6 +56,8 @@ export default function CreateAccount() {
         console.log("executado com sucesso")
     }
 
+     
+
 
 
 
@@ -82,6 +84,11 @@ export default function CreateAccount() {
 
                 if (data.sucess) {
 
+                    localStorage.setItem('nomecompleto', nomecompleto)
+                    localStorage.setItem('senha', senha)
+
+                    console.log(data.massage)
+
                     Toastify(
                         {
                             text: 'Usuário criado com sucesso!',
@@ -96,7 +103,7 @@ export default function CreateAccount() {
                     console.log("Usuário registrado com sucesso!", data);
                     setTimeout(() => {
                         setLoader(false);
-                        navigate('/gerenciarpratos');
+                        navigate('/Login');
                     }, 2000);
 
                 }
@@ -129,9 +136,9 @@ export default function CreateAccount() {
                 ).showToast();
                 console.log("Ops! As senhas precisam ser iguais!");
             }
-            else {
+            if (!nomecompleto || !senha ||!cidade || !genero || !email) {
                 Toastify({
-                    text: 'Já existe uma conta com este email',
+                    text: 'Todos os campos precisam estar preenchidos!',
                     position: 'center',
                     style: {
                         background: '#db2d0e',
@@ -139,9 +146,20 @@ export default function CreateAccount() {
 
                     }
                 }).showToast();
-
-                console.log('Já existe uma conta com este email')
             }
+            // else {
+            //     Toastify({
+            //         text: 'Já existe uma conta com este email!',
+            //         position: 'center',
+            //         style: {
+            //             background: '#db2d0e',
+            //             color: '#ffffff'
+
+            //         }
+            //     }).showToast();
+
+            //     console.log('Já existe uma conta com este email')
+            // }
         }, 1000)
 
     }
