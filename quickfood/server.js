@@ -83,8 +83,7 @@ app.post('/Login', (req, res) => {
 
 app.post('/Criarconta', (req, res) => {
   const { nomecompleto, senha, cidade, genero, email } = req.body;
-
-  // Verifique se todos os campos estão presentes
+  // Verifica se todos os campos estão presentes
   if (!nomecompleto || !senha || !cidade || !genero || !email) {
     return res.status(400).json({ error: 'Todos os campos são obrigatórios' });
   }
@@ -105,12 +104,12 @@ app.post('/Criarconta', (req, res) => {
   db.get(query, [email], function (err, row) {
     if (err) {
       console.error("Erro ao verificar o email:", err.message);
-      return res.status(500).json({ error: 'Erro ao verificar o email.' });
+      return res.status(500).json({ sucess: false,error: 'Erro ao verificar o email.' });
     }
 
     // Verifique se o email já existe
     if (row) {
-      return res.status(400).json({ error: 'Já existe uma conta criada com este email.' });
+      return res.status(400).json({ sucess: false,error: 'Já existe uma conta criada com este email.' });
     }
 
     // Se o email não existir, insira o novo usuário
@@ -120,10 +119,10 @@ app.post('/Criarconta', (req, res) => {
       function (err) {
         if (err) {
           console.error('Erro ao inserir no banco de dados:', err.message);
-          return res.status(500).json({ error: 'Erro ao registrar o usuário.' });
+          return res.status(500).json({ sucess: false ,error: 'Erro ao registrar o usuário.' });
         }
 
-        res.status(201).json({ message: 'Usuário registrado com sucesso!' });
+        res.status(201).json({ sucess : true ,message: 'Usuário registrado com sucesso!' });
       }
     );
   });

@@ -25,6 +25,7 @@ export default function CreateAccount() {
     const [cidade, setcidade] = useState("")
     const [genero, setgenero] = useState('masculino')
     const [loader, setLoader] = useState(false)
+    const [Termos, setTermos] = useState(false)
 
     useEffect(() => {
         setTimeout(() => {
@@ -56,7 +57,7 @@ export default function CreateAccount() {
         console.log("executado com sucesso")
     }
 
-     
+
 
 
 
@@ -74,6 +75,7 @@ export default function CreateAccount() {
                     cidade,
                     genero,
                     email
+                    
                 })
             });
 
@@ -84,17 +86,15 @@ export default function CreateAccount() {
 
                 if (data.sucess) {
 
-                    localStorage.setItem('nomecompleto', nomecompleto)
-                    localStorage.setItem('senha', senha)
-
-                    console.log(data.massage)
+                    // console.log(data.massage)
+                    // console.log(Termos)
 
                     Toastify(
                         {
                             text: 'Usuário criado com sucesso!',
                             position: 'center',
                             style: {
-                                background: '#ff7b00',
+                                background: '#33ff00',
                                 color: '#ffffff'
                             }
 
@@ -123,6 +123,8 @@ export default function CreateAccount() {
             //     console.log("Todos os campos precisam ser preenchidos");
             // }
             if (senha != confirmarsenha) {
+
+                console.log(Termos)
                 Toastify(
                     {
                         text: 'Ops! As senhas precisam ser iguais!',
@@ -136,7 +138,19 @@ export default function CreateAccount() {
                 ).showToast();
                 console.log("Ops! As senhas precisam ser iguais!");
             }
-            if (!nomecompleto || !senha ||!cidade || !genero || !email) {
+
+            if (Termos === false) {
+                Toastify({
+                    text: 'Os termos e condições precisam ser aceitos!',
+                    position: 'center',
+                    style: {
+                        background: '#db2d0e',
+                        color: '#ffffff'
+
+                    }
+                }).showToast();
+            }
+            if (!nomecompleto || !senha || !cidade || !genero || !email) {
                 Toastify({
                     text: 'Todos os campos precisam estar preenchidos!',
                     position: 'center',
@@ -166,11 +180,12 @@ export default function CreateAccount() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        handleCadastrarUsuario(genero, email, pais, cidade);
+        handleCadastrarUsuario(genero, email, pais, cidade, senha);
         localStorage.setItem('email', email);
         localStorage.setItem('genero', genero);
         localStorage.setItem('pais', pais);
-        localStorage.setItem('cidade', cidade)
+        localStorage.setItem('cidade', cidade);
+        localStorage.setItem('senha' , senha)
 
         console.log(genero + email, pais, cidade)
     };
@@ -297,7 +312,10 @@ export default function CreateAccount() {
                                     <small className='style_naoobrigatoriotext'>*Não obrigatório</small>
 
                                     <div className='style-container-termosecondicoes'>
-                                        <input type="checkbox" />
+                                        <input
+                                            type="checkbox"
+                                            onChange={(e) => setTermos(e.target.value)}
+                                            checked= {Termos} />
                                         <small >Concordo com os termos e condições</small>
                                     </div>
 

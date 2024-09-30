@@ -86,6 +86,8 @@
 
 .h1titlehome-style {
   font-size: 35px;
+  margin-left: 30px;
+
 }
 
 
@@ -99,6 +101,7 @@
   }
 
   .container_h1tittle {
+    display: grid;
     width: 70%;
     height: 180px;
     margin-left: 280px;
@@ -149,7 +152,7 @@
 
   .container_input-restaurants-register {
     width: 95% !important;
-    margin-left: 350px !important;
+    margin-left: 35px !important;
   }
 
 
@@ -259,6 +262,7 @@
   }
 
   .container_h1tittle {
+    display: grid;
     margin-left: 180px !important;
     width: 76% !important;
   }
@@ -403,6 +407,7 @@
 
 
   .container_h1tittle {
+    display: grid;
     margin-left: 150px !important;
     width: 95% !important;
   }
@@ -545,8 +550,8 @@
 
   .h1titlehome-style {
     font-size: 18px;
-    margin-top: 110px !important;
-    margin-left: 20px !important;
+    margin-top: 50px !important;
+    margin-left: 50px !important;
 
   }
 
@@ -555,7 +560,8 @@
   }
 
   .container_h1tittle {
-    margin-left: 40px !important;
+    display: grid !important;
+    margin-left: 1px !important;
     width: 95% !important;
   }
 
@@ -992,7 +998,7 @@
 
   .container_input-restaurants-register {
     width: 85% !important;
-    margin-right: 100px !important;
+    margin-right: 50px !important;
     height: 950px !important;
   }
 
@@ -1281,6 +1287,7 @@
 
   .container-in-destaque {
     margin-left: 45px !important;
+    width: 100% !important;
   }
 
   .style-heartfavorit {
@@ -1436,7 +1443,7 @@
 
   .container_input-restaurants-register {
     width: 85% !important;
-    margin-right: 120px !important;
+    margin-right: 50px !important;
     height: 950px !important;
   }
 
@@ -1451,7 +1458,7 @@
 
   .container-second-login-register {
     width: 80% !important;
-    
+
   }
 
   .custom-file-button {
@@ -1560,7 +1567,7 @@
 
   .container_infor-text {
     height: 0px !important;
-    
+
   }
 
 
@@ -1585,14 +1592,14 @@
   .style_container_lista_pagordernarreq {
     margin-left: 120px !important;
     display: grid !important;
-  
+
   }
 
   .container_result-options {
     margin-left: 120px !important;
     width: 110% !important;
     height: 50% !important;
-  } 
+  }
 
   .style-options-meuspedidos {
     padding: 1px !important;
@@ -2072,7 +2079,7 @@
     margin-left: 120px !important;
     width: 80% !important;
     height: 50% !important;
-  } 
+  }
 
   .style-options-meuspedidos {
     padding: 1px !important;
@@ -2486,7 +2493,7 @@
   }
 
 
-  
+
 
 
 }
@@ -2499,6 +2506,8 @@
     margin-left: 0px !important;
 
   }
+
+
 
   .inputtext_style {
     margin-left: 205px !important;
@@ -2642,10 +2651,11 @@
 
   .container-in-destaque {
     margin-left: 45px !important;
+    width: 85% !important;
   }
 
   .style-heartfavorit {
-    margin-left: 1px !important;
+    margin-right: 25px !important;
   }
 
   .container_cabecalho-informacoes {
@@ -2914,7 +2924,7 @@
     margin-left: 120px !important;
     width: 80% !important;
     height: 50% !important;
-  } 
+  }
 
   .style-options-meuspedidos {
     padding: 1px !important;
@@ -3087,6 +3097,11 @@
 
   .container-in-destaque {
     margin-left: 45px !important;
+    width: 85% !important;
+  }
+
+  .container-text-about-restaurantdestaque {
+    width: 70% !important;
   }
 
   .style-heartfavorit {
@@ -3358,7 +3373,7 @@
     margin-left: 120px !important;
     width: 80% !important;
     height: 50% !important;
-  } 
+  }
 
   .style-options-meuspedidos {
     padding: 1px !important;
@@ -3433,11 +3448,12 @@
 }
 
 .container_h1tittle {
-  width: 70%;
+  display: grid;
+  width: 100%;
   height: 180px;
-  margin-left: 280px;
+  margin-left: 150px;
   margin-top: 180px;
-  /* border: 1px solid rgb(255, 255, 255); */
+  border: 1px solid rgb(255, 255, 255);
 
 
 }

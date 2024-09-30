@@ -16,6 +16,7 @@ export default function Login() {
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
     const [loader, setLoader] = useState(false)
+    const [AutoEmail, setAutoEmail] = useState('')
 
     useEffect(() => {
         setTimeout(() => {
@@ -59,6 +60,14 @@ export default function Login() {
 
     // }
 
+    useEffect  (() => {
+        const AutocompleteEmail = localStorage.getItem('email')
+
+        if (AutocompleteEmail) {
+            setEmail(AutocompleteEmail)
+        }
+    })
+
 
     const handleenteraccount = async (e) => {
         e.preventDefault();
@@ -77,6 +86,7 @@ export default function Login() {
 
             console.log(data)
 
+            
             if (data.success) {
                 localStorage.setItem('token', data.token);
                 localStorage.setItem('email', email);
@@ -193,6 +203,7 @@ export default function Login() {
                                     className="style-inputs-loginpage"
                                     placeholder="Seu email aqui*"
                                     type="email"
+                                    autoComplete='email'
                                     onChange={(e) => setEmail(e.target.value)}
                                     value={email}
                                 />
