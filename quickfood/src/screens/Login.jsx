@@ -76,7 +76,7 @@ export default function Login() {
 
 
         setTimeout(async () => {
-            const response = await fetch('https://proj-quickfoood.onrender.com/Login', {
+            const response = await fetch('https://proj-quickfood.onrender.com/Login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, senha })

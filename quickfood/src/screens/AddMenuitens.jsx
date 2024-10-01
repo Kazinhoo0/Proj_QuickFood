@@ -81,7 +81,7 @@ export default function AddMenuItens() {
         }
 
 
-        const response = await fetch('https://proj-quickfoood.onrender.com/Adicionaritensmenu', {
+        const response = await fetch('https://proj-quickfood.onrender.com/Adicionaritensmenu', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
