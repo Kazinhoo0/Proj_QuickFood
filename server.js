@@ -24,15 +24,20 @@ app.use(cors({
 const secretkey = 'K2$%542!!'
 
 
-// Servir arquivos estáticos da pasta build
-app.use(express.static(path.join(__dirname, 'build')));
+
+const buildPath = path.join(__dirname, 'build');
 
 
+// Serve arquivos estáticos da pasta build
+app.use(express.static(buildPath));
 
 // Rota para a página inicial
 app.get('*', (req, res) => {
   res.sendFile(path.join(buildPath, 'index.html'));
 });
+
+
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
