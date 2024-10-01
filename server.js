@@ -20,19 +20,12 @@ app.use(cors({
 }))
 
 
-const buildPath = process.env.NODE_ENV === 'production'
-  ? path.resolve(__dirname, './quickfood/build')
-  : path.resolve(__dirname, './build');
-
-app.use(express.static(buildPath));
-
-
 
 const secretkey = 'K2$%542!!'
 
 
 // Servir arquivos estáticos da pasta build
-app.use(express.static(path.resolve(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 
 
