@@ -13,7 +13,7 @@ const db = require('./quickfood/src/db');
 
 
 app.use(cors({
-  origin: 'https://proj-quickfoood.onrender.com',
+  origin: 'https://proj-quickfood.onrender.com',
   methods: ['POST', 'GET', 'DELETE', 'PUT'],
   credentials: true,
 
