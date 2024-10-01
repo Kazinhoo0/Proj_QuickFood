@@ -7,13 +7,13 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const db = require('./src/db');
+const db = require('./quickfood/src/db');
 
 
 
 
 app.use(cors({
-  origin:'https://proj-quickfood.onrender.com/',
+  origin: 'https://proj-quickfood.onrender.com/',
   methods: ['POST', 'GET', 'DELETE', 'PUT'],
   credentials: true,
 
@@ -40,7 +40,7 @@ app.use(bodyParser.json());
 
 
 app.post('/Login', (req, res) => {
-  const { email, senha,} = req.body;
+  const { email, senha, } = req.body;
 
 
   if (!email || !senha) {
@@ -55,36 +55,36 @@ app.post('/Login', (req, res) => {
   const query = `SELECT id, senha, nomecompleto FROM users WHERE email = ?`;
 
   db.get(query, [email], function (err, row) {
-      if (err) {
-        console.error('Erro ao inserir no banco de dados:', err.message);
-        return res.status(500).json({ error: err.message });
-      }
+    if (err) {
+      console.error('Erro ao inserir no banco de dados:', err.message);
+      return res.status(500).json({ error: err.message });
+    }
 
 
-      if (row) {
+    if (row) {
 
-        const isPasswordValid = bcrypt.compareSync(senha, row.senha);
+      const isPasswordValid = bcrypt.compareSync(senha, row.senha);
 
-        if (isPasswordValid) {
+      if (isPasswordValid) {
 
-          const token = jwt.sign({ id: row.id, email }, secretkey, { expiresIn: '1h' });
-          res.status(200).json({
-            success: true,
-            id: row.id,
-            token: token,
-            message: 'Login bem-sucedido',
-            nomecompleto: row.nomecompleto
-          });
-        } else {
-          res.status(400).json({ success: false, message: 'Senha incorreta' });
-        }
+        const token = jwt.sign({ id: row.id, email }, secretkey, { expiresIn: '1h' });
+        res.status(200).json({
+          success: true,
+          id: row.id,
+          token: token,
+          message: 'Login bem-sucedido',
+          nomecompleto: row.nomecompleto
+        });
       } else {
-        res.status(400).json({ success: false, message: 'Email não encontrado' });
+        res.status(400).json({ success: false, message: 'Senha incorreta' });
       }
+    } else {
+      res.status(400).json({ success: false, message: 'Email não encontrado' });
+    }
 
 
-    
-    });
+
+  });
 });
 
 
@@ -111,12 +111,12 @@ app.post('/Criarconta', (req, res) => {
   db.get(query, [email], function (err, row) {
     if (err) {
       console.error("Erro ao verificar o email:", err.message);
-      return res.status(500).json({ sucess: false,error: 'Erro ao verificar o email.' });
+      return res.status(500).json({ sucess: false, error: 'Erro ao verificar o email.' });
     }
 
     // Verifique se o email já existe
     if (row) {
-      return res.status(400).json({ sucess: false,error: 'Já existe uma conta criada com este email.' });
+      return res.status(400).json({ sucess: false, error: 'Já existe uma conta criada com este email.' });
     }
 
     // Se o email não existir, insira o novo usuário
@@ -126,10 +126,10 @@ app.post('/Criarconta', (req, res) => {
       function (err) {
         if (err) {
           console.error('Erro ao inserir no banco de dados:', err.message);
-          return res.status(500).json({ sucess: false ,error: 'Erro ao registrar o usuário.' });
+          return res.status(500).json({ sucess: false, error: 'Erro ao registrar o usuário.' });
         }
 
-        res.status(201).json({ sucess : true ,message: 'Usuário registrado com sucesso!' });
+        res.status(201).json({ sucess: true, message: 'Usuário registrado com sucesso!' });
       }
     );
   });
@@ -175,8 +175,8 @@ app.post('/gerenciarpratos', (req, res) => {
 
 
   if (!userid) {
-    return res.status(400).json({message: 'id do usuário é obrigatório'})
-  
+    return res.status(400).json({ message: 'id do usuário é obrigatório' })
+
   }
 
 
