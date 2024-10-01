@@ -20,6 +20,14 @@ app.use(cors({
 }))
 
 
+const buildPath = process.env.NODE_ENV === 'production'
+  ? path.resolve(__dirname, './quickfood/build')
+  : path.resolve(__dirname, './build');
+
+app.use(express.static(buildPath));
+
+
+
 const secretkey = 'K2$%542!!'
 
 
@@ -30,9 +38,8 @@ app.use(express.static(path.resolve(__dirname, 'build')));
 
 // Rota para a página inicial
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(buildPath, 'index.html'));
 });
-
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
