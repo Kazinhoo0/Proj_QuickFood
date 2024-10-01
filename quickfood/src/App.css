@@ -723,7 +723,7 @@
   }
 
   .custom-file-button {
-    width: 172% !important;
+    width: 92% !important;
 
   }
 
@@ -1016,7 +1016,7 @@
   }
 
   .custom-file-button {
-    width: 117% !important;
+    width: 90% !important;
 
   }
 
@@ -1462,7 +1462,7 @@
   }
 
   .custom-file-button {
-    width: 172% !important;
+    width: 90% !important;
 
   }
 
@@ -1948,8 +1948,7 @@
   }
 
   .custom-file-button {
-    width: 117% !important;
-
+    width: 85% !important;
   }
 
   .style_tittlelogin-senha {
@@ -2807,7 +2806,7 @@
   }
 
   .custom-file-button {
-    width: 117% !important;
+    width: 80% !important;
 
   }
 
@@ -3243,7 +3242,7 @@
   }
 
   .custom-file-button {
-    width: 117% !important;
+    width: 80% !important;
 
   }
 
@@ -3454,10 +3453,10 @@
   margin-left: 150px;
   margin-top: 180px;
   font-size: 4vw;
-  line-height: 1.2; 
+  line-height: 1.2;
   text-align: center;
-  margin: 20px 0; 
-  padding: 0 20px; 
+  margin: 20px 0;
+  padding: 0 20px;
   color: #333;
   /* border: 1px solid rgb(255, 255, 255); */
 

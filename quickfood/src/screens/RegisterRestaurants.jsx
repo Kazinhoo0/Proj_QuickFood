@@ -72,7 +72,7 @@ export default function RegisterRestaurant() {
                         <div className='container-input-registerrestaurants'>
                             <form className='container-formulario-restaurants' action="">
                                 <span>Nome Completo</span>
-                                <input className='style-inputs-loginpage' placeholder='Nome completo*' type="email" />
+                                <input className='style-inputs-loginpage' placeholder='Nome completo*' type="text" />
                                 <span>Senha</span>
                                 <input className='style-inputs-loginpage' placeholder='Sua senha aqui*' type="password" />
                                 <span>Cidade</span>

@@ -7,7 +7,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const db = require('./quickfood/src/db');
+const db = require('./src/db');
 
 
 
