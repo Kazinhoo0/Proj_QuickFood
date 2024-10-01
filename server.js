@@ -13,7 +13,7 @@ const db = require('./quickfood/src/db');
 
 
 app.use(cors({
-  origin: 'https://proj-quickfoood.onrender.com/',
+  origin: 'https://proj-quickfoood.onrender.com',
   methods: ['POST', 'GET', 'DELETE', 'PUT'],
   credentials: true,
 
@@ -23,9 +23,6 @@ app.use(cors({
 
 const secretkey = 'K2$%542!!'
 
-
-
-const buildPath = path.join(__dirname, 'build');
 
 
 // Serve arquivos estáticos da pasta build
