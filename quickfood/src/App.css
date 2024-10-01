@@ -3453,7 +3453,13 @@
   height: 180px;
   margin-left: 150px;
   margin-top: 180px;
-  border: 1px solid rgb(255, 255, 255);
+  font-size: 4vw;
+  line-height: 1.2; 
+  text-align: center;
+  margin: 20px 0; 
+  padding: 0 20px; 
+  color: #333;
+  /* border: 1px solid rgb(255, 255, 255); */
 
 
 }
