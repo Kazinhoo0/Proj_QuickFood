@@ -66,7 +66,7 @@ export default function CreateAccount() {
     const handleCadastrarUsuario = async () => {
 
         setTimeout(async () => {
-            const response = await fetch('https://proj-quickfood.onrender.com/Criarconta', {
+            const response = await fetch('https://proj-quickfoood.onrender.com/Criarconta', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
