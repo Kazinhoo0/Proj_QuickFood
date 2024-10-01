@@ -8,7 +8,6 @@ const cors = require('cors')
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const db = require('./quickfood/src/db');
-const cors = require('cors')
 
 
 
