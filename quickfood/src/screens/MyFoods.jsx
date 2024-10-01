@@ -69,7 +69,7 @@ export default function MyFoods() {
             try {
 
 
-                const response = await fetch('https://proj-quickfoood.onrender.com/gerenciarpratos', {
+                const response = await fetch('https://proj-quickfood.onrender.com/gerenciarpratos', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ userid })

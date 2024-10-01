@@ -66,7 +66,7 @@ export default function CreateAccount() {
     const handleCadastrarUsuario = async () => {
 
         setTimeout(async () => {
-            const response = await fetch('https://proj-quickfoood.onrender.com/Criarconta', {
+            const response = await fetch('https://proj-quickfood.onrender.com/Criarconta', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -75,7 +75,7 @@ export default function CreateAccount() {
                     cidade,
                     genero,
                     email
-                    
+
                 })
             });
 
@@ -185,7 +185,7 @@ export default function CreateAccount() {
         localStorage.setItem('genero', genero);
         localStorage.setItem('pais', pais);
         localStorage.setItem('cidade', cidade);
-        localStorage.setItem('senha' , senha)
+        localStorage.setItem('senha', senha)
 
         console.log(genero + email, pais, cidade)
     };
@@ -315,7 +315,7 @@ export default function CreateAccount() {
                                         <input
                                             type="checkbox"
                                             onChange={(e) => setTermos(e.target.value)}
-                                            checked= {Termos} />
+                                            checked={Termos} />
                                         <small >Concordo com os termos e condições</small>
                                     </div>
 
