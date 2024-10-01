@@ -76,7 +76,7 @@ export default function Login() {
 
 
         setTimeout(async () => {
-            const response = await fetch('http://localhost:3000/Login', {
+            const response = await fetch('https://proj-quickfoood.onrender.com/Login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, senha })

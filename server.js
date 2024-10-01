@@ -13,7 +13,7 @@ const db = require('./quickfood/src/db');
 
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://proj-quickfoood.onrender.com/',
   methods: ['POST', 'GET', 'DELETE', 'PUT'],
   credentials: true,
 
@@ -25,6 +25,13 @@ const secretkey = 'K2$%542!!'
 
 // Servir arquivos estáticos da pasta build
 app.use(express.static(path.join(__dirname, 'build')));
+
+
+
+// Rota para a página inicial
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -193,14 +200,6 @@ app.post('/gerenciarpratos', (req, res) => {
       res.status(404).json({ success: false, message: 'Nenhum item encontrado' });
     }
   });
-});
-
-
-
-
-// Rota para a página inicial
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 
