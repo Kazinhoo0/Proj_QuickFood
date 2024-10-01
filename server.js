@@ -29,11 +29,11 @@ const buildPath = path.join(__dirname, 'build');
 
 
 // Serve arquivos estáticos da pasta build
-app.use(express.static(path.join(__dirname, 'quickfood', 'build')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 // Rota para a página inicial
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'quickfood', 'build', 'index.html'));
+  res.sendFile(path.join(__dirname,'build', 'index.html'));
 });
 
 
