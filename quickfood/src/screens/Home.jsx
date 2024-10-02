@@ -74,19 +74,12 @@ export default function Home() {
                         </div>
                     </nav>
                     <div className='container_home_text'>
-                        <div className='container-login_text'>
-                            <div className='container_h1tittle'>
-                                <h1 className='h1titlehome-style'>
-                                    <strong>
-                                        FAST FOOD ORGANICO E SAUDÁVEL NA SUA MESA
-                                        <br />
-                                    </strong>
-                                    <strong>AGORA DE UMA FORMA MAIS FACIL E RÁPIDA</strong>
 
-                                </h1>
-                            </div>
+                    <div className='container-login_text'>
+                        <div className='container_h1headerloginpage'>
+                            <h1 className='style_tittlelogin-senha'>FAST FOOD ORGANICO E SAUDÁVEL NA SUA MESA</h1>
                         </div>
-
+                    </div>
 
                         <div className='container_searchbar'>
                             <input placeholder='NOME RESTAURANTE' className='inputtext_style' type="text" />
