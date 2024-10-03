@@ -249,6 +249,13 @@
     width: 76% !important;
   }
 
+  .style_tittlelogin-senha {
+    margin-right: 200px !important;
+  }
+
+
+
+
   .container_infbalanço {
     margin-left: 5px !important;
   }
@@ -258,7 +265,7 @@
   }
 
   .container_searchbar {
-    margin-left: 20px !important;
+    margin-left: 0px !important;
   }
 
   .container_options {
@@ -419,7 +426,7 @@
   }
 
   .style_tittlelogin-senha {
-    margin-right: 50px;
+    margin-right: 130px !important;
   }
 
 
@@ -559,6 +566,7 @@
   .container_searchbar {
     width: 88% !important;
     height: 60px !important;
+    margin-left: 0px !important;
 
   }
 
@@ -711,7 +719,7 @@
 
   .style_tittlelogin-senha {
     font-size: 30px;
-    margin-right: 100px !important;
+    margin-right: 300px !important;
     margin-top: 80px;
     color: white;
     text-align: center;
@@ -858,6 +866,7 @@
   .container_searchbar {
     width: 88% !important;
     height: 60px !important;
+    margin-left: 0px !important;
 
   }
 
@@ -1003,10 +1012,10 @@
   }
 
   .style_tittlelogin-senha {
+    color: #fff;
     font-size: 30px;
-    margin-right: 200px !important;
+    margin-right: 300px !important;
     margin-top: 80px;
-    color: white;
     text-align: center;
   }
 
@@ -1130,7 +1139,7 @@
   }
 
   .inputtext_style {
-    margin-left: 205px !important;
+    margin-left: 206px !important;
   }
 
   .container_home_text {
@@ -1152,9 +1161,10 @@
   }
 
   .container_searchbar {
-    width: 100% !important;
-    height: 60px !important;
     display: grid !important;
+    height: 60px !important;
+    width: 150% !important;
+    margin-left: 0px !important;
 
   }
 
@@ -1392,10 +1402,10 @@
   }
 
   .style_tittlelogin-senha {
-    font-size: 20px;
-    margin-right: 200px !important;
-    margin-top: 50px;
-    color: white;
+    color: #fff;
+    font-size: 30px;
+    margin-left: 300px !important;
+    margin-top: 80px;
     text-align: center;
   }
 
@@ -1450,7 +1460,7 @@
 
   .style_tittlelogin-senha {
     font-size: 30px;
-    margin-left: 280px !important;
+    margin-left: 180px !important;
     margin-top: 80px;
     color: white;
     text-align: center;
@@ -1614,14 +1624,6 @@
     font-size: 13px;
   }
 
-  .style_tittlelogin-senha {
-    font-size: 20px;
-    margin-left: 10px;
-    margin-top: 50px;
-    color: white;
-    text-align: center;
-  }
-
   .style-button-loginpage {
     width: 40% !important;
   }
@@ -1687,6 +1689,7 @@
     width: 100% !important;
     height: 60px !important;
     display: grid !important;
+    margin-left: 20px !important;
 
   }
 
@@ -1935,7 +1938,7 @@
 
   .style_tittlelogin-senha {
     font-size: 20px;
-    margin-left: 200px !important;
+    margin-left: 100px !important;
     margin-top: 80px;
     color: white;
     text-align: center;
@@ -2516,6 +2519,7 @@
     width: 100% !important;
     height: 60px !important;
     display: grid !important;
+    margin-left: 0px !important;
 
   }
 
@@ -2794,7 +2798,7 @@
 
   .style_tittlelogin-senha {
     font-size: 20px;
-    margin-left: 70px;
+    margin-left: 50px !important;
     margin-top: 80px;
     color: white;
     text-align: center;
@@ -3230,7 +3234,7 @@
 
   .style_tittlelogin-senha {
     font-size: 20px;
-    margin-left: 70px !important;
+    margin-left: 50px !important;
     margin-top: 80px;
     color: white;
     text-align: center;
