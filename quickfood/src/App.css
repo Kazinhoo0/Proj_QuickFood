@@ -257,6 +257,15 @@
     text-align: center;
   }
 
+
+  .style_tittlelogin-senhatelahome {
+    margin-right: 70px !important;
+    font-size: 30px;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+  }
+
   .container_infbalanço {
     margin-left: 5px !important;
   }
@@ -435,6 +444,14 @@
   }
 
 
+  .style_tittlelogin-senhatelahome {
+    margin-left: 80px !important;
+    font-size: 30px;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+  }
+
 
   .style_h1page-register-restaurants {
     color: white;
@@ -572,7 +589,7 @@
   .container_searchbar {
     width: 88% !important;
     height: 60px !important;
-    margin-left: 0px !important;
+    margin-left: 100px !important;
 
   }
 
@@ -731,6 +748,15 @@
     text-align: center;
   }
 
+
+  .style_tittlelogin-senhatelahome {
+    font-size: 30px;
+    margin-right: 155px !important;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+  }
+
   .container-principal-restaurants-register {
     height: 1100px !important;
   }
@@ -872,7 +898,7 @@
   .container_searchbar {
     width: 88% !important;
     height: 60px !important;
-    margin-left: 0px !important;
+    margin-left: 100px !important;
 
   }
 
@@ -1018,6 +1044,15 @@
   }
 
   .style_tittlelogin-senha {
+    color: #fff;
+    font-size: 30px;
+    margin-right: 50px !important;
+    margin-top: 80px;
+    text-align: center;
+  }
+
+
+  .style_tittlelogin-senhatelahome {
     color: #fff;
     font-size: 30px;
     margin-right: 150px !important;
@@ -1416,6 +1451,15 @@
   }
 
 
+  .style_tittlelogin-senhatelahome {
+    color: #fff;
+    font-size: 30px;
+    margin-left: 100px !important;
+    margin-top: 80px;
+    text-align: center;
+  }
+
+
   .container_input-login-register {
     width: 100% !important;
   }
@@ -1688,7 +1732,7 @@
     width: 100% !important;
     height: 60px !important;
     display: grid !important;
-    margin-left: 20px !important;
+    margin-left: 65px !important;
 
   }
 
@@ -1944,6 +1988,15 @@
   }
 
 
+  .style_tittlelogin-senhatelahome {
+    font-size: 20px;
+    margin-right: 100px !important;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+  }
+
+
   .container-principal-restaurants-register {
     height: 1100px !important;
   }
@@ -2105,7 +2158,7 @@
     width: 100% !important;
     height: 60px !important;
     display: grid !important;
-    margin-left: 20px !important;
+    margin-left: 55px !important;
   }
 
 
@@ -2388,6 +2441,14 @@
     text-align: center;
   }
 
+  .style_tittlelogin-senhatelahome {
+    font-size: 20px;
+    margin-right: 100px !important;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+  }
+
   .container-principal-restaurants-register {
     height: 1100px !important;
   }
@@ -2520,7 +2581,7 @@
     width: 100% !important;
     height: 60px !important;
     display: grid !important;
-    margin-left: 0px !important;
+    margin-left: 25px !important;
 
   }
 
@@ -2799,19 +2860,20 @@
 
   .style_tittlelogin-senha {
     font-size: 20px;
-    margin-left: 300px !important;
+    margin-left: 20px !important;
     margin-top: 80px;
     color: white;
     text-align: center;
   }
 
   
-  .style_tittlelogin-senha-homepage {
+  .style_tittlelogin-senhatelahome {
     font-size: 20px;
-    margin-left: 80px !important;
+    margin-right: 60px !important;
     margin-top: 80px;
     color: white;
     text-align: center;
+  
   }
 
   .container-principal-restaurants-register {
@@ -2975,7 +3037,7 @@
     width: 100% !important;
     height: 60px !important;
     display: grid !important;
-    margin-left: 0px !important;
+    margin-left: 45px !important;
 
   }
 
@@ -3243,9 +3305,9 @@
 
   }
 
-  .style_tittlelogin-senha {
+  .style_tittlelogin-senhatelahome {
     font-size: 20px;
-    margin-left: 250px !important;
+    margin-right: 150px !important;
     margin-top: 80px;
     color: white;
     text-align: center;
@@ -3977,7 +4039,7 @@ strong {
 }
 
 
-.style_tittlelogin-senha-homepage {
+.style_tittlelogin-senhatelahome {
   color: white;
 }
 

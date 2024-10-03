@@ -75,9 +75,9 @@ export default function Home() {
                     </nav>
                     <div className='container_home_text'>
 
-                    <div className='container-login_text-homepage'>
-                        <div className='container_h1headerloginpage-homepage'>
-                            <h1 className='style_tittlelogin-senha-homepage'>FAST FOOD ORGANICO E SAUDÁVEL NA SUA MESA</h1>
+                    <div className='container-login_text'>
+                        <div className='container_h1headerloginpage'>
+                            <h1 className='style_tittlelogin-senhatelahome'>FAST FOOD ORGANICO E SAUDÁVEL NA SUA MESA</h1>
                         </div>
                     </div>
 
