@@ -2861,11 +2861,11 @@
 
 
   .style_tittlelogin-senha-loginpage {
-    font-size: 20px;
+    font-size: 20px !important;
     margin-left: 2px !important;
-    margin-top: 80px;
-    color: white;
-    text-align: center;
+    margin-top: 80px !important;
+    color: white !important;
+    text-align: center !important;
   }
 
   .container-principal-restaurants-register {
@@ -4015,6 +4015,10 @@ strong {
 
 
 .style_tittlelogin-senha {
+  color: white;
+}
+
+.style_tittlelogin-senha-loginpage {
   color: white;
 }
 
