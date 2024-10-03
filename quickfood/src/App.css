@@ -1936,9 +1936,17 @@
     width: 85% !important;
   }
 
-  .style_tittlelogin-senha {
+  .style_tittlelogin-senha-loginpage {
     font-size: 20px;
-    margin-left: 200px !important;
+    margin-left: 350px !important;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+  }
+
+  .style_tittlelogin-senha-homepage {
+    font-size: 20px;
+    margin-left: 190px !important;
     margin-top: 80px;
     color: white;
     text-align: center;
@@ -2380,9 +2388,17 @@
 
   }
 
-  .style_tittlelogin-senha {
+  .style_tittlelogin-senha-homepage {
     font-size: 20px;
-    margin-left: 120px !important;
+    margin-left: 200px !important;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+  }
+
+  .style_tittlelogin-senha-loginpage {
+    font-size: 20px;
+    margin-left: 300px !important;
     margin-top: 80px;
     color: white;
     text-align: center;
@@ -3237,6 +3253,23 @@
   .style_tittlelogin-senha {
     font-size: 20px;
     margin-left: 50px !important;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+  }
+
+  .style_tittlelogin-senha-homepage {
+    font-size: 20px;
+    margin-left: 100px !important;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+  }
+  
+
+  .style_tittlelogin-senha-loginpage {
+    font-size: 20px;
+    margin-left: 270px !important;
     margin-top: 80px;
     color: white;
     text-align: center;
