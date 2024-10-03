@@ -250,11 +250,20 @@
   }
 
   .style_tittlelogin-senha {
-    margin-right: 200px !important;
+    margin-right: 70px !important;
+    font-size: 30px;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
   }
 
-
-
+  .style_tittlelogin-senha-loginpage {
+    margin-right: 100px !important;
+    font-size: 30px;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+  }
 
   .container_infbalanço {
     margin-left: 5px !important;
@@ -426,7 +435,19 @@
   }
 
   .style_tittlelogin-senha {
-    margin-right: 130px !important;
+    margin-left: 80px !important;
+    font-size: 30px;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+  }
+
+  .style_tittlelogin-senha-loginpage {
+    margin-right: 100px !important;
+    font-size: 30px;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
   }
 
 
@@ -719,7 +740,15 @@
 
   .style_tittlelogin-senha {
     font-size: 30px;
-    margin-right: 300px !important;
+    margin-right: 155px !important;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+  }
+
+  .style_tittlelogin-senha-loginpage {
+    font-size: 30px;
+    margin-right: 180px !important;
     margin-top: 80px;
     color: white;
     text-align: center;
@@ -1014,7 +1043,15 @@
   .style_tittlelogin-senha {
     color: #fff;
     font-size: 30px;
-    margin-right: 300px !important;
+    margin-right: 150px !important;
+    margin-top: 80px;
+    text-align: center;
+  }
+
+  .style_tittlelogin-senha-loginpage {
+    color: #fff;
+    font-size: 30px;
+    margin-right: 180px !important;
     margin-top: 80px;
     text-align: center;
   }
@@ -1404,7 +1441,15 @@
   .style_tittlelogin-senha {
     color: #fff;
     font-size: 30px;
-    margin-left: 300px !important;
+    margin-left: 100px !important;
+    margin-top: 80px;
+    text-align: center;
+  }
+
+  .style_tittlelogin-senha-loginpage {
+    color: #fff;
+    font-size: 30px;
+    margin-left: 120px !important;
     margin-top: 80px;
     text-align: center;
   }
@@ -1456,14 +1501,6 @@
   .custom-file-button {
     width: 90% !important;
 
-  }
-
-  .style_tittlelogin-senha {
-    font-size: 30px;
-    margin-left: 350px !important;
-    margin-top: 80px;
-    color: white;
-    text-align: center;
   }
 
   .container-principal-restaurants-register {
@@ -1936,17 +1973,17 @@
     width: 85% !important;
   }
 
-  .style_tittlelogin-senha-loginpage {
+  .style_tittlelogin-senha {
     font-size: 20px;
-    margin-left: 350px !important;
+    margin-left: 325px !important;
     margin-top: 80px;
     color: white;
     text-align: center;
   }
 
-  .style_tittlelogin-senha-homepage {
+  .style_tittlelogin-senha-loginpage {
     font-size: 20px;
-    margin-left: 190px !important;
+    margin-left: 80px !important;
     margin-top: 80px;
     color: white;
     text-align: center;
@@ -2388,17 +2425,18 @@
 
   }
 
-  .style_tittlelogin-senha-homepage {
+  .style_tittlelogin-senha {
     font-size: 20px;
-    margin-left: 200px !important;
+    margin-left: 320px !important;
     margin-top: 80px;
     color: white;
     text-align: center;
   }
 
-  .style_tittlelogin-senha-loginpage {
+
+  .style_tittlelogin-senha-forloginpage {
     font-size: 20px;
-    margin-left: 300px !important;
+    margin-left: 50px !important;
     margin-top: 80px;
     color: white;
     text-align: center;
@@ -2815,7 +2853,16 @@
 
   .style_tittlelogin-senha {
     font-size: 20px;
-    margin-left: 50px !important;
+    margin-left: 300px !important;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+  }
+
+
+  .style_tittlelogin-senha-loginpage {
+    font-size: 20px;
+    margin-left: 2px !important;
     margin-top: 80px;
     color: white;
     text-align: center;
@@ -3252,24 +3299,16 @@
 
   .style_tittlelogin-senha {
     font-size: 20px;
-    margin-left: 50px !important;
+    margin-left: 250px !important;
     margin-top: 80px;
     color: white;
     text-align: center;
   }
 
-  .style_tittlelogin-senha-homepage {
-    font-size: 20px;
-    margin-left: 100px !important;
-    margin-top: 80px;
-    color: white;
-    text-align: center;
-  }
-  
 
   .style_tittlelogin-senha-loginpage {
     font-size: 20px;
-    margin-left: 270px !important;
+    margin-left: 10px !important;
     margin-top: 80px;
     color: white;
     text-align: center;
