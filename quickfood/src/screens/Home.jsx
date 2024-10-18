@@ -19,6 +19,7 @@ import imgmenutwitter from '../assets_imgs/twitter.png'
 import imgtelefone from '../assets_imgs/phone.png'
 import imgemail from '../assets_imgs/mail.png'
 import { useNavigate } from 'react-router-dom'
+import NavbarSmarphone from '..//components/NavbarSmarphone'
 
 
 
@@ -64,14 +65,7 @@ export default function Home() {
                                 <img className='imglogo_width' src={logo} alt="" />
                             </a>
                         </div>
-                        <div className='container_navbar_buttons'>
-                            <ul className='navbar_style'>
-                                <lo className='navbar_itens_style'><a onClick={handlenavigaterestaurant}>RESTAURANTS</a></lo>
-                                <lo className='navbar_itens_style'><a onClick={handlenavigateLogin}>LOGIN /  REGISTER</a></lo>
-                                <lo onClick={handlenavigateregister} className='navbar_itens_style_orange'><a onClick={handlenavigateregister}>REGISTRAR RESTAURANT</a></lo>
-
-                            </ul>
-                        </div>
+                        <NavbarSmarphone/>
                     </nav>
                     <div className='container_home_text'>
 

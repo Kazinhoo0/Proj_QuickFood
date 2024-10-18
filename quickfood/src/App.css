@@ -2,41 +2,6 @@
   text-align: celogocontainer_itensnter;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .container_fluid-home {
   /* border: 1px solid red; */
@@ -860,6 +825,70 @@
   }
 
 
+  /* CSS NAVBAR */
+
+  .container_navbar_buttons {
+    /* display: grid !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin-left: 50px !important;
+    justify-content: end !important; */
+    border-radius: 5px !important;
+    display: grid;
+    /* display: none; */
+    position: fixed;
+    left: 69% !important;
+    bottom: 0% !important;
+    height: 100% !important;
+    width: 30% !important;
+    background-color: rgba(71, 69, 69, 0.945);
+
+  }
+
+  .container_buttonclosenavbar {
+    width: auto;
+    /* border: 1px solid  green; */
+    height: 50px !important;
+    margin-top: 50px !important;
+    display: flex;
+    justify-content: end !important;
+  }
+
+  .style_buttonclosenavbar {
+    width: 50px !important;
+    height: 30px !important;
+  }
+
+  .navbar_itens_style {
+    padding: 0px !important;
+    height: 20px !important;
+  }
+
+  .navbar_itens_style_orange {
+    height: 20px !important;
+  }
+
+  .navbar_style {
+    display: grid !important;
+    /* border: 1px solid red; */
+    height: 25% !important;
+    padding-right: 10px !important;
+    margin-bottom: 170% !important;
+  }
+
+  .container_navbarbutton {
+    /* border: 1px solid red; */
+    width: 20% !important;
+    display: flex;
+    margin-left: 570px !important;
+    margin-top: 20px !important;
+  }
+
+  .style_navbarbutton {
+
+    width: 50px !important;
+    height: 30px !important;
+  }
 }
 
 
@@ -1162,6 +1191,72 @@
     height: 0px !important;
     margin-left: 100px !important;
     margin-bottom: 200px !important;
+  }
+
+
+  /* CSS NAVBAR */
+
+  .container_navbar_buttons {
+    /* display: grid !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin-left: 50px !important;
+    justify-content: end !important; */
+    border-radius: 5px !important;
+    display: grid;
+    /* display: none; */
+    position: fixed;
+    left: 69% !important;
+    bottom: 0% !important;
+    height: 100% !important;
+    width: 30% !important;
+    background-color: rgba(71, 69, 69, 0.945);
+
+  }
+
+  .container_buttonclosenavbar {
+    width: auto;
+    /* border: 1px solid  green; */
+    height: 50px !important;
+    margin-top: 50px !important;
+    display: flex;
+    justify-content: end !important;
+  }
+
+  .style_buttonclosenavbar {
+    width: 50px !important;
+    height: 30px !important;
+  }
+
+  .navbar_itens_style {
+    padding: 0px !important;
+    height: 20px !important;
+  }
+
+  .navbar_itens_style_orange {
+    height: 20px !important;
+  }
+
+  .navbar_style {
+    display: grid !important;
+    /* border: 1px solid red; */
+    height: 25% !important;
+    padding-right: 10px !important;
+    margin-bottom: 170% !important;
+  }
+
+  .container_navbarbutton {
+    /* border: 1px solid red; */
+    width: 20% !important;
+    display: flex;
+    margin-left: 570px !important;
+    margin-top: 20px !important;
+  }
+
+  .style_navbarbutton {
+
+    width: 50px !important;
+    height: 30px !important;
   }
 
 
@@ -1638,6 +1733,73 @@
 
   .style-options-meuspedidos {
     padding: 1px !important;
+  }
+
+
+
+  /* CSS NAVBAR */
+
+  .container_navbar_buttons {
+    /* display: grid !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin-left: 50px !important;
+    justify-content: end !important; */
+    border-radius: 5px !important;
+    display: grid;
+    /* display: none; */
+    position: fixed;
+    left: 69% !important;
+    bottom: 0% !important;
+    height: 100% !important;
+    width: 30% !important;
+    background-color: rgba(71, 69, 69, 0.945);
+
+  }
+
+  .container_buttonclosenavbar {
+    width: auto;
+    /* border: 1px solid  green; */
+    height: 50px !important;
+    margin-top: 50px !important;
+    display: flex;
+    justify-content: end !important;
+  }
+
+  .style_buttonclosenavbar {
+    width: 50px !important;
+    height: 30px !important;
+  }
+
+  .navbar_itens_style {
+    padding: 0px !important;
+    height: 20px !important;
+  }
+
+  .navbar_itens_style_orange {
+    height: 20px !important;
+  }
+
+  .navbar_style {
+    display: grid !important;
+    /* border: 1px solid red; */
+    height: 25% !important;
+    padding-right: 10px !important;
+    margin-bottom: 170% !important;
+  }
+
+  .container_navbarbutton {
+    /* border: 1px solid red; */
+    width: 20% !important;
+    display: flex;
+    margin-left: 570px !important;
+    margin-top: 20px !important;
+  }
+
+  .style_navbarbutton {
+
+    width: 50px !important;
+    height: 30px !important;
   }
 
 
@@ -2866,14 +3028,14 @@
     text-align: center;
   }
 
-  
+
   .style_tittlelogin-senhatelahome {
     font-size: 20px;
     margin-right: 60px !important;
     margin-top: 80px;
     color: white;
     text-align: center;
-  
+
   }
 
   .container-principal-restaurants-register {

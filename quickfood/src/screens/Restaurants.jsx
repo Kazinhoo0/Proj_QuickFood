@@ -11,6 +11,7 @@ import imgsearch from '../assets_imgs/search-interface-symbol.png'
 import imgstarblack from '../assets_imgs/star.png'
 import imgaz from '../assets_imgs/from-a-to-z.png'
 import imglike from '../assets_imgs/like.png'
+import NavbarSmarphone from '..//components/NavbarSmarphone'
 
 
 
@@ -53,14 +54,7 @@ export default function Restaurants() {
                                 <img className='imglogo_width' src={logo} alt="" />
                             </a>
                         </div>
-                        <div className='container_navbar_buttons'>
-                            <ul className='navbar_style'>
-                                <lo className='navbar_itens_style'><a onClick={handlenavigaterestaurant}>RESTAURANTS</a></lo>
-                                <lo className='navbar_itens_style'><a onClick={handlenavigateLogin}>LOGIN /  REGISTER</a></lo>
-                                <lo className='navbar_itens_style_orange'><a onClick={handlenavigateregister}>REGISTRAR RESTAURANT</a></lo>
-
-                            </ul>
-                        </div>
+                        <NavbarSmarphone/>
                     </nav>
                     <div className='container-login_text'>
                         <div className='container_h1headerpesquisar-restaurants-page'>
