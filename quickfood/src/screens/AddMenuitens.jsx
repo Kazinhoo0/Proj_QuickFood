@@ -10,6 +10,7 @@ import imgtelefone from '../assets_imgs/phone.png';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Toastify from 'toastify-js';
+import NavbarSmartphonepagonlogin from '..//components/NavbarSmartphoneOnLogin'
 
 
 
@@ -149,6 +150,8 @@ export default function AddMenuItens() {
 
                             </ul>
                         </div>
+
+                        <NavbarSmartphonepagonlogin />
                     </nav>
                     <div className='container-login_text'>
                         <div className='container_h1headerloginpage'>

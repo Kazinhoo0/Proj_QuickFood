@@ -11,6 +11,7 @@ import imgpendente from '../assets_imgs/loading.png'
 import imgentregue from '../assets_imgs/list-option.png'
 import imgcaminho from '../assets_imgs/fast-delivery.png'
 import { useEffect, useState } from 'react'
+import NavbarSmarphone from '..//components/NavbarSmarphone'
 
 
 export default function MyOrders() {
@@ -80,6 +81,8 @@ export default function MyOrders() {
 
                             </ul>
                         </div>
+
+                        <NavbarSmarphone />
                     </nav>
 
                     <div className='container_userprofile-myfoods' >
@@ -107,7 +110,7 @@ export default function MyOrders() {
                         </ul>
                     </div>
                     <div className='container_result-options'>
-                            
+
                     </div>
                 </div>
             </div>

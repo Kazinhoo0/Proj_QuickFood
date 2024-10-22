@@ -8,6 +8,7 @@ import imgtelefone from '../assets_imgs/phone.png'
 import { useNavigate } from 'react-router-dom'
 import imgprofileteste from '../assets_imgs/user.png'
 import { useEffect, useState } from 'react'
+import NavbarSmarphone from '..//components/NavbarSmarphone'
 
 
 
@@ -124,6 +125,8 @@ export default function MyFoods() {
 
                             </ul>
                         </div>
+
+                        <NavbarSmarphone />
                     </nav>
                     <div className='container_userprofile-myfoods' >
                         <div className='container_picture-father' >

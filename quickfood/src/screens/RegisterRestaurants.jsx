@@ -6,7 +6,7 @@ import imgmenufacebook from '../assets_imgs/facebook.png'
 import imgmenutwitter from '../assets_imgs/twitter.png'
 import imgtelefone from '../assets_imgs/phone.png'
 import { useNavigate } from 'react-router-dom'
-
+import NavbarSmarphone from '..//components/NavbarSmarphone'
 
 
 export default function RegisterRestaurant() {
@@ -56,6 +56,8 @@ export default function RegisterRestaurant() {
 
                             </ul>
                         </div>
+
+                        <NavbarSmarphone />
                     </nav>
                     <div className='container-login_text'>
                         <div className='container_h1headerloginpage'>

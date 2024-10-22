@@ -54,6 +54,16 @@ export default function Restaurants() {
                                 <img className='imglogo_width' src={logo} alt="" />
                             </a>
                         </div>
+
+                        <div className='container_navbar_buttons'>
+                            <ul className='navbar_style'>
+                                <lo className='navbar_itens_style'><a onClick={handlenavigaterestaurant}>RESTAURANTS</a></lo>
+                                <lo className='navbar_itens_style'><a onClick={handlenavigateLogin}>LOGIN /  REGISTER</a></lo>
+                                <lo onClick={handlenavigateregister} className='navbar_itens_style_orange'><a onClick={handlenavigateregister}>REGISTRAR RESTAURANT</a></lo>
+
+                            </ul>
+                        </div>
+
                         <NavbarSmarphone/>
                     </nav>
                     <div className='container-login_text'>

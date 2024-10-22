@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Toastify from 'toastify-js';
 import { MutatingDots } from 'react-loader-spinner'
+import NavbarSmarphone from '..//components/NavbarSmarphone'
 
 
 export default function Login() {
@@ -168,6 +169,8 @@ export default function Login() {
 
                             </ul>
                         </div>
+
+                        <NavbarSmarphone />
                     </nav>
                     
                     <div className='container-login_text'>

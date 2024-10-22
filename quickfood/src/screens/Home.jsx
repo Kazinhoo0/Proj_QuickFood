@@ -65,15 +65,26 @@ export default function Home() {
                                 <img className='imglogo_width' src={logo} alt="" />
                             </a>
                         </div>
-                        <NavbarSmarphone/>
+
+                        <div className='container_navbar_buttons'>
+                            <ul className='navbar_style'>
+                                <lo className='navbar_itens_style'><a onClick={handlenavigaterestaurant}>RESTAURANTS</a></lo>
+                                <lo className='navbar_itens_style'><a onClick={handlenavigateLogin}>LOGIN /  REGISTER</a></lo>
+                                <lo onClick={handlenavigateregister} className='navbar_itens_style_orange'><a onClick={handlenavigateregister}>REGISTRAR RESTAURANT</a></lo>
+
+                            </ul>
+                        </div>
+
+                        <NavbarSmarphone />
+
                     </nav>
                     <div className='container_home_text'>
 
-                    <div className='container-login_text'>
-                        <div className='container_h1headerloginpage'>
-                            <h1 className='style_tittlelogin-senhatelahome'>FAST FOOD ORGANICO E SAUDÁVEL NA SUA MESA</h1>
+                        <div className='container-login_text'>
+                            <div className='container_h1headerloginpage'>
+                                <h1 className='style_tittlelogin-senhatelahome'>FAST FOOD ORGANICO E SAUDÁVEL NA SUA MESA</h1>
+                            </div>
                         </div>
-                    </div>
 
                         <div className='container_searchbar'>
                             <input placeholder='NOME RESTAURANTE' className='inputtext_style' type="text" />
