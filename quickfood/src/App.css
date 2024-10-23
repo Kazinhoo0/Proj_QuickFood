@@ -1847,7 +1847,7 @@
 
   .navbar_style_pagonuserlog {
     display: grid;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-bottom: 250% !important;
     justify-content: end;
     text-align: end;
@@ -2367,17 +2367,15 @@
 
   .navbar_style_pagonuserlog {
     display: grid;
-    border: 1px solid red;
-    margin-bottom: 250% !important;
+    /* border: 1px solid red; */
+    margin-bottom: 200% !important;
     justify-content: end;
-    text-align: end;
-    padding-right: 10px !important;
+    text-align: start;
+    padding-left: 5px !important;
     margin: 0px;
-    font-size: 18px !important;
+    font-size: 17px !important;
 
   }
-
-
 
 }
 
@@ -3746,10 +3744,10 @@
 
 .navbar_style_pagonuserlog {
   display: grid;
-  border: 1px solid red;
-  margin-bottom: 250% !important;
+  /* border: 1px solid red; */
+  margin-bottom: 150% !important;
   justify-content: end;
-  text-align: end;
+  text-align: start;
   padding-right: 10px !important;
   margin: 0px;
   font-size: 18px !important;

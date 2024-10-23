@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Toastify from 'toastify-js';
 import { MutatingDots } from 'react-loader-spinner'
-import NavbarSmarphone from '..//components/NavbarSmarphone'
+import NavbarSmarphone from '../components/NavbarSmartphone'
 
 
 export default function Login() {
@@ -61,7 +61,7 @@ export default function Login() {
 
     // }
 
-    useEffect  (() => {
+    useEffect(() => {
         const AutocompleteEmail = localStorage.getItem('email')
 
         if (AutocompleteEmail) {
@@ -87,14 +87,14 @@ export default function Login() {
 
             console.log(data)
 
-            
+
             if (data.success) {
                 localStorage.setItem('token', data.token);
                 localStorage.setItem('email', email);
                 localStorage.setItem('nomecompleto', data.nomecompleto);
                 localStorage.setItem('userid', data.id)
 
-                
+
 
                 Toastify({
                     text: 'Login efetuado com sucesso!',
@@ -111,7 +111,7 @@ export default function Login() {
                     navigate('/gerenciarpratos');
                 }, 2000);
 
-            } 
+            }
             else {
                 Toastify({
                     text: 'Usuário não cadastrado, porfavor crie uma conta!',
@@ -133,7 +133,7 @@ export default function Login() {
                     }
                 }).showToast();
             }
-            
+
 
             // else {
             //     setLoader(false);
@@ -172,7 +172,7 @@ export default function Login() {
 
                         <NavbarSmarphone />
                     </nav>
-                    
+
                     <div className='container-login_text'>
                         <div className='container_h1headerloginpage'>
                             <h1 className='style_tittlelogin-senha'>LOGIN USUÁRIO/REGISTRAR</h1>

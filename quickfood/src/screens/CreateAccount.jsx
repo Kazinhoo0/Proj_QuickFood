@@ -10,7 +10,7 @@ import { useState, useEffect } from 'react';
 import Toastify from 'toastify-js';
 import "toastify-js/src/toastify.css"
 import { MutatingDots } from 'react-loader-spinner'
-import NavbarSmarphone from '..//components/NavbarSmarphone'
+import NavbarSmarphone from '../components/NavbarSmartphone'
 
 
 

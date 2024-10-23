@@ -8,7 +8,7 @@ import imgtelefone from '../assets_imgs/phone.png'
 import { useNavigate } from 'react-router-dom'
 import imgprofileteste from '../assets_imgs/user.png'
 import { useEffect, useState } from 'react'
-import NavbarSmarphone from '..//components/NavbarSmarphone'
+import NavbarSmarphone from '../components/NavbarSmartphoneOnLogin'
 
 
 
@@ -109,7 +109,7 @@ export default function MyFoods() {
         <div className="home-container">
             <div style={{ backgroundImage: `url(${topimg_home})` }} className="container_fluid-pagmyfoods">
                 <div className="container_son-myfoods">
-                <nav className="style_navbar">
+                    <nav className="style_navbar">
                         <div className='container_logo'>
                             <a onClick={handlenavigatehome} className='imglogo_position'>
                                 <img className='imglogo_width' src={logo} alt="" />
@@ -120,7 +120,7 @@ export default function MyFoods() {
                                 <lo className='navbar_itens_style'><a className='style_a_paginasafterlogin' onClick={handlenavigateadditens} >Adicionar itens</a></lo>
                                 <lo className='navbar_itens_style'><a className='style_a_paginasafterlogin' onClick={handlenavigatemeuspratos} >Meus pratos</a></lo>
                                 <lo className='navbar_itens_style'><a className='style_a_paginasafterlogin' onClick={handlenavigateordenarrequisições} >Ordenar requisições</a></lo>
-                                <lo className='navbar_itens_style'><a  style={{color: 'orange', fontWeight: 'bolder'}}>{userdata.nomecompleto}</a></lo>
+                                <lo className='navbar_itens_style'><a style={{ color: 'orange', fontWeight: 'bolder' }}>{userdata.nomecompleto}</a></lo>
                                 <lo className='style_button_sair'><a className='style_a_paginasafterlogin' onClick={handlenavigatehome}>SAIR</a></lo>
 
                             </ul>
@@ -150,22 +150,22 @@ export default function MyFoods() {
                         <h3 style={{ paddingBottom: '5px' }}>Foods</h3>
                     </div>
                     <div style={{ height: '220px', paddingBottom: '130px', overflowY: 'Auto' }}>
-                         {pratos.map((prato, index) => ( 
-                        <div key={index} className='container_itens'>
-                            <div className='container_img'>
-                                <img className='style_imgitensmenu' src={prato.fotomenu} alt="" />
-                            </div>
-                            <div className='container_nomeitem_ingredientes'>
-                                <h3>Item: {prato.nome}</h3>
+                        {pratos.map((prato, index) => (
+                            <div key={index} className='container_itens'>
+                                <div className='container_img'>
+                                    <img className='style_imgitensmenu' src={prato.fotomenu} alt="" />
+                                </div>
+                                <div className='container_nomeitem_ingredientes'>
+                                    <h3>Item: {prato.nome}</h3>
 
-                                <h3>Ingredientes: {prato.ingredientes}</h3>
+                                    <h3>Ingredientes: {prato.ingredientes}</h3>
+                                </div>
+                                <div className='container_preço'>
+                                    <h4>R$: {prato.preco}</h4>
+                                </div>
                             </div>
-                            <div className='container_preço'>
-                                <h4>R$: {prato.preco}</h4>
-                            </div>
-                        </div>
-                         ))
-                         } 
+                        ))
+                        }
                     </div>
 
 

@@ -11,7 +11,7 @@ import imgpendente from '../assets_imgs/loading.png'
 import imgentregue from '../assets_imgs/list-option.png'
 import imgcaminho from '../assets_imgs/fast-delivery.png'
 import { useEffect, useState } from 'react'
-import NavbarSmarphone from '..//components/NavbarSmarphone'
+import NavbarSmarphone from '../components/NavbarSmartphoneOnLogin'
 
 
 export default function MyOrders() {

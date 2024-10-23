@@ -56,6 +56,7 @@ export default function NavbarSmarphone() {
                         <lo onClick={handlenavigateregister} className='navbar_itens_style_orange'><a onClick={handlenavigateregister}>REGISTRAR RESTAURANT</a></lo>
 
                     </ul>
+                    
                 </div>
             )}
         </div>

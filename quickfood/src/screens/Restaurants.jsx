@@ -11,7 +11,7 @@ import imgsearch from '../assets_imgs/search-interface-symbol.png'
 import imgstarblack from '../assets_imgs/star.png'
 import imgaz from '../assets_imgs/from-a-to-z.png'
 import imglike from '../assets_imgs/like.png'
-import NavbarSmarphone from '..//components/NavbarSmarphone'
+import NavbarSmarphone from '../components/NavbarSmartphone'
 
 
 
@@ -64,7 +64,7 @@ export default function Restaurants() {
                             </ul>
                         </div>
 
-                        <NavbarSmarphone/>
+                        <NavbarSmarphone />
                     </nav>
                     <div className='container-login_text'>
                         <div className='container_h1headerpesquisar-restaurants-page'>

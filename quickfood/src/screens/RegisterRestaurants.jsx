@@ -6,7 +6,7 @@ import imgmenufacebook from '../assets_imgs/facebook.png'
 import imgmenutwitter from '../assets_imgs/twitter.png'
 import imgtelefone from '../assets_imgs/phone.png'
 import { useNavigate } from 'react-router-dom'
-import NavbarSmarphone from '..//components/NavbarSmarphone'
+import NavbarSmarphone from '../components/NavbarSmartphone'
 
 
 export default function RegisterRestaurant() {
