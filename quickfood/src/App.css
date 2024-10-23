@@ -27,6 +27,7 @@
 
 .container_navbar_smartphones {
   display: none;
+  z-index: 2;
 }
 
 
@@ -43,6 +44,7 @@
   width: auto;
   height: 100%;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .img_logo {
