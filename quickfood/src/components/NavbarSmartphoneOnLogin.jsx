@@ -50,10 +50,10 @@ export default function NavbarSmartphonepagonlogin() {
 
                     <ul className='navbar_style_pagonuserlog'>
 
-                        <lo className='navbar_itens_style'><a onClick={handlenavigaterestaurant}>ADICIONAR ITENS</a></lo>
-                        <lo className='navbar_itens_style'><a onClick={handlenavigateLogin}>MEUS PRATOS</a></lo>
-                        <lo className='navbar_itens_style'><a onClick={handlenavigateLogin}>ORDENAR REQUISIÇÕES</a></lo>
-                        <lo className='navbar_itens_style'><a onClick={handlenavigateLogin}>nomeuser</a></lo>
+                        <lo className='navbar_itens_style_onlog'><a onClick={handlenavigaterestaurant}>ADICIONAR ITENS</a></lo>
+                        <lo className='navbar_itens_style_onlog'><a onClick={handlenavigateLogin}>MEUS PRATOS</a></lo>
+                        <lo className='navbar_itens_style_onlog'><a onClick={handlenavigateLogin}>ORDENAR REQUISIÇÕES</a></lo>
+                        <lo className='navbar_itens_style_onlog'><a onClick={handlenavigateLogin}>nomeuser</a></lo>
                         <lo onClick={handlenavigateregister} className='navbar_itens_style_orange'><a onClick={handlenavigateregister}>SAIR</a></lo>
 
                     </ul>
