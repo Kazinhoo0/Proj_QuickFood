@@ -66,7 +66,7 @@ export default function Restaurants() {
 
                         <NavbarSmarphone />
                     </nav>
-                    <div className='container-login_text'>
+                    <div className='container-login_text .paglogin'>
                         <div className='container_h1headerpesquisar-restaurants-page'>
                             <div className="container-imglupasearch">
                                 <img className="style-img-pesquisarrestaurants" src={imgsearch} />

@@ -59,8 +59,8 @@ export default function RegisterRestaurant() {
 
                         <NavbarSmarphone />
                     </nav>
-                    <div className='container-login_text'>
-                        <div className='container_h1headerloginpage'>
+                    <div className='container-login_text_pagregister'>
+                        <div className='container_h1headerloginpage_paglogin'>
                             <h1 className='style_tittlelogin-senha'>CADASTRAR USUÁRIOS E RESTAURANTES</h1>
                         </div>
                     </div>

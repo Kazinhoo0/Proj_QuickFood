@@ -173,8 +173,8 @@ export default function Login() {
                         <NavbarSmarphone />
                     </nav>
 
-                    <div className='container-login_text'>
-                        <div className='container_h1headerloginpage'>
+                    <div className='container-login_text_pagregister'>
+                        <div className='container_h1headerloginpage_paglogin'>
                             <h1 className='style_tittlelogin-senha'>LOGIN USUÁRIO/REGISTRAR</h1>
                         </div>
                     </div>

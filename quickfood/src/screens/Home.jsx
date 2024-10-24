@@ -78,23 +78,32 @@ export default function Home() {
                         <NavbarSmarphone />
 
                     </nav>
+
                     <div className='container_home_text'>
 
                         <div className='container-login_text'>
-                            <div className='container_h1headerloginpage'>
-                                <h1 className='style_tittlelogin-senhatelahome'>FAST FOOD ORGANICO E SAUDÁVEL NA SUA MESA</h1>
-                            </div>
+                            <h1 className='style_tittlelogin-senhatelahome'>FAST FOOD ORGANICO E SAUDÁVEL NA SUA MESA</h1>
                         </div>
 
-                        <div className='container_searchbar'>
-                            <input placeholder='NOME RESTAURANTE' className='inputtext_style' type="text" />
-                            <button onClick={handlenavigaterestaurant} className='buttonsearch_text'>PROCURAR</button>
-                        </div>
-                        <div className='container_options'>
+                        {/* <div className='container_options'>
                             <img className='style_img-inforestaurant' src={optionsimg} alt="" />
+                        </div>  */}
+
+                    </div>
+
+                    <div className='container_home_text'>
+
+                        <div className='container_searchbar'>
+                            <input
+                                placeholder='NOME RESTAURANTE'
+                                className='inputtext_style'
+                                type="text" />
+                            <button onClick={handlenavigaterestaurant} className='buttonsearch_text'>PROCURAR</button>
                         </div>
 
                     </div>
+
+
 
                 </div>
             </div>
@@ -109,7 +118,7 @@ export default function Home() {
             </div>
             <div className='container_fotherhowitworks'>
                 <div className='container_howitworks'>
-                    <h2 className='teste' style={{ color: 'black', border: '5px solid white' }}>COMO TRABALHAMOS</h2>
+                    <h2 className='teste' style={{ color: 'black' }}>COMO TRABALHAMOS</h2>
                     <p className='teste2'>Como funciona o processo até a sua casa.</p>
                 </div>
                 <ul className='container_blockhowitworks'>
@@ -148,15 +157,19 @@ export default function Home() {
 
                     </div>
                 </ul>
-                <div className='container_imgpicanha' style={{ backgroundImage: `url(${imgpicanha_tophowitworks})` }}>
-                    <div className='container_gridpicanha'>
-                        <h2 className='h2-bastaencomendar-enósentregamos' style={{ color: 'white', fontSize: '40px' }}>BASTA ENCOMENDAR E NÓS ENTREGAREMOS</h2>
-                        <p className='teste2223' style={{ color: 'white' }}>Pellentesque eget justo eget nibh luctus semper at ut tellus.</p>
-                        <div className='teste2223'>
-                            <button onClick={handlenavigaterestaurant} className='style_button-ordenaragora'>ORDENAR AGORA</button>
-                        </div>
+                <div className='container_imgpicanha' style={{ backgroundImage: `url(${imgpicanha_tophowitworks})`, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
 
-                    </div>
+                    <ul className='container_lista_paghome'>
+
+                        <li className='style_listas_paghome_strongtext'>BASTA ENCOMENDAR E NÓS ENTREGAREMOS</li>
+
+                        <li className='style_listas_paghome'>Pellentesque eget justo eget nibh luctus semper at ut tellus</li>
+
+                        <li><button className='style_listas_paghome_button'>ORDERNAR AGORA</button></li>
+
+                    </ul>
+
+
                 </div>
                 <div className='container_destaques'>
                     <div className='container_tittle-restaurantesemdestaque'>
