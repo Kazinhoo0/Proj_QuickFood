@@ -31,7 +31,9 @@
 }
 
 
-
+.style_img-inforestaurant {
+  width: 30%;
+}
 
 .style_navbar {
   /* border: 1px solid purple; */
@@ -99,9 +101,9 @@
     margin-left: 70px !important;
   }
 
-  .container_options {
+  /* .container_options {
     margin-left: 100px !important;
-  }
+  } */
 
   .container_blockhowitworks {
     padding-left: 2% !important;
@@ -391,6 +393,10 @@
 
   }
 
+  .style_img-inforestaurant {
+    width: 50%;
+  }
+
 
   .container_h1tittle {
     display: grid;
@@ -409,10 +415,10 @@
   /* .container_searchbar {
     margin-left: 50px !important;
   } */
-
+  /* 
   .container_options {
     margin-left: 90px !important;
-  }
+  } */
 
   .container_blockhowitworks {
     padding-left: 1% !important;
@@ -591,10 +597,10 @@
     margin-left: 230px !important;
   } */
 
-  .container_options {
+  /* .container_options {
     margin-left: 20px !important;
 
-  }
+  } */
 
   .container_blockhowitworks {
     padding-left: 1% !important;
@@ -968,10 +974,10 @@
 
   } */
 
-  .container_options {
+  /* .container_options {
     margin-left: 1px !important;
 
-  }
+  } */
 
   .container_blockhowitworks {
     padding-left: 1% !important;
@@ -1367,11 +1373,6 @@
     height: 10% !important;
   }
 
-  .container_options {
-    margin-left: 10px !important;
-    margin-top: 50px !important;
-
-  }
 
 
   .container_blockhowitworks {
@@ -1383,7 +1384,7 @@
   }
 
   .style_img-inforestaurant {
-    width: 50%;
+    width: 60%;
   }
 
   .span_circlue {
@@ -2017,11 +2018,11 @@
     height: 10% !important;
   }
 
-  .container_options {
+  /* .container_options {
     margin-left: 1px !important;
     margin-top: 50px !important;
 
-  }
+  } */
 
   .container_blockhowitworks {
     padding-left: 20% !important;
@@ -2032,7 +2033,7 @@
   }
 
   .style_img-inforestaurant {
-    width: 50%;
+    width: 70%;
   }
 
   .span_circlue {
@@ -2495,12 +2496,12 @@
     height: 10% !important;
   }
 
-  .container_options {
+  /* .container_options {
     margin-left: 1px !important;
     margin-top: 50px !important;
     margin-right: 160px !important;
 
-  }
+  } */
 
   .container_blockhowitworks {
     padding-left: 20% !important;
@@ -2511,7 +2512,7 @@
   }
 
   .style_img-inforestaurant {
-    width: 50%;
+    width: 70%;
   }
 
   .span_circlue {
@@ -2943,11 +2944,11 @@
     height: 10% !important;
   }
 
-  .container_options {
+  /* .container_options {
     margin-left: 1px !important;
     margin-top: 50px !important;
 
-  }
+  } */
 
   .container_blockhowitworks {
     padding-left: 1% !important;
@@ -3398,13 +3399,13 @@
     height: 10% !important;
   }
 
-  .container_options {
+  /* .container_options {
     margin-left: 45px !important;
     margin-top: 100px !important;
     width: 70% !important;
     height: 30% !important;
 
-  }
+  } */
 
   .container_blockhowitworks {
     padding-left: 1% !important;
@@ -3951,8 +3952,10 @@ strong {
 }
 
 .container_options {
-  /* border: 1px solid red; */
-  display: grid;
+  /* border: 1px solid rgb(0, 255, 0); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   place-items: center;
 
 }

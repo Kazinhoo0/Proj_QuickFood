@@ -85,10 +85,6 @@ export default function Home() {
                             <h1 className='style_tittlelogin-senhatelahome'>FAST FOOD ORGANICO E SAUDÁVEL NA SUA MESA</h1>
                         </div>
 
-                        {/* <div className='container_options'>
-                            <img className='style_img-inforestaurant' src={optionsimg} alt="" />
-                        </div>  */}
-
                     </div>
 
                     <div className='container_home_text'>
@@ -102,6 +98,11 @@ export default function Home() {
                         </div>
 
                     </div>
+
+                    <div className='container_options'>
+                        <img className='style_img-inforestaurant' src={optionsimg} alt="" />
+                    </div>
+
 
 
 
