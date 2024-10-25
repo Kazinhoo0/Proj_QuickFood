@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom'
 import imgprofileteste from '../assets_imgs/user.png'
 import { useEffect, useState } from 'react'
 import NavbarSmarphone from '../components/NavbarSmartphoneOnLogin'
+import {Toastify} from 'toastify-js'
 
 
 
@@ -85,9 +86,25 @@ export default function MyFoods() {
                 if (data.success) {
                     setPratos(data.items); // Armazena os itens no estado
                 } else {
+                    Toastify({
+                        text: 'Nenhum item encontrado!',
+                        position: 'center',
+                        style: {
+                            background: '#db2d0e',
+                            color: '#ffffff'
+                        }
+                    }).showToast();
                     console.log('Nenhum item encontrado');
                 }
             } catch (error) {
+                Toastify({
+                    text: 'Erro ao buscar os pratos!',
+                    position: 'center',
+                    style: {
+                        background: '#db2d0e',
+                        color: '#ffffff'
+                    }
+                }).showToast();
                 console.error('Erro ao buscar os pratos:', error);
             } finally {
                 setLoading(false); // Remove o loading após a requisição
