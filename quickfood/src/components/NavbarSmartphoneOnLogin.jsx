@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import '../App.css';
 import { FaBars } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
@@ -9,6 +9,10 @@ export default function NavbarSmartphonepagonlogin() {
 
 
     const [isButtonOn, setIsButtonon] = useState(false);
+    const [userdata, setUserData] = useState({
+        
+        username: ''
+    })
 
 
     const handleclickbutton = () => {
@@ -17,18 +21,34 @@ export default function NavbarSmartphonepagonlogin() {
 
     const navigate = useNavigate();
 
-    const handlenavigaterestaurant = () => {
-        navigate('/Pesquisarrestaurants')
-    };
+    const handlenavigatehome = () => {
+        navigate('/')
+        console.log('Executado com sucesso')
+    }
 
-    const handlenavigateregister = () => {
-        navigate('/Registrarrestaurantes')
-    };
+    const handlenavigatemeuspratos = () => {
+        navigate('/gerenciarpratos')
+        console.log('Executado com sucesso')
+    }
+
+    const handlenavigateadditens = () => {
+        navigate('/Adicionaritensmenu')
+        console.log('Executado com sucesso')
+    }
+
+    const handlenavigateordenarrequisições = () => {
+        navigate('/Ordenarrequisicoes')
+        console.log("executado com sucesso")
+    }
+
+    useEffect(() => { 
+        const username = localStorage.getItem('nomecompleto');
 
 
-    const handlenavigateLogin = () => {
-        navigate('/Login')
-    };
+        setUserData ({
+            username: username || ''
+        })
+    })
 
 
 
@@ -50,11 +70,11 @@ export default function NavbarSmartphonepagonlogin() {
 
                     <ul className='navbar_style_pagonuserlog'>
 
-                        <lo className='navbar_itens_style_onlog'><a onClick={handlenavigaterestaurant}>ADICIONAR ITENS</a></lo>
-                        <lo className='navbar_itens_style_onlog'><a onClick={handlenavigateLogin}>MEUS PRATOS</a></lo>
-                        <lo className='navbar_itens_style_onlog'><a onClick={handlenavigateLogin}>ORDENAR REQUISIÇÕES</a></lo>
-                        <lo className='navbar_itens_style_onlog'><a onClick={handlenavigateLogin}>nomeuser</a></lo>
-                        <lo onClick={handlenavigateregister} className='navbar_itens_style_orange'><a onClick={handlenavigateregister}>SAIR</a></lo>
+                        <lo className='navbar_itens_style_onlog'><a onClick={handlenavigateadditens}>ADICIONAR ITENS</a></lo>
+                        <lo className='navbar_itens_style_onlog'><a onClick={handlenavigatemeuspratos}>MEUS PRATOS</a></lo>
+                        <lo className='navbar_itens_style_onlog'><a onClick={handlenavigateordenarrequisições}>ORDENAR REQUISIÇÕES</a></lo>
+                        <lo className='navbar_itens_style_onlog'><a onClick={userdata.username}>nomeuser</a></lo>
+                        <lo className='navbar_itens_style_orange'><a onClick={handlenavigatehome}>SAIR</a></lo>
 
                     </ul>
 

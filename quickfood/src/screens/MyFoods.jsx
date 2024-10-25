@@ -129,16 +129,22 @@ export default function MyFoods() {
                         <NavbarSmarphone />
                     </nav>
                     <div className='container_userprofile-myfoods' >
-                        <div className='container_picture-father' >
-                            <div className='container_picture_son'>
-                                <img className='style-img-profile' src={imgprofileteste} alt="" />
-                            </div>
-                        </div>
 
-                        <div className='container_username'>
-                            <h2 className='style_titulo_pagesafterlogin'>{userdata.nomecompleto}</h2>
-                            <small className='style_descrição_pagesafterlogin' >Apple Juice, Beef Roast, Cheese Burger</small>
-                        </div>
+
+                        <img className='style-img-profile' src={imgprofileteste} alt="" />
+
+                        <ul style={{ display: 'grid', justifyContent: 'center', alignItems: 'center', listStyle: 'none', color: 'white' }}>
+
+                            <li>
+                                <h2 className='style_titulo_pagesafterlogin'>{userdata.nomecompleto}</h2>
+                            </li>
+
+                            <li>
+                                <small className='style_descrição_pagesafterlogin' >Apple Juice, Beef Roast, Cheese Burger</small>
+                            </li>
+
+                        </ul>
+
                     </div>
 
                 </div>

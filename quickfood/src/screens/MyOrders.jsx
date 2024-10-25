@@ -63,16 +63,22 @@ export default function MyOrders() {
 
     return (
         <div className="home-container">
+
             <div style={{ backgroundImage: `url(${topimg_home})` }} className="container_fluid-pagmyfoods">
+
                 <div className="container_son-myfoods">
+
                     <nav className="style_navbar">
                         <div className='container_logo'>
                             <a onClick={handlenavigatehome} className='imglogo_position'>
                                 <img className='imglogo_width' src={logo} alt="" />
                             </a>
                         </div>
+
                         <div className='container_navbar_buttons'>
+
                             <ul className='navbar_style'>
+
                                 <lo className='navbar_itens_style'><a className='style_a_paginasafterlogin' onClick={handlenavigateadditens} >Adicionar itens</a></lo>
                                 <lo className='navbar_itens_style'><a className='style_a_paginasafterlogin' onClick={handlenavigatemeuspratos} >Meus pratos</a></lo>
                                 <lo className='navbar_itens_style'><a className='style_a_paginasafterlogin' onClick={handlenavigateordenarrequisições} >Ordenar requisições</a></lo>
@@ -80,22 +86,29 @@ export default function MyOrders() {
                                 <lo className='style_button_sair'><a className='style_a_paginasafterlogin' onClick={handlenavigatehome}>SAIR</a></lo>
 
                             </ul>
+
                         </div>
 
                         <NavbarSmarphone />
                     </nav>
 
                     <div className='container_userprofile-myfoods' >
-                        <div className='container_picture-father' >
-                            <div className='container_picture_son'>
-                                <img className='style-img-profile' src={imgprofileteste} alt="" />
-                            </div>
-                        </div>
 
-                        <div className='container_username'>
-                            <h2 className='style_titulo_pagesafterlogin'>{userdata.nomecompleto}</h2>
-                            <small className='style_descrição_pagesafterlogin' >Apple Juice, Beef Roast, Cheese Burger</small>
-                        </div>
+
+                        <img className='style-img-profile' src={imgprofileteste} alt="" />
+
+                        <ul style={{ display: 'grid', justifyContent: 'center', alignItems: 'center', listStyle: 'none', color: 'white' }}>
+
+                            <li>
+                                <h2 className='style_titulo_pagesafterlogin'>{userdata.nomecompleto}</h2>
+                            </li>
+
+                            <li>
+                                <small className='style_descrição_pagesafterlogin' >Apple Juice, Beef Roast, Cheese Burger</small>
+                            </li>
+
+                        </ul>
+
                     </div>
 
                 </div>

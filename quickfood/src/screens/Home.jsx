@@ -57,22 +57,31 @@ export default function Home() {
 
     return (
         <div className='home-container'>
+            
             <div style={{ backgroundImage: `url(${topimg_home})` }} className="container_fluid-home">
+
                 <div className="container_son">
+
                     <nav className="style_navbar">
+
                         <div className='container_logo'>
+
                             <a onClick={handlenavigatehome} className='imglogo_position'>
                                 <img className='imglogo_width' src={logo} alt="" />
                             </a>
+
                         </div>
 
                         <div className='container_navbar_buttons'>
+
                             <ul className='navbar_style'>
+
                                 <lo className='navbar_itens_style'><a onClick={handlenavigaterestaurant}>RESTAURANTS</a></lo>
                                 <lo className='navbar_itens_style'><a onClick={handlenavigateLogin}>LOGIN /  REGISTER</a></lo>
                                 <lo onClick={handlenavigateregister} className='navbar_itens_style_orange'><a onClick={handlenavigateregister}>REGISTRAR RESTAURANT</a></lo>
 
                             </ul>
+
                         </div>
 
                         <NavbarSmarphone />

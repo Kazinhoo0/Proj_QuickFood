@@ -155,11 +155,11 @@
     margin-left: 0px !important;
   }
 
-  .style-img-profile {
+  /* .style-img-profile {
     width: 100px !important;
     height: 100px !important;
     margin-right: 10px !important;
-  }
+  } */
 
   .container_username {
     width: 100% !important;
@@ -315,11 +315,11 @@
     margin-left: 0px !important;
   }
 
-  .style-img-profile {
+  /* .style-img-profile {
     width: 100px !important;
     height: 100px !important;
     margin-right: 10px !important;
-  }
+  } */
 
   .container_username {
     width: 100% !important;
@@ -489,11 +489,11 @@
     margin-left: 0px !important;
   }
 
-  .style-img-profile {
+  /* .style-img-profile {
     width: 100px !important;
     height: 100px !important;
     margin-right: 10px !important;
-  }
+  } */
 
   .container_username {
     width: 100% !important;
@@ -800,11 +800,11 @@
     margin-left: 0px !important;
   }
 
-  .style-img-profile {
+  /* .style-img-profile {
     width: 100px !important;
     height: 100px !important;
     margin-right: 10px !important;
-  }
+  } */
 
   .container_username {
     width: 100% !important;
@@ -1177,11 +1177,11 @@
     margin-left: 0px !important;
   }
 
-  .style-img-profile {
+  /* .style-img-profile {
     width: 100px !important;
     height: 100px !important;
     margin-right: 10px !important;
-  }
+  } */
 
   .container_username {
     width: 100% !important;
@@ -1689,9 +1689,9 @@
   }
 
   .style-img-profile {
-    width: 100px !important;
-    height: 100px !important;
-    margin-right: 10px !important;
+    width: 120px !important;
+    height: 120px !important;
+    margin-left: 20px !important;
   }
 
   .container_username {
@@ -2299,23 +2299,23 @@
     margin-left: 270px !important;
   }
 
-  .style-img-profile {
+  /* .style-img-profile {
     width: 80px !important;
     height: 80px !important;
     margin-right: 10px !important;
-  }
+  } */
 
-  .style_titulo_pagesafterlogin {
+  /* .style_titulo_pagesafterlogin {
     font: 10px !important;
     margin-top: 130px !important;
     margin-left: 200px !important;
-  }
+  } */
 
-  .style_descrição_pagesafterlogin {
+  /* .style_descrição_pagesafterlogin {
     font-size: 12px !important;
     margin-top: 140px !important;
     margin-left: 15px !important;
-  }
+  } */
 
   .container_username {
     width: 70% !important;
@@ -2815,23 +2815,23 @@
     margin-left: 250px !important;
   }
 
-  .style-img-profile {
+  /* .style-img-profile {
     width: 80px !important;
     height: 80px !important;
     margin-right: 10px !important;
-  }
+  } */
 
-  .style_titulo_pagesafterlogin {
+  /* .style_titulo_pagesafterlogin {
     font: 10px !important;
     margin-top: 130px !important;
     margin-left: 100px !important;
-  }
+  } */
 
-  .style_descrição_pagesafterlogin {
+  /* .style_descrição_pagesafterlogin {
     font-size: 12px !important;
     margin-top: 140px !important;
     margin-left: 10px !important;
-  }
+  } */
 
   .container_username {
     width: 70% !important;
@@ -3244,23 +3244,23 @@
     margin-left: 150px !important;
   }
 
-  .style-img-profile {
+  /* .style-img-profile {
     width: 80px !important;
     height: 80px !important;
     margin-right: 10px !important;
-  }
+  } */
 
-  .style_titulo_pagesafterlogin {
+  /* .style_titulo_pagesafterlogin {
     font: 10px !important;
     margin-top: 130px !important;
     margin-right: 10px !important;
-  }
+  } */
 
-  .style_descrição_pagesafterlogin {
+  /* .style_descrição_pagesafterlogin {
     font-size: 12px !important;
     margin-top: 140px !important;
     margin-right: 15px !important;
-  }
+  } */
 
   .container_username {
     width: 70% !important;
@@ -3700,23 +3700,23 @@
     margin-left: 163px !important;
   }
 
-  .style-img-profile {
+  /* .style-img-profile {
     width: 80px !important;
     height: 80px !important;
     margin-right: 10px !important;
-  }
+  } */
 
-  .style_titulo_pagesafterlogin {
+  /* .style_titulo_pagesafterlogin {
     font: 10px !important;
     margin-top: 130px !important;
     margin-right: 10px !important;
-  }
+  } */
 
-  .style_descrição_pagesafterlogin {
+  /* .style_descrição_pagesafterlogin {
     font-size: 12px !important;
     margin-top: 140px !important;
     margin-right: 15px !important;
-  }
+  } */
 
   .container_username {
     width: 70% !important;
@@ -4150,7 +4150,7 @@ strong {
 }
 
 .container_tittle-restaurantesemdestaque {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 100%;
   height: 200px;
   margin: 6px;
@@ -4905,22 +4905,25 @@ button:hover {
 }
 
 .container_userprofile-myfoods {
-  /* border: 1px solid red; */
-  width: 50%;
+  border: 1px solid red;
+  width: 98%;
   height: 60%;
   margin: 20px;
   display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
 .container_picture-father {
-  /* border: 1px solid black; */
-  width: 30%;
-  margin-left: 30px;
+  border: 1px solid rgb(0, 255, 0);
+  width: 80%;
+  height: 60%;
+
 
 }
 
 .container_picture_son {
-  border: 5px solid rgb(255, 255, 255);
+  border: 5px solid rgb(17, 231, 46);
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -4934,13 +4937,14 @@ button:hover {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  margin-left: 100px;
 }
 
 
 
 .container_username {
   width: 50%;
-  /* border: 1px solid red; */
+  border: 1px solid red;
   display: grid;
   justify-content: start;
   align-content: center;
