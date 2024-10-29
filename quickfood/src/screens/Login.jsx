@@ -208,7 +208,7 @@ export default function Login() {
                                     placeholder="Seu email aqui*"
                                     type="email"
                                     onChange={(e) => setEmail(e.target.value)}
-                                    value={email}
+                                    
                                 />
                                 <span>Senha</span>
                                 <input

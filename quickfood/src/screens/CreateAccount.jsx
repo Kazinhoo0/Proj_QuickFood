@@ -181,7 +181,7 @@ export default function CreateAccount() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        handleCadastrarUsuario(genero, email, pais, cidade, senha);
+        handleCadastrarUsuario(genero, email , pais, cidade, senha);
         localStorage.setItem('email', email);
         localStorage.setItem('genero', genero);
         localStorage.setItem('pais', pais);
