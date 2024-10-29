@@ -207,7 +207,6 @@ export default function Login() {
                                     className="style-inputs-loginpage"
                                     placeholder="Seu email aqui*"
                                     type="email"
-                                    autoComplete='email'
                                     onChange={(e) => setEmail(e.target.value)}
                                     value={email}
                                 />
