@@ -187,10 +187,10 @@
         margin-left: 120px !important;
       } */
 
-  .container_Foodstittle {
+  /* .container_Foodstittle {
     width: 1350px !important;
     height: 50% !important;
-  }
+  } */
 
   .container_itens {
     display: flex !important;
@@ -347,10 +347,10 @@
         margin-left: 120px !important;
       } */
 
-  .container_Foodstittle {
+  /* .container_Foodstittle {
     width: 1100px !important;
     height: 50% !important;
-  }
+  } */
 
   .container_itens {
     display: flex !important;
@@ -522,7 +522,7 @@
       } */
 
   .container_Foodstittle {
-    width: 1080px !important;
+    width: 100% !important;
     height: 50% !important;
   }
 
@@ -534,9 +534,7 @@
     padding-bottom: 35px !important;
   }
 
-  .container_nomeitem_ingredientes {
-    padding-top: 15px !important;
-  }
+  .container_nomeitem_ingredientes {}
 
   .container_cabecalho-informacoes-myfoods {
     height: 500px !important;
@@ -833,7 +831,7 @@
       } */
 
   .container_Foodstittle {
-    width: 900px !important;
+    width: 100% !important;
     height: 50% !important;
   }
 
@@ -1210,7 +1208,7 @@
     } */
 
   .container_Foodstittle {
-    width: 800px !important;
+    width: 100% !important;
     height: 50% !important;
   }
 
@@ -1329,6 +1327,10 @@
   /* .inputtext_style {
     margin-left: 206px !important;
   } */
+
+  .container-foritens {
+    height: 400px !important;
+  }
 
   .container_home_text {
     width: 100%;
@@ -1721,12 +1723,13 @@
   } */
 
   .container_Foodstittle {
-    width: 600px !important;
+    width: 100% !important;
     height: 50% !important;
   }
 
   .container_itens {
     display: flex !important;
+    height: 250px !important;
   }
 
   .container_preço {
@@ -1734,7 +1737,7 @@
   }
 
   .container_nomeitem_ingredientes {
-    padding-top: 15px !important;
+    display: grid !important;
   }
 
   .container_cabecalho-informacoes-myfoods {
@@ -2326,7 +2329,7 @@
   }
 
   .container_Foodstittle {
-    width: 400px !important;
+    width: 100% !important;
     height: 50% !important;
   }
 
@@ -2454,6 +2457,11 @@
     width: 50% !important;
   } */
 
+  .container-foritens {
+    /* border: 1px solid red; */
+    height: 200px !important;
+  }
+
   .container_home_text {
     width: 100%;
   }
@@ -2466,6 +2474,10 @@
   .cadast_itens_style {
     margin: 60px !important;
     font-size: small !important;
+  }
+
+  .container_img_prod {
+    width: 100% !important;
   }
 
   /* .container_searchbar {
@@ -2842,11 +2854,13 @@
   }
 
   .container_Foodstittle {
-    width: 400px !important;
+    width: 100% !important;
+
   }
 
   .container_itens {
     display: grid !important;
+    height: 350px !important;
   }
 
   .container_preço {
@@ -2897,6 +2911,15 @@
     margin-top: 110px !important;
     margin-left: 0px !important;
 
+  }
+
+  .container_img_prod {
+    width: 100% !important;
+  }
+
+  .container-foritens {
+    /* border: 1px solid red; */
+    height: 200px !important;
   }
 
 
@@ -3271,12 +3294,13 @@
   }
 
   .container_Foodstittle {
-    width: 300px !important;
-    height: 50% !important;
+    width: 100% !important;
+
   }
 
   .container_itens {
     display: grid !important;
+    height: 350px !important;
   }
 
   .container_preço {
@@ -3948,7 +3972,17 @@ strong {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 1s;
 
+}
+
+.links-btn {
+  color: white;
+  transition: 1s;
+}
+
+.links-btn:hover {
+  color: #666;
 }
 
 .container_options {
@@ -4107,7 +4141,14 @@ strong {
   width: 150px;
   height: 30px;
   font-size: 14px;
+  cursor: pointer;
 
+}
+
+.style_listas_paghome_button:hover {
+  background-color: white;
+  color: orange;
+  transition: 1s;
 }
 
 .container_lista_paghome {
@@ -4375,12 +4416,16 @@ strong {
 .style-linksstyle {
   /* border: 1px solid red; */
   text-decoration: none;
-  color: white;
   list-style: none;
   align-content: start;
   padding-left: 0px;
   cursor: pointer;
+  transition: 1s;
 
+}
+
+.style-linksstyle:hover {
+  color: #666;
 }
 
 .container-copyright {
@@ -4879,14 +4924,15 @@ button:hover {
   align-content: center;
   justify-content: center;
   background-color: rgba(219, 218, 218, 0.664);
-  /* border: 1px solid red; */
+  /* border: 1px solid rgb(30, 253, 0); */
 }
 
 .container_menufoods {
-  /* border: 1px solid red; */
+  /* border: 1px solid rgb(0, 17, 255); */
   width: 80%;
   display: grid;
   justify-content: center;
+  align-items: center;
 }
 
 .container_cabecalho-informacoes-myfoods {
@@ -4905,7 +4951,7 @@ button:hover {
 }
 
 .container_userprofile-myfoods {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 98%;
   height: 60%;
   margin: 20px;
@@ -4953,7 +4999,10 @@ button:hover {
 }
 
 .container_Foodstittle {
-  /* border: 1px solid red; */
+  border: 1px solid rgb(153, 147, 153);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 1000px;
   text-align: center;
   height: 50% !important;
@@ -4965,25 +5014,49 @@ button:hover {
 }
 
 .container_itens {
+
   /* border: 1px solid rgb(255, 0, 0); */
   height: 120px;
   background-color: rgb(255, 255, 255);
-  justify-content: center;
-  align-content: center;
+  /* justify-content: center;
+  align-content: center; */
   display: flex;
   border-top: 1px solid grey;
+
 }
 
-.container_img {
+.style-infprod {
+  margin-right: 100px;
+}
+
+.container_img_prod {
   /* border: 1px solid rgb(0, 0, 0); */
-  align-content: start;
-  justify-content: start;
-  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
 }
 
 .container_nomeitem_ingredientes {
-  /* border: 1px solid red; */
-  width: 55%;
+
+  /* border: 1px solid rgb(17, 123, 165); */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container-foritens {
+  border: 1px solid rgb(155, 148, 148);
+  height: 220px;
+  padding-bottom: 130px;
+  overflow-y: auto;
+}
+
+.style_imgitensmenu {
+  width: 200px;
+  height: 100px;
 }
 
 .container_preço {

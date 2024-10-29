@@ -9,7 +9,8 @@ import { useNavigate } from 'react-router-dom'
 import imgprofileteste from '../assets_imgs/user.png'
 import { useEffect, useState } from 'react'
 import NavbarSmarphone from '../components/NavbarSmartphoneOnLogin'
-import {Toastify} from 'toastify-js'
+import { Toastify } from 'toastify-js'
+import LinksBar from '../components/LinksInfoBar'
 
 
 
@@ -168,117 +169,39 @@ export default function MyFoods() {
             </div>
 
             <div className='container-principal-login-register-myfoods'>
+
                 <div className='container_menufoods'>
+
                     <div className='container_Foodstittle' >
                         <h3 style={{ paddingBottom: '5px' }}>Foods</h3>
                     </div>
-                    <div style={{ height: '220px', paddingBottom: '130px', overflowY: 'Auto' }}>
-                        {pratos.map((prato, index) => (
-                            <div key={index} className='container_itens'>
-                                <div className='container_img'>
-                                    <img className='style_imgitensmenu' src={prato.fotomenu} alt="" />
-                                </div>
-                                <div className='container_nomeitem_ingredientes'>
-                                    <h3>Item: {prato.nome}</h3>
 
-                                    <h3>Ingredientes: {prato.ingredientes}</h3>
-                                </div>
-                                <div className='container_preço'>
-                                    <h4>R$: {prato.preco}</h4>
-                                </div>
+                    <div className='container-foritens'>
+
+                        <div className='container_itens'>
+                            <div className='container_img_prod'>
+                                <img className='style_imgitensmenu' src='https://th.bing.com/th/id/R.ae6e28d8b655da23aef371023ac1bea7?rik=uHleBZgopx%2fv8w&pid=ImgRaw&r=0&sres=1&sresct=1' alt="" />
                             </div>
-                        ))
-                        }
+                            <div className='container_nomeitem_ingredientes'>
+
+                                <h3 className='style-infprod' >Item: </h3>
+
+                                <h3 className='style-infprod' >Ingredientes: </h3>
+
+                                <h3 className='style-infprod' >Preço: </h3>
+
+                            </div>
+
+                        </div>
+
                     </div>
 
 
                 </div>
 
             </div>
-            <div className='container_cabecalho-informacoes-myfoods'>
-                <div className='container_infor-text'>
-                    <div className='container-menus-tela'>
-                        <div className='tittle-menus'>
-                            <h3>Popular Cities</h3>
-                            <p className='style-barra'></p>
-                        </div>
 
-                        <div className='container-categoriasmenu-popular-cities' >
-                            <ul className='style-linksstyle '>
-                                <li>Karachi</li>
-                                <li>Lahore</li>
-                                <li>Islamabad</li>
-                                <li>Rawalpindi</li>
-                                <li>Multan</li>
-                            </ul>
-
-                        </div>
-
-                    </div>
-
-                    <div className='container-menus-tela'>
-                        <div className='tittle-menus'>
-                            <h3>Popular Cuisnies</h3>
-                            <p className='style-barra'></p>
-                        </div>
-
-                        <div className='container-categoriasmenu-popular-cities' >
-
-                            <ul className='style-linksstyle '>
-                                <li>Apple Juice</li>
-                                <li>BB.Q</li>
-                                <li>Chicken Roast</li>
-                                <li>Prawns</li>
-                                <li>Steam Roast</li>
-                            </ul>
-
-                        </div>
-
-                    </div>
-
-                    <div className='container-menus-tela'>
-                        <div className='tittle-menus'>
-                            <h3>Menu</h3>
-                            <p className='style-barra'></p>
-                        </div>
-
-                        <div className='container-categoriasmenu-popular-cities' >
-                            <ul className='style-linksstyle '>
-                                <li>Home</li>
-                                <li>Contact</li>
-                                <li>FAQ's</li>
-                                <li>How it works</li>
-                            </ul>
-
-                        </div>
-                    </div>
-
-                    <div className='container-menus-tela'>
-                        <div className='tittle-menus'>
-                            <h3>Contact</h3>
-                            <p className='style-barra'></p>
-                        </div>
-                        <div className='container_icons'>
-                            <img className='style-img-redesociais' src={imgmenufacebook} alt="" />
-                            <img className='style-img-redesociais' src={imgmenuinstagram} alt="" />
-                            <img className='style-img-redesociais' src={imgmenutwitter} alt="" />
-
-                        </div>
-                        <div className='container-telefone'>
-                            <img className='style-imgtelefone' src={imgtelefone} alt="" />
-                            <small className='style-telefoneeemail' >+55 21999999999</small>
-                        </div>
-
-                        <div className='container-telefone'>
-                            <img className='style-imgtelefone' src={imgemail} alt="" />
-                            <small className='style-telefoneeemail' >quickfood@gmail.com</small>
-                        </div>
-                    </div>
-                </div>
-                <div className='container-copyright'>
-                    <p style={{ color: 'white' }}>© 2024 Quick Food.Developed by Kauã Lopes</p>
-                </div>
-            </div>
+                <LinksBar/>
         </div>
     )
 }
