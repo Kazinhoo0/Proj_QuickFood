@@ -177,22 +177,26 @@ export default function MyFoods() {
                     </div>
 
                     <div className='container-foritens'>
+                        {pratos.map((prato, index) => (
 
-                        <div className='container_itens'>
-                            <div className='container_img_prod'>
-                                <img className='style_imgitensmenu' src='https://th.bing.com/th/id/R.ae6e28d8b655da23aef371023ac1bea7?rik=uHleBZgopx%2fv8w&pid=ImgRaw&r=0&sres=1&sresct=1' alt="" />
+                       
+                            <div key={index} className='container_itens'>
+                                <div className='container_img_prod'>
+                                    <img className='style_imgitensmenu' src='https://th.bing.com/th/id/R.ae6e28d8b655da23aef371023ac1bea7?rik=uHleBZgopx%2fv8w&pid=ImgRaw&r=0&sres=1&sresct=1' alt="" />
+                                </div>
+                                <div className='container_nomeitem_ingredientes'>
+
+                                    <h3 className='style-infprod' >Item: {prato.nome} </h3>
+
+                                    <h3 className='style-infprod' >Ingredientes: {prato.ingredientes} </h3>
+
+                                    <h3 className='style-infprod' >Preço: {prato.preco} </h3>
+
+                                </div>
+
                             </div>
-                            <div className='container_nomeitem_ingredientes'>
-
-                                <h3 className='style-infprod' >Item: </h3>
-
-                                <h3 className='style-infprod' >Ingredientes: </h3>
-
-                                <h3 className='style-infprod' >Preço: </h3>
-
-                            </div>
-
-                        </div>
+                         ))
+                        }
 
                     </div>
 
@@ -201,7 +205,7 @@ export default function MyFoods() {
 
             </div>
 
-                <LinksBar/>
+            <LinksBar />
         </div>
     )
 }

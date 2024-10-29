@@ -163,11 +163,15 @@ export default function AddMenuItens() {
 
                 </div>
             </div>
+
             <div className='container-principal-restaurants-register'>
-                <div className='container-second-login-register'>
+
                     <div className='container_input-restaurants-register'>
+
                         <h2 className='style-h2-loginpage' >CADASTRAR MENUS</h2>
+
                         <div className='container-input-additens'>
+
                             <form className='container-formulario-restaurants_pageadditens' action="">
                                 <span className='style_span_pageadditens'>Nome item</span>
                                 <input
@@ -193,7 +197,9 @@ export default function AddMenuItens() {
                                     placeholder='Seu email aqui*'
                                     type="text"
                                     value={novoPrato.ingredientes} />
+
                                 <span className='style_span_pageadditens'>Foto Menu</span>
+                                
                                 <input
                                     onChange={(e) => setNovoPrato({ ...novoPrato, fotomenu: e.target.value })}
                                     className='custom-file-button'
@@ -204,9 +210,13 @@ export default function AddMenuItens() {
 
                             </form>
                         </div>
+
                         <div className='container_type_additens' >
-                            <span className='style_span_types'>Escolha o tipo do item: </span>
-                            <div className='container_checkbox_type' >
+
+                            <span className='style_span_types'>Escolha o tipo do item:</span>
+
+
+                            <div className='container-typefood' >
 
                                 <input
                                     className='style_checkbox_additens'
@@ -238,13 +248,16 @@ export default function AddMenuItens() {
                                     className='style_checkbox_additens'
                                     type="checkbox"
                                     onChange={(e) => setTypescomidas({ ...typesComidas, hamburguer: e.target.checked })}
-                                    value={typesComidas.hamburguer} />
+                                    value={typesComidas.hamburguer} 
+                                />
+
                                 <small>Hamburguer</small>
 
 
                             </div>
 
-                            <div className='container_checkbox_type'>
+                            <div className='container-typefood' >
+
                                 <input
                                     className='style_checkbox_additens'
                                     type="checkbox"
@@ -259,6 +272,7 @@ export default function AddMenuItens() {
                                     type="checkbox"
                                     onChange={(e) => setTypescomidas(e.target.checked)}
                                     value={typesComidas.japoneses} />
+
                                 <small>Japones</small>
 
 
@@ -267,6 +281,7 @@ export default function AddMenuItens() {
                                     type="checkbox"
                                     onChange={(e) => setTypescomidas({ ...typesComidas, carnes: e.target.checked })}
                                     value={typesComidas.carnes} />
+
                                 <small>Carnes</small>
 
 
@@ -275,25 +290,26 @@ export default function AddMenuItens() {
                                     type="checkbox"
                                     onChange={(e) => setTypescomidas({ ...typesComidas, salada: e.target.checked })}
                                     value={typesComidas.salada} />
+
                                 <small>Salada</small>
 
 
                             </div>
 
-                            <div className='style_button_createmenu'>
+
+
+                            <div className='container-add-btn'>
                                 <button onClick={handleSubmit} className='style_buttoncreatemenu'>ADICIONAR ITEM</button>
                             </div>
 
                         </div>
 
-                    </div>
-
                 </div>
             </div>
 
-            
-                <LinksBar/>
-            
+
+            <LinksBar />
+
         </div>
 
 

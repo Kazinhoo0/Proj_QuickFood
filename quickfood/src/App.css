@@ -121,10 +121,10 @@
   /* pagina de cadastrar menus */
 
 
-  .container_input-restaurants-register {
+  /* .container_input-restaurants-register {
     width: 95% !important;
     margin-left: 35px !important;
-  }
+  } */
 
 
   .style_button_sair {
@@ -141,9 +141,10 @@
     cursor: pointer;
   }
 
-  .style_checkbox_additens {
+
+  /* .style_checkbox_additens {
     margin-left: 90px !important;
-  }
+  } */
 
 
 
@@ -280,13 +281,13 @@
 
   /* responsividade pagina cadastrar menus */
 
-  .style_checkbox_additens {
+  /* .style_checkbox_additens {
     margin-left: 120px !important;
-  }
+  } */
 
-  .container_input-restaurants-register {
+  /* .container_input-restaurants-register {
     width: 95% !important;
-  }
+  } */
 
   .container-second-login-register {
     width: 60% !important;
@@ -452,10 +453,10 @@
 
   }
 
-  .container_input-restaurants-register {
+  /* .container_input-restaurants-register {
     width: 250% !important;
     margin-right: 100px !important;
-  }
+  } */
 
   .style-inputs-loginpage {
     width: 95% !important;
@@ -699,6 +700,16 @@
   /* resgitrar restaurants page */
 
 
+
+  .container-formulario-restaurants_pageadditens {
+    /* border: 1px solid red; */
+    width: 100% !important;
+  }
+
+  .container-formulario-restaurants_pageadditens2 {
+    width: 100% !important;
+  }
+
   .style_h1page-register-restaurants {
     color: white;
     font-size: 30px;
@@ -715,18 +726,17 @@
   }
 
   .container_input-restaurants-register {
-    width: 85% !important;
-    margin-right: 160px !important;
-    height: 950px !important;
+    height: 750px !important;
   }
 
   .container-input-additens {
     display: grid !important;
+    height: 460px !important;
   }
 
   .style-inputs-additenspag {
     margin-bottom: 0px !important;
-    width: 180% !important;
+    width: 100% !important;
   }
 
   .container-second-login-register {
@@ -734,7 +744,7 @@
   }
 
   .custom-file-button {
-    width: 92% !important;
+    width: 100% !important;
 
   }
 
@@ -760,8 +770,8 @@
   }
 
   .container_type_additens {
-    margin-top: 230px !important;
-    width: 90% !important;
+    width: 100% !important;
+    height: 210px;
   }
 
   .container_checkbox_type {
@@ -784,10 +794,10 @@
     cursor: pointer;
   }
 
-  .style_checkbox_additens {
+  /* .style_checkbox_additens {
     margin-left: 70px !important;
 
-  }
+  } */
 
 
   /* Pagina meu pratos */
@@ -1075,11 +1085,21 @@
   /* resgitrar restaurants page */
 
 
+  .container-formulario-restaurants_pageadditens {
+    /* border: 1px solid red; */
+    width: 100% !important;
+  }
+
+  .container-formulario-restaurants_pageadditens2 {
+    width: 100% !important;
+  }
+
   .style_h1page-register-restaurants {
     color: white;
     font-size: 30px;
 
   }
+
 
   .style-inputs-loginpage {
     width: 80% !important;
@@ -1090,43 +1110,42 @@
   }
 
   .container_input-restaurants-register {
-    width: 85% !important;
-    margin-right: 50px !important;
-    height: 950px !important;
+    height: 750px !important;
+  }
+
+  .container-input-additens {
+    display: grid !important;
+    height: 460px !important;
+  }
+
+  .style-inputs-additenspag {
+    margin-bottom: 0px !important;
+    width: 100% !important;
   }
 
   .container-second-login-register {
     width: 80% !important;
   }
 
-  .container-input-additens {
-    display: grid !important;
-  }
-
-  .style-inputs-additenspag {
-    margin-bottom: 0px !important;
-    width: 180% !important;
-  }
-
   .custom-file-button {
-    width: 90% !important;
+    width: 100% !important;
 
   }
 
   /* .style_tittlelogin-senha {
-    color: #fff;
     font-size: 30px;
-    margin-right: 50px !important;
+    margin-right: 155px !important;
     margin-top: 80px;
+    color: white;
     text-align: center;
   } */
 
 
   .style_tittlelogin-senhatelahome {
-    color: #fff;
     font-size: 30px;
-    /* margin-right: 150px !important; */
-    margin-top: 80px;
+    /* margin-right: 155px !important; */
+    /* margin-top: 80px; */
+    color: white;
     text-align: center;
   }
 
@@ -1135,21 +1154,20 @@
   }
 
   .container_type_additens {
-    margin-top: 230px !important;
-    width: 90% !important;
+    width: 100% !important;
+    height: 210px;
   }
 
   .container_checkbox_type {
     display: flex !important;
     border: none !important;
-    padding-right: 0px !important;
+    padding-left: 20px !important;
   }
 
   .style_button_sair {
     font-size: 15px !important;
     /* margin-right: 350px !important; */
     width: 10% !important;
-    /* height: 15%; */
     padding: 5px;
     margin-left: 10px;
     text-align: center;
@@ -1160,11 +1178,6 @@
     cursor: pointer;
   }
 
-
-  .style_checkbox_additens {
-    margin-left: 70px !important;
-
-  }
 
 
   /* Pagina meu pratos */
@@ -1611,6 +1624,15 @@
   /* resgitrar restaurants page */
 
 
+  .container-formulario-restaurants_pageadditens {
+    /* border: 1px solid red; */
+    width: 100% !important;
+  }
+
+  .container-formulario-restaurants_pageadditens2 {
+    width: 100% !important;
+  }
+
   .style_h1page-register-restaurants {
     color: white;
     font-size: 30px;
@@ -1626,30 +1648,44 @@
     width: 90%;
   }
 
-
   .container_input-restaurants-register {
-    width: 85% !important;
-    margin-right: 50px !important;
-    height: 950px !important;
+    height: 750px !important;
   }
 
   .container-input-additens {
     display: grid !important;
+    height: 460px !important;
   }
 
   .style-inputs-additenspag {
     margin-bottom: 0px !important;
-    width: 180% !important;
+    width: 100% !important;
   }
 
   .container-second-login-register {
     width: 80% !important;
-
   }
 
   .custom-file-button {
-    width: 90% !important;
+    width: 100% !important;
 
+  }
+
+  /* .style_tittlelogin-senha {
+    font-size: 30px;
+    margin-right: 155px !important;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+  } */
+
+
+  .style_tittlelogin-senhatelahome {
+    font-size: 30px;
+    /* margin-right: 155px !important; */
+    /* margin-top: 80px; */
+    color: white;
+    text-align: center;
   }
 
   .container-principal-restaurants-register {
@@ -1657,12 +1693,12 @@
   }
 
   .container_type_additens {
-    margin-top: 230px !important;
-    width: 90% !important;
+    width: 100% !important;
+    height: 210px;
   }
 
   .container_checkbox_type {
-    display: grid !important;
+    display: flex !important;
     border: none !important;
     padding-left: 20px !important;
   }
@@ -3919,7 +3955,7 @@
 }
 
 .style_checkbox_additens {
-  margin-left: 100px;
+  /* margin-right: 10px; */
 }
 
 h1 {
@@ -4543,7 +4579,7 @@ strong {
 
 
 .container-second-login-register {
-  /* border: 1px solid black; */
+  border: 1px solid rgb(0, 0, 0);
   width: 50%;
   height: 370px;
   margin-top: 50px;
@@ -4563,7 +4599,8 @@ strong {
   font-size: 30px;
   display: flex;
   justify-content: center;
-  /* border: 1px solid red; */
+  align-items: center;
+  border: 1px solid red;
 
 }
 
@@ -4596,7 +4633,7 @@ strong {
 .style-inputs-additenspag2 {
   border: 1px solid red;
   height: 35px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 
@@ -4642,18 +4679,18 @@ strong {
 
 
 .container_input-restaurants-register {
-  /* border: 1px solid rgb(228, 11, 11); */
-  width: 95%;
+  border: 1px solid rgb(228, 11, 11);
+  width: 55%;
   height: 500px;
   background-color: #ffffff;
 }
 
 .container-principal-restaurants-register {
   /* border: 1px solid red; */
-  height: 570px;
+  height: 650px;
   display: flex;
-  align-content: center;
   justify-content: center;
+  align-items: center;
   background-color: rgba(236, 235, 235, 0.74);
 }
 
@@ -4671,6 +4708,7 @@ strong {
   /* border: 1px solid rgb(0, 0, 0); */
   height: 190px;
   display: grid;
+  align-items: center;
   padding: 15px;
 }
 
@@ -4687,6 +4725,7 @@ strong {
   /* border: 1px solid rgb(0, 0, 0); */
   height: 190px;
   display: grid;
+  align-items: center;
   padding: 15px;
 }
 
@@ -4705,14 +4744,16 @@ strong {
 }
 
 .container-input-additens {
-  /* border: 1px solid rgb(0, 81, 255); */
+  border: 1px solid rgb(0, 255, 13);
   display: flex;
+  justify-content: center;
+  align-items: center;
   height: 222px;
   /* background-color: white; */
 }
 
 .container_type_additens {
-  /* border: 1px solid rgb(255, 0, 0); */
+  border: 1px solid rgb(0, 204, 255);
   height: 183px;
 }
 
@@ -4727,13 +4768,24 @@ strong {
 }
 
 
-.container_checkbox_type {
-  border: 1px solid grey;
-  padding-top: 20px;
-  padding-bottom: 5px;
+.container-typefood {
+  border: 1px solid red;
   display: flex;
-  align-content: start;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+  /* border: 1px solid grey; */
+
+}
+
+.container-add-btn {
+  border: 1px solid rgb(47, 0, 255);
+  display: flex;
   justify-content: start;
+  align-items: center;
+  margin-bottom: 5px;
+
+
 }
 
 .style_button_createmenu {
@@ -4752,12 +4804,13 @@ strong {
   margin-left: 15px;
   margin-top: 10px;
   cursor: pointer;
+  transition: 1s;
 }
 
 
 .style_checkbox_additens {
-  margin-left: 150px;
-
+  cursor: pointer;
+  margin-left: 50px;
 }
 
 .container_filho_inputs {
