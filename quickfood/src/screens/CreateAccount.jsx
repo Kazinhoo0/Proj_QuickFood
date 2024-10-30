@@ -1,10 +1,5 @@
 import topimg_home from '../assets_imgs/fb-subheader-4.jpg';
 import logo from '../assets_imgs/logo_quickfood.png';
-import imgemail from '../assets_imgs/mail.png';
-import imgmenuinstagram from '../assets_imgs/instagram.png';
-import imgmenutwitter from '../assets_imgs/twitter.png';
-import imgmenufacebook from '../assets_imgs/facebook.png'
-import imgtelefone from '../assets_imgs/phone.png';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Toastify from 'toastify-js';
@@ -224,9 +219,13 @@ export default function CreateAccount() {
 
                 </div>
             </div>
+
             <div className='container-principal-restaurants-register'>
+
                 <div className='container-second-login-register'>
+
                     <div className='container_input-restaurants-register'>
+
                         <h2 className='style-h2-loginpage' >CRIAR NOVA CONTA</h2>
 
 
@@ -245,12 +244,13 @@ export default function CreateAccount() {
 
                         ) : (
 
+
                             <div className='container-input-registerrestaurants'>
 
 
                                 <form className='container-formulario-restaurants' action="">
 
-                                    <span>Nome Completo</span>
+                                    <span className='style-spans'>Nome Completo</span>
                                     <input
                                         className='style-inputs-loginpage'
                                         placeholder='Nome completo*'
@@ -258,7 +258,9 @@ export default function CreateAccount() {
                                         onChange={(e) => setNomecompleto(e.target.value)}
                                         value={nomecompleto} />
 
-                                    <span>Senha</span>
+
+
+                                    <span className='style-spans'>Senha</span>
                                     <input
                                         className='style-inputs-loginpage'
                                         placeholder='Sua senha aqui*'
@@ -266,7 +268,8 @@ export default function CreateAccount() {
                                         onChange={(e) => setsenha(e.target.value)}
                                         value={senha} />
 
-                                    <span>Cidade</span>
+
+                                    <span className='style-spans'>Cidade</span>
                                     <input
                                         className='style-inputs-loginpage'
                                         type="text"
@@ -274,7 +277,8 @@ export default function CreateAccount() {
                                         value={cidade}
                                         placeholder='Ex: Rio de janeiro' />
 
-                                    <span>Genero</span>
+
+                                    <span className='style-spans' >Genero</span>
                                     <select
 
                                         className='style-inputs-loginpage'
@@ -288,38 +292,62 @@ export default function CreateAccount() {
 
                                     </select>
 
-                                    <span className='style_spans'>Email</span>
-                                    <input value={email} onChange={(e) => setemail(e.target.value)} className='style-inputs-loginpage' placeholder='Seu email aqui*' type="email" />
+                                    <span className='style-spans'>Email</span>
+                                    <input
+                                        value={email} 
+                                        onChange={(e) => setemail(e.target.value)}
+                                        className='style-inputs-loginpage'
+                                        placeholder='Seu email aqui*'
+                                        type="email"
+                                    />
 
 
                                 </form>
 
 
 
-                                <div className='container-formulario-restaurants' action="">
+                                <form className='container-formulario-restaurants' action="">
+                                
+                                    <span className='style-spans'>Confirmar Senha</span>
 
-                                    <span>Confirmar Senha</span>
                                     <input
                                         className='style-inputs-loginpage'
                                         placeholder='Sua senha aqui*'
                                         type="password"
                                         onChange={(e) => setconfirmarsenha(e.target.value)}
-                                        value={confirmarsenha} />
+                                        value={confirmarsenha} 
+                                    />
 
-                                    <span>Pais</span>
-                                    <input value={pais} onChange={(e) => setpais(e.target.value)} className='style-inputs-loginpage' type="text" placeholder='Ex: Brasil' />
+                                    <span className='style-spans'>Pais</span>
+
+                                    <input 
+                                        value={pais}
+                                        onChange={(e) => setpais(e.target.value)}
+                                        className='style-inputs-loginpage'
+                                        type="text"
+                                        placeholder='Ex: Brasil'
+                                    />
+
                                     <small className='style_naoobrigatoriotext'>*Não obrigatório</small>
 
-                                    <span>Foto Perfil</span>
-                                    <input className='custom-file-button' placeholder='Escolher Imagem*' type="file" />
+                                    <span className='style-spans'>Foto Perfil</span>
+
+                                    <input
+                                        className='custom-file-button'
+                                        placeholder='Escolher Imagem*'
+                                        type="file"
+                                    />
+
                                     <small className='style_naoobrigatoriotext'>*Não obrigatório</small>
 
                                     <div className='style-container-termosecondicoes'>
+
                                         <input
                                             type="checkbox"
                                             onChange={(e) => setTermos(e.target.value)}
                                             checked={Termos} />
                                         <small >Concordo com os termos e condições</small>
+
                                     </div>
 
                                     <div className='container_buttoncriarconta'>
@@ -328,10 +356,16 @@ export default function CreateAccount() {
                                         <p className='style-criarconta-a'>Ainda não tem uma conta ?
                                             <a onClick={handlenavigateLogin} className='style-link-a' > Faça Login</a>
                                         </p>
+
                                     </div>
-                                </div>
-                            </div>
+
+                                </form> 
+
+
+                            </div>   
+                            
                         )}
+                        
                     </div>
 
                 </div>

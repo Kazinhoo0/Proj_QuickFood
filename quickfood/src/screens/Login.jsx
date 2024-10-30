@@ -181,8 +181,11 @@ export default function Login() {
 
                 </div>
             </div>
+            
             <div className="container-principal-login-register">
+
                 <div className="container-second-login-register">
+                
                     <div className="container_input-login-register">
                         <h2 className="style-h2-loginpage">LOGIN SUA CONTA</h2>
 
@@ -202,7 +205,7 @@ export default function Login() {
                         ) : (
 
                             <form onSubmit={handleenteraccount} className="container-formulario-login">
-                                <span>Email</span>
+                                <span className='style-spans'>Email</span>
                                 <input
                                     className="style-inputs-loginpage"
                                     placeholder="Seu email aqui*"
@@ -210,7 +213,7 @@ export default function Login() {
                                     onChange={(e) => setEmail(e.target.value)}
                                     
                                 />
-                                <span>Senha</span>
+                                <span className='style-spans'>Senha</span>
                                 <input
                                     className="style-inputs-loginpage"
                                     placeholder="Sua senha aqui*"

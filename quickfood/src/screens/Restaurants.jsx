@@ -1,10 +1,5 @@
 import { CiSearch } from "react-icons/ci";
 import { useNavigate } from "react-router-dom";
-import imgemail from '../assets_imgs/mail.png'
-import imgmenuinstagram from '../assets_imgs/instagram.png'
-import imgmenufacebook from '../assets_imgs/facebook.png'
-import imgmenutwitter from '../assets_imgs/twitter.png'
-import imgtelefone from '../assets_imgs/phone.png'
 import topimg_home from '../assets_imgs/fb-subheader-2.jpg'
 import logo from '../assets_imgs/logo_quickfood.png'
 import imgsearch from '../assets_imgs/search-interface-symbol.png'
